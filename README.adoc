@@ -56,7 +56,7 @@ Projet est réalisé par::
 - https://github.com/Chris-973[Chrispher MARIE-ANGÉLIQUE]
 - https://github.com/Zekoko[Bastien BALMES]
 
-Tuteur/tutrice enseignant(e) de l'équipe:: mailto:jean-michel.bruel@univ-tlse2.fr[JMB]
+Tuteur/tutrice enseignant(e) de l'équipe:: mailto:pascal.sotin@univ-tlse2.fr[PSO]
 
 == Contexte général
 
