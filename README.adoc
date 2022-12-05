@@ -98,7 +98,7 @@ Utilisez pour cela les fonctionnalités de GitHub pour les https://docs.github.c
 
 De plus ce fichier `README.adoc` devra être à jour des informations suivantes :
 
-- Version courante : https://github.com/IUT-Blagnac/sae3-01-devapp-g2b-11/releases/tag/v0.1[v0.1]
+- Version courante : https://github.com/IUT-Blagnac/sae3-01-devapp-g2b-11/releases/tag/v0.1[v0.1] (_Pre-release_)
 - Lien vers la doc technique
 - Lien vers la doc utilisateur
 - Liste des https://github.com/IUT-Blagnac/sae3-01-devapp-g2b-11/issues[User Stories]  et % restant
