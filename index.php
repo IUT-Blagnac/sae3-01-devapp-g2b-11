@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
     <header>
         <?php include("src/pages/header/header.php"); ?>
     </header>    
 
     <main>
-
+        
     </main>
     
     <footer>
