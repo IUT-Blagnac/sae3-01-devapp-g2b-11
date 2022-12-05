@@ -98,10 +98,10 @@ Utilisez pour cela les fonctionnalités de GitHub pour les https://docs.github.c
 
 De plus ce fichier `README.adoc` devra être à jour des informations suivantes :
 
-- Version courante : https://github.com/IUT-Blagnac/sae3-01-template/releases/tag/v0.1.2[v0.1.2]
+- Version courante : https://github.com/IUT-Blagnac/sae3-01-devapp-g2b-11/releases/tag/v0.1[v0.1]
 - Lien vers la doc technique
 - Lien vers la doc utilisateur
-- Liste des (ou lien vers les) User Stories (ToDo/Ongoing/Done) et % restant
+- Liste des https://github.com/IUT-Blagnac/sae3-01-devapp-g2b-11/issues[User Stories]  et % restant
 - Tests unitaires et plans de test
 - Indicateurs de qualité du code (dette technique)
 - ... tout autre élément que vous jugerez utiles pour démontrer la qualité de votre application
