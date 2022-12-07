@@ -1,0 +1,121 @@
+header{
+    display: block;
+    position: sticky;
+    top: 0;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: var(--mb-1-5) var(--mb-3);
+    background-color: #fff;
+    align-items: center;
+}
+.header .title{
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-medium);
+    letter-spacing: 2px;
+}
+.header .navbar ul{
+    display: flex;
+    align-items: center;
+    gap: var(--mb-1-5);
+}
+
+.header .search-bar{
+    display: flex;
+    align-items: center;
+}
+
+.search-bar .input{
+    position: relative;
+}
+
+.search-bar .icon{
+    position: absolute;
+    padding-left: 9px;
+}
+
+
+.header .navbar input{
+    position: relative;
+    outline: none;
+    background: url("src/img/search-logo.png") no-repeat 9px 9px;
+    padding: 0.15rem;
+    border: 1px solid #111;
+    border-radius: 20px;
+    width: 250px;
+    height: 25px;
+    padding-left: 30px;
+}
+.header .navbar a{
+    position: relative;
+    padding-bottom: 5px;
+    color: #00BF61;
+    font-size: 1.15rem;
+}
+
+.header .navbar .panier::before{
+    content : '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    background-color: #00BF61;
+    bottom: 0;
+    transition: all .3s ease-in-out;
+}
+
+.header .navbar .panier:hover::before{
+    width: 100%;
+    transition: all .3s ease-in-out;
+}
+
+.header .navbar a.button{
+    background-color: #00BF61;
+    color: #fff;
+    padding: var(--mb-0-5) var(--mb-1-5);
+    border: 2px #00BF61 solid;
+    border-radius: 20px;
+    transition: all .3s ease-in-out;
+}
+.header .navbar a.button:hover{
+    background-color: transparent;
+    color: #00BF61;
+    transition: all .3s ease-in-out;
+}
+.subheader{
+    background-color: #00BF61;
+    padding: var(--mb-1) var(--mb-1-5);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.subheader ul{
+    display: flex;
+    justify-content: space-around;
+}
+.subheader a{
+    position: relative;
+    font-size: 1.5rem;
+    color: #fff;
+    padding-bottom: 5px;
+}
+.subheader a::before{
+    content: '';
+    position: absolute;
+    background-color: #fff;
+    width: 0%;
+    height: 3px;
+    bottom: 0;
+    transition: all .3s ease-in-out;
+}
+.subheader a:hover::before{
+    width: 100%;
+    transition: all .3s ease-in-out;
+}
+.subheader li{
+    display: flex;
+}
+.subheader i{
+    padding-left: 8px;
+    font-size: 20px;
+    color: #fff;
+}

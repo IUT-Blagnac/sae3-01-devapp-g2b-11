@@ -1,0 +1,45 @@
+.footer{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    background-color: #EBEBEB   ;
+    padding: 80px 10px;
+    
+}
+
+.footer::before{
+    content: '© 2022. Tous droits réservés.';
+    text-align: center;
+    width: 80%;
+    height: 1px;
+    background-color: #111;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 50px;
+}
+.footer .title{
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+.footer ul li{
+    padding-bottom: 10px;
+}
+.footer a{
+    position: relative;
+    color: #111;
+    padding-bottom: 5px;
+}
+.footer a::before{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    background-color: #111;
+    transition: all .3s ease-in-out;
+}
+.footer a:hover::before{
+    width: 100%;
+    transition: all .3s ease-in-out;
+}
