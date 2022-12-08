@@ -1,0 +1,10 @@
+{
+  "nomFichier" : "data.txt",
+  "data" : [
+    "temperature",
+    "humidity",
+    "co2"
+  ],
+  "seuiltemp" : 8,
+  "seuilhum" : 60
+}
