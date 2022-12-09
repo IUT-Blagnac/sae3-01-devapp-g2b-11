@@ -11,8 +11,9 @@
     <header>
         <div class="header">
             <div class="navlogo">
-                <div class="logo"></div>
-                <div class="title">Royal Bio.</div>
+                <div class="logo">
+                    <img src="src/img/logo.png" alt="Logo de la start'up">
+                </div>
             </div>
             <div class="navbar">
                 <ul>
@@ -27,12 +28,33 @@
                 </ul>
             </div>
         </div>
+
         <div class="subheader">
-            <ul>
+            <ul class="menu">
                 <li><a href="#">Accueil</a></li>
-                <li><a href="#">Alimentation</a><i class="fa-sharp fa-solid fa-sort-down"></i></li>
-                <li><a href="#">Hygiène</a><i class="fa-sharp fa-solid fa-sort-down"></i></li>
-                <li><a href="#">Maison</a><i class="fa-sharp fa-solid fa-sort-down"></i></li>
+                <li><a href="#">Alimentation</a>
+                    <ul class="submenu">
+                        <li><a href="#">Fruits & Légumes</a></li>
+                        <li><a href="#">Fruits & Légumes</a></li>
+                        <li><a href="#">Fruits & Légumes</a></li>
+                        <li><a href="#">Crémerie & oeufs</a></li>
+                        <li><a href="#">Fruits & Légumes</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Hygiène</a>
+                    <ul class="submenu">
+                        <li><a href="#">Savons</a></li>
+                        <li><a href="#">Shampooings</a></li>
+                        <li><a href="#">Soins & Visages</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Maison</a>
+                    <ul class="submenu">
+                        <li><a href="#">Soin du linge</a></li>
+                        <li><a href="#">Vaiselle & Ménage</a></li>
+                        <li><a href="#">Décoration</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </header>

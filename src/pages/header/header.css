@@ -7,8 +7,12 @@ header{
 .header{
     display: flex;
     justify-content: space-between;
-    padding: var(--mb-1-5) var(--mb-3);
+    padding: 0 var(--mb-3);
     background-color: #fff;
+    align-items: center;
+}
+.header .navlogo{
+    display: flex;
     align-items: center;
 }
 .header .title{
@@ -83,39 +87,49 @@ header{
     color: #00BF61;
     transition: all .3s ease-in-out;
 }
+
 .subheader{
     background-color: #00BF61;
-    padding: var(--mb-1) var(--mb-1-5);
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
 }
-.subheader ul{
+.subheader .menu{
     display: flex;
     justify-content: space-around;
 }
-.subheader a{
-    position: relative;
-    font-size: 1.5rem;
-    color: #fff;
-    padding-bottom: 5px;
-}
-.subheader a::before{
-    content: '';
-    position: absolute;
-    background-color: #fff;
-    width: 0%;
-    height: 3px;
-    bottom: 0;
-    transition: all .3s ease-in-out;
-}
-.subheader a:hover::before{
-    width: 100%;
-    transition: all .3s ease-in-out;
-}
 .subheader li{
-    display: flex;
+    position: relative;
+    display: inline-block;
+    transition: all .3s ease-in-out;
 }
-.subheader i{
-    padding-left: 8px;
-    font-size: 20px;
+
+.subheader li a{
+    display: block;
+    font-size: 30px;
+    padding: 20px;
     color: #fff;
+}
+.subheader li:hover{
+    background-color: #009B4F;
+    transition: all .3s ease-in-out;
+}
+
+.subheader li:hover .submenu{
+    display: block;
+    transition: all .3s ease-in-out;
+}
+.submenu li:hover{
+    background-color: #009B4F;
+    transition: all .3s ease-in-out;
+}
+.submenu{
+    background-color: #00BF61;
+    position: absolute;
+    display: none;
+    transition: all .3s ease-in-out;
+}
+.submenu li {
+    width: 100%;
+}
+.submenu li a{
+    font-size: 17px;
 }
