@@ -13,7 +13,7 @@
 <body>
     <?php include "src/include/header.php" ?>
     <main>
-        <h1>Je suis la page Accueil</h1>
+        <h1>Je suis la page Index</h1>
     </main>
     <?php include "src/include/footer.php" ?>
 </body>
