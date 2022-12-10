@@ -24,7 +24,7 @@
                     
                     <li><a href="#" class="button">Contact</a></li>
                     <li><a href="connexion.php" class="button">Connexion</a></li>
-                    <li><a href="#" class="panier"><i class="fa-solid fa-basket-shopping"></i></a></li>
+                    <li><a href="panier.php" class="panier"><i class="fa-solid fa-basket-shopping"></i></a></li>
                     <div class="toggleMenu">
                         <i class="open fa-solid fa-bars"></i>
                         <i class="close fa-solid fa-xmark"></i>

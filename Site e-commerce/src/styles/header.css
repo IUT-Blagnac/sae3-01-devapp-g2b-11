@@ -104,6 +104,7 @@ header{
     position: relative;
     display: inline-block;
     transition: all .3s ease-in-out;
+    width: 1px;
 }
 
 .subheader li a{
