@@ -13,24 +13,7 @@
 <body>
     <?php include "src/include/header.php" ?>
     <main>
-        <div class="about">
-            <div class="title"><h1>Qui sommes nous ?</h1></div>
-            <div class="subtitle">Présentation de notre Start-up</div>
-
-            <div class="container">
-
-            </div>
-        </div>
-
-        <div class="services">
-            <div class="title">Nos services</div>
-            <div class="subtitle">Que proposons nous ?</div>
-
-            <div class="container">
-
-            </div>
-        </div>
-
+        <h1>Je suis la page Index</h1>
     </main>
     <?php include "src/include/footer.php" ?>
 </body>
