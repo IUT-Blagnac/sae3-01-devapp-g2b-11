@@ -15,6 +15,10 @@ header{
     display: flex;
     align-items: center;
 }
+.navlogo .logo img{
+    width: 150px;
+    height: 130px;
+}
 .header .title{
     font-size: var(--h1-font-size);
     font-weight: var(--font-medium);
@@ -24,6 +28,13 @@ header{
     display: flex;
     align-items: center;
     gap: var(--mb-1-5);
+}
+.navbar .toggleMenu{
+    font-size: 30px;
+    color: #009B4F;
+    /* display: none; */
+    visibility: hidden;
+    cursor: pointer;
 }
 
 .header .search-bar{
@@ -48,9 +59,14 @@ header{
     padding: 0.15rem;
     border: 1px solid #111;
     border-radius: 20px;
-    width: 250px;
+    width: 150px;
     height: 25px;
     padding-left: 30px;
+    transition: all .3s ease-in-out;
+}
+.navbar input:focus{
+    width: 250px;
+    transition: all .3s ease-in-out;
 }
 .header .navbar a{
     position: relative;
@@ -58,20 +74,8 @@ header{
     color: #00BF61;
     font-size: 1.15rem;
 }
-
-.header .navbar .panier::before{
-    content : '';
-    position: absolute;
-    width: 0%;
-    height: 3px;
-    background-color: #00BF61;
-    bottom: 0;
-    transition: all .3s ease-in-out;
-}
-
-.header .navbar .panier:hover::before{
-    width: 100%;
-    transition: all .3s ease-in-out;
+.panier i{
+    font-size: 30px;
 }
 
 .header .navbar a.button{
@@ -104,7 +108,7 @@ header{
 
 .subheader li a{
     display: block;
-    font-size: 30px;
+    font-size: 25px;
     padding: 20px;
     color: #fff;
 }
@@ -132,4 +136,36 @@ header{
 }
 .submenu li a{
     font-size: 17px;
+}
+
+/* BREAKPOINTS */
+/* for large devices */
+@media screen and (max-width: 992px){
+
+}
+
+/* for medium devices */
+@media screen and (max-width: 768px){
+    header{
+        border-bottom: 1px solid #333;
+    }
+    .navbar{
+        display: none;
+    }
+    .navbar input, 
+    .navbar .icon{
+        display: none;
+    }
+    .subheader{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 576px){
+
+}
+
+/* for smaller devices */
+@media screen and (max-width: 350px){
+
 }

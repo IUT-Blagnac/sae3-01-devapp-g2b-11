@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Footer</title>
-    <link rel="stylesheet" href="src/pages/footer/pied.css">
 </head>
 <body>
     <div class="footer">
@@ -33,7 +32,6 @@
                 <li><a href="#">Cookies</a></li>
                 <li><a href="#">Mentions légales</a></li>
             </ul>
-        </div>
-
+    </div>
 </body>
 </html>

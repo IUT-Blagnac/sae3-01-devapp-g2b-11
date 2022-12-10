@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Header</title>
-    <link rel="stylesheet" href="src/pages/header/header.css">
 </head>
 <body>
-    <header>
+<header>
+
         <div class="header">
             <div class="navlogo">
                 <div class="logo">
@@ -19,19 +19,23 @@
                 <ul>
                     <div class="search-bar">
                         <div class="icon"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></div>
-                        <div class="input"><input type="text"></div>
+                        <div class="input"><input type="text" placeholder="Recherche un produit ..."></div>
                     </div>
                     
                     <li><a href="#" class="button">Contact</a></li>
-                    <li><a href="#" class="button">Connexion</a></li>
-                    <li><a href="#" class="panier">Panier</a></li>
+                    <li><a href="connexion.php" class="button">Connexion</a></li>
+                    <li><a href="#" class="panier"><i class="fa-solid fa-basket-shopping"></i></a></li>
+                    <div class="toggleMenu">
+                        <i class="open fa-solid fa-bars"></i>
+                        <i class="close fa-solid fa-xmark"></i>
+                    </div>
                 </ul>
             </div>
         </div>
 
         <div class="subheader">
             <ul class="menu">
-                <li><a href="#">Accueil</a></li>
+                <li><a href="http://193.54.227.164/~SAESYS11/">Accueil</a></li>
                 <li><a href="#">Alimentation</a>
                     <ul class="submenu">
                         <li><a href="#">Fruits & Légumes</a></li>
@@ -58,6 +62,5 @@
             </ul>
         </div>
     </header>
-    
 </body>
 </html>
