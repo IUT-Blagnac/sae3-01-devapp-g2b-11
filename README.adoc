@@ -89,7 +89,7 @@ TIP: Pensez à utiliser les salons Discord dédiés pour poser vos questions.
 
 == Réalisations 
 
-TIP: Mettez ici toutes les informations nécessaire à l'utilisation de votre dépôt (comment on installe votre application, où sont les docs, etc.)
+Dossier contenant les ifnormations sur les différents domaines concernés par cette SAE : https://github.com/IUT-Blagnac/sae3-01-devapp-g2b-11/tree/master/assets[Assets]
 
 == Gestion de projet & Qualité
 
