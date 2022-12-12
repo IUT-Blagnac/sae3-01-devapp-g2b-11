@@ -1,4 +1,4 @@
-package app;
+package app.g2b11.func;
 
 
 import com.github.cliftonlabs.json_simple.JsonObject;
@@ -8,7 +8,7 @@ import java.io.IOException;
 
 public class createJsonConfig {
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         JsonObject config = new JsonObject();
         String[] data = new String[3];
 
@@ -23,6 +23,16 @@ public class createJsonConfig {
         try{
             FileWriter f = new FileWriter("src/config.json");
             f.write(config.toJson());
+            f.close();
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+    }*/
+
+    public static void saveJson(JsonObject c){
+        try{
+            FileWriter f = new FileWriter("src/config.json");
+            f.write(c.toJson());
             f.close();
         } catch (IOException e){
             e.printStackTrace();
