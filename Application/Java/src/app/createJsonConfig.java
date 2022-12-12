@@ -27,9 +27,6 @@ public class createJsonConfig {
         } catch (IOException e){
             e.printStackTrace();
         }
-
-
-
     }
 
     public static void ecrireNomFich(String nom, JsonObject c){
