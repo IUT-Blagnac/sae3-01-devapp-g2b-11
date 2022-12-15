@@ -145,7 +145,8 @@ VALUES('34','010','','','', '', '', '');
 INSERT INTO PRODUIT
 VALUES('35','011','','','', '', '', '');
 INSERT INTO PRODUIT
-VALUES('36','012','','','', '', '', '');INSERT INTO PRODUIT
+VALUES('36','012','','','', '', '', '');
+INSERT INTO PRODUIT
 VALUES('37','001','Fraise Mara des bois',1.38,'Burban producteur', 'Un parfum très prononcé de fraises des bois, une texture fondante et originale', 'Eau, Glucides, Fibres, Vitamines C, Vitamine B', 20);
 INSERT INTO PRODUIT
 VALUES('38','002','','','', '', '', '');
@@ -168,7 +169,8 @@ VALUES('46','010','','','', '', '', '');
 INSERT INTO PRODUIT
 VALUES('47','011','','','', '', '', '');
 INSERT INTO PRODUIT
-VALUES('48','012','','','', '', '', '');INSERT INTO PRODUIT
+VALUES('48','012','','','', '', '', '');
+INSERT INTO PRODUIT
 VALUES('49','001','Fraise Mara des bois',1.38,'Burban producteur', 'Un parfum très prononcé de fraises des bois, une texture fondante et originale', 'Eau, Glucides, Fibres, Vitamines C, Vitamine B', 20);
 INSERT INTO PRODUIT
 VALUES('50','002','','','', '', '', '');
