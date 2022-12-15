@@ -75,15 +75,15 @@ VALUES('012', '12', 'Literie');
 
 -- PRODUITS
 INSERT INTO PRODUIT
-VALUES('1','001','Fraise Mara des bois',1.38,'Burban producteur', 'Un parfum très prononcé de fraises des bois, une texture fondante et originale', 'Eau, Glucides, Fibres, Vitamines C, Vitamine B', 20);
+VALUES('1','001','Fraise Mara des bois',6.19,'Burban producteur', 'Un parfum très prononcé de fraise des bois, une texture fondante et originale', 'Eau, Glucides, Fibres, Vitamines C, Vitamine B', 20);
 INSERT INTO PRODUIT
-VALUES('2','002','','','', '', '', '');
+VALUES('2','002','Haricot vert à filet',4.20,'Les graines Bocquet', 'Haricot vert fins avec une gousses fines et droites, parfaitement rondes, de couleur vert très foncé', 'Graisse, Glucide, Fibre, Protéines', 40);
 INSERT INTO PRODUIT
-VALUES('3','003','','','', '', '', '');
+VALUES('3','003','Ailes de poulet',4.90,'L''un des morceaux les plus tendres de viande de poulet', 'Boucherie Les Fontaines', 'Eau, Protéines, Lipides', 15);
 INSERT INTO PRODUIT
-VALUES('4','004','','','', '', '', '');
+VALUES('4','004','Comté',''13.95,'La Laiterie Toulousaine', 'Fromage au lait cru à pâte pressée.  A la fois doux, aromatique, parfois légèrement piquant, toujours parfumé', 'Lait cru, Ferments lactiques, Présuren, Sel', 33);
 INSERT INTO PRODUIT
-VALUES('5','005','','','', '', '', '');
+VALUES('5','005','Haribo Tagada',9.99,'Le paradis gourmand', 'Un goût, une texture et une allure inimitables, Tagada est le bonbon qui fait le bonheur des petits et des grands', 'Sucre, Sirop de glucose, gélatine, Acide citrique', 47);
 INSERT INTO PRODUIT
 VALUES('6','006','','','', '', '', '');
 INSERT INTO PRODUIT
