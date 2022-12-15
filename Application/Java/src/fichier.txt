@@ -1,3 +1,0 @@
-Fruit : Fraise
-Legume : Poireau
-Friandise : haribo

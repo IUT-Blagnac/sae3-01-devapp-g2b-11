@@ -89,7 +89,7 @@ TIP: Pensez à utiliser les salons Discord dédiés pour poser vos questions.
 
 == Réalisations 
 
-TIP: Mettez ici toutes les informations nécessaire à l'utilisation de votre dépôt (comment on installe votre application, où sont les docs, etc.)
+Dossier contenant des informations sur les différents domaines concernés par cette SAE : https://github.com/IUT-Blagnac/sae3-01-devapp-g2b-11/tree/master/assets[Assets]
 
 == Gestion de projet & Qualité
 
@@ -99,9 +99,35 @@ Utilisez pour cela les fonctionnalités de GitHub pour les https://docs.github.c
 De plus ce fichier `README.adoc` devra être à jour des informations suivantes :
 
 - Version courante : https://github.com/IUT-Blagnac/sae3-01-devapp-g2b-11/releases/tag/v0.1[v0.1] (_Pre-release_)
-- Lien vers la doc technique
-- Lien vers la doc utilisateur
+- Lien vers la doc technique : https://github.com/IUT-Blagnac/sae3-01-devapp-g2b-11/blob/master/assets/Docs/doc-technique.adoc[Doc Technique]
+- Lien vers la doc utilisateur : https://github.com/IUT-Blagnac/sae3-01-devapp-g2b-11/blob/master/assets/Docs/doc-utilisateur.adoc[Doc Utilisateur]
 - Liste des https://github.com/IUT-Blagnac/sae3-01-devapp-g2b-11/issues[User Stories]  et % restant
 - Tests unitaires et plans de test
 - Indicateurs de qualité du code (dette technique)
 - ... tout autre élément que vous jugerez utiles pour démontrer la qualité de votre application
+
+=== Évaluations hebdomadaires
+
+
+
+NOTE: Les notes ci-dessous sont mises à jour directement par les enseignants responsables de la compétence 5.
+
+
+
+ifdef::env-github[]
+
+image:https://docs.google.com/spreadsheets/d/e/2PACX-1vTc3HJJ9iSI4aa2I9a567wX1AUEmgGrQsPl7tHGSAJ_Z-lzWXwYhlhcVIhh5vCJxoxHXYKjSLetP6NS/pubchart?oid=1287010292&amp;format=image[link=https://docs.google.com/spreadsheets/d/e/2PACX-1vTc3HJJ9iSI4aa2I9a567wX1AUEmgGrQsPl7tHGSAJ_Z-lzWXwYhlhcVIhh5vCJxoxHXYKjSLetP6NS/pubchart?oid=1287010292&amp;format=image]
+
+endif::[]
+
+
+
+ifndef::env-github[]
+
+++++
+
+<iframe width="786" height="430" seamless frameborder="0" scrolling="no" src="[https://docs.google.com/spreadsheets/d/e/2PACX-1vTc3HJJ9iSI4aa2I9a567wX1AUEmgGrQsPl7tHGSAJ_Z-lzWXwYhlhcVIhh5vCJxoxHXYKjSLetP6NS/pubchart?oid=1287010292&amp;format=image](https://docs.google.com/spreadsheets/d/e/2PACX-1vTc3HJJ9iSI4aa2I9a567wX1AUEmgGrQsPl7tHGSAJ_Z-lzWXwYhlhcVIhh5vCJxoxHXYKjSLetP6NS/pubchart?oid=1287010292&amp%3Bformat=image&authuser=0)"></iframe>
+
+++++
+
+endif::[]

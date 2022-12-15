@@ -1,3 +1,5 @@
+package app.g2b11.func;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -7,18 +9,18 @@ import java.util.List;
 import java.util.Map;
 import java.util.TimerTask;
 
-public class monAction extends TimerTask{
+public class readDataFile extends TimerTask{
 	
 	/*
 	 * Permet de lire les informations d'un fichier .txt
-	 * @return un dictionnaire contenant les clés et valeurs présentents dans le fichier .txt
+	 * @return un dictionnaire contenant les clï¿½s et valeurs prï¿½sentents dans le fichier .txt
 	 */
 	@Override
 	public void run() {
-		Map<String, String> dico = new HashMap<String, String>();
-		
+		Map<String, Double> dico = new HashMap<String, Double>();
+
 		// Chemin du fichier
-		Path path = Path.of("src/fichier.txt"); // chemin du fichier à lire
+		Path path = Path.of("src/data/fichier.txt"); // chemin du fichier ï¿½ lire
 		List<String> lignes = new ArrayList();
 		// on essaye de lire les lignes du fichier contenu au chemin "path"
 		try {
@@ -29,10 +31,10 @@ public class monAction extends TimerTask{
 		} // liste qui va contenir les lignes du fichier lu
 		String a[] = {""};
 		
-		// On ajoute c'est lignes dans le dictionnaire
+		// On ajoute ces lignes dans le dictionnaire
 		for(String ligne : lignes) {
 			a = ligne.split(":", 2);
-			dico.put(a[0], a[1]);
+			dico.put(a[0], Double.valueOf(a[1]));
 		}
 		
 		System.out.println(dico.toString());

@@ -1,0 +1,3 @@
+Temperature:3.0
+CO2:32.1
+Humidity:1.3
