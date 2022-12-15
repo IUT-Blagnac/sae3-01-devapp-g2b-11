@@ -4,17 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Royal Bio - Site E-Commerce</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="src/styles/header.css">
-    <link rel="stylesheet" href="src/styles/footer.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Royak Bio</title>
+    <link rel="stylesheet" href="styles/accueil.css">
+
+    <!-- INCLUDES LINKS -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="http://193.54.227.164/~SAESYS11/styles/heade.css">
+    <link rel="stylesheet" href="styles/footer.css">
 </head>
 <body>
-    <?php include "src/include/header.php" ?>
+    <?php include "include/header.php"; ?>
     <main>
-        <h1>Je suis la page Accueil</h1>
+        <div class="apropos">
+                <div class="apropos_content">
+                    <div class="title">A propos</div>
+                    <div class="subtitle">Qui sommes nous ?</div>
+                    <div class="data">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero modi earum, minima alias, 
+                        </p>
+                    </div>
+                    <div class="button">
+                        <a href="#">En savoir plus</a>
+                    </div>
+                </div>
+                <div class="apropos_img">
+                    <img src="http://193.54.227.164/~SAESYS11/img/epicerie_img.jpg" alt="Image de l'épicerie">
+                </div>
+        </div>
+
+        <div class="services">
+            <div class="title">Nos services</div>
+            <div class="subtitle">Que proposons nous ?</div>
+            <div class="apropos_container">
+                <div class="apropos_content">
+                    
+                </div>
+            </div>
+        </div>
     </main>
-    <?php include "src/include/footer.php" ?>
+    <?php include "include/footer.php"; ?>  
 </body>
 </html>

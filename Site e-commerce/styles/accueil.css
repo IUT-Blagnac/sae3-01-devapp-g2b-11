@@ -1,0 +1,61 @@
+.apropos{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+}
+
+.apropos_content .title{
+    color: #444;
+    font-size: 50px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+.apropos_content .subtitle{
+    position: relative;
+    color: #555;
+    font-size: 25px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    padding-left: 5.4rem;
+}
+
+.apropos_content .subtitle::before{
+    content: '';
+    position: absolute;
+    width: 12%;
+    height: 2px;
+    background-color: #555;
+    left: 0 ;
+    top: 1rem;
+}
+.apropos_content .data{
+    margin-bottom: 40px;
+    color: #777777;
+}
+
+.apropos_content .button a{
+    position: relative;
+    color: #fff;
+    padding: 1rem 1.5rem;
+    border-radius: 50px;
+    background-color: #00BF61;
+    border: 2px solid #00BF61;
+    transition: .3s ease-in-out ;
+}
+.apropos_content .button a:hover{
+    background-color: transparent;
+    color: #00BF61;
+    transition: .3s ease-in-out;
+}
+.apropos_img img{
+    width: 500px;
+    height: 300px;
+    border-radius: 20px;
+    border: 5px solid #444;
+    transition: .3s ease-in-out;
+}
+.apropos_img:hover img{
+    transform: scale(1.05);
+    transition: .3s ease-in-out;
+}

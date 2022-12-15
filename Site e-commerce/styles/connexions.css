@@ -1,0 +1,78 @@
+
+.container{
+    width:400px;
+    margin:0 auto;
+    margin-top:5%;
+    margin-bottom: 5%;
+   
+   
+   }
+   /* Bordered form */
+   .container form {
+    width:100%;
+    padding: 30px;
+    border: 1px solid #f1f1f1;
+    background:  white;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    
+   }
+   .container h1{
+    width: 38%;
+    margin: 0 auto;
+    padding-bottom: 10px;
+   }
+   
+   /* Full-width inputs */
+   .container input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    transition: all .3s ease-in-out;
+   }
+   
+   /* Set a style for all buttons */
+   .container input[type=submit] {
+    background-color: #00BF61;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    
+    cursor: pointer;
+    width: 100%;
+    border: 1px solid #00BF61;
+    border-radius: 5px;
+   }
+   .container input[type=submit]:hover {
+    background-color: white;
+    color: #00BF61;
+    border: 1px solid #00BF61;
+    border-radius: 5px;
+    transition: all .3s ease-in-out;
+   }
+   
+   .container input[type=button] {
+    background-color: #00BF61;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    
+    cursor: pointer;
+    width: 100%;
+    border: 1px solid #00BF61;
+    border-radius: 5px;
+   }
+   .container input[type=button]:hover {
+    background-color: white;
+    color: #00BF61;
+    border: 1px solid #00BF61;
+    border-radius: 5px;
+    transition: all .3s ease-in-out;
+   }
+   .mdp{
+       font-family:arial, sans-serif;
+       color:gray;
+       font-size: 10px;
+   }
