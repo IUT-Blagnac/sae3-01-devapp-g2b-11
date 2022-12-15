@@ -13,8 +13,8 @@
           <padding>
               <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
           </padding>
-          <Button fx:id="butConfig" onAction="#onConfigButtonClick" prefHeight="77.0" prefWidth="112.0" text="Configuration" />
-         <Button fx:id="butData" mnemonicParsing="false" prefHeight="76.0" prefWidth="115.0" text="Données" />
+          <Button fx:id="butConfig" onMouseClicked="#onConfigButtonClick" prefHeight="77.0" prefWidth="112.0" text="Configuration" />
+         <Button fx:id="butData" mnemonicParsing="false" onMouseClicked="#onDataButtonClick" prefHeight="76.0" prefWidth="115.0" text="Données" />
       </VBox>
    </center>
    <top>

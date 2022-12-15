@@ -1,15 +1,9 @@
-package app;
+package app.g2b11.func;
 
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
 import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Timer;
-import java.util.TimerTask;
 
 public class lectureFic {
 	public static void main(String[] args) throws IOException {
@@ -17,7 +11,7 @@ public class lectureFic {
 		
 		Timer minuteur = new Timer();
 		// permet de r�p�ter l'action toutes les 10 minutes
-		minuteur.schedule(new monAction(), 0, 1*1000*60*10);
+		minuteur.schedule(new readDataFile(), 0, 1*1000*60*10);
 		
 	}
 	

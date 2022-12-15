@@ -19,18 +19,37 @@ public class EntrepotVisualAppController {
     @FXML
     private Button butData;
 
+    private Stage stage;
+
+    @FXML
+    public void initialize(){
+        stage = new Stage();
+    }
+
     @FXML
     protected void onConfigButtonClick() {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ConfigFrame.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
-            Stage stage = new Stage();
             stage.setScene(new Scene(root1));
             stage.setResizable(false);
             stage.show();
         } catch(Exception ex) {
             ex.printStackTrace();
         }
-
     }
+
+    @FXML
+    protected void onDataButtonClick() {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("DataFrame.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            stage.setScene(new Scene(root1));
+            stage.setResizable(false);
+            stage.show();
+        } catch(Exception ex) {
+            ex.printStackTrace();
+        }
+    }
+
 }

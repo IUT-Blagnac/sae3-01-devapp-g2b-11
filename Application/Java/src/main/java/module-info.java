@@ -2,6 +2,7 @@ module app.g2b11 {
     requires javafx.controls;
     requires javafx.fxml;
     requires json.simple;
+    requires com.google.gson;
 
 
     opens app.g2b11 to javafx.fxml;

@@ -52,5 +52,9 @@ public class createJsonConfig {
         c.put("data", data);
     }
 
+    public static void choixalerte (String[] alerte, JsonObject c){
+        c.put("alerte", alerte);
+    }
+
 
 }

@@ -1,4 +1,4 @@
-package app;
+package app.g2b11.func;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.TimerTask;
 
-public class monAction extends TimerTask{
+public class readDataFile extends TimerTask{
 	
 	/*
 	 * Permet de lire les informations d'un fichier .txt
