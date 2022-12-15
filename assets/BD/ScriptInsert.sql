@@ -99,81 +99,82 @@ VALUES('11','011','','','', '', '', '');
 INSERT INTO PRODUIT
 VALUES('12','012','','','', '', '', '');
 INSERT INTO PRODUIT
-VALUES();
+VALUES('13','001','Fraise Mara des bois',1.38,'Burban producteur', 'Un parfum très prononcé de fraises des bois, une texture fondante et originale', 'Eau, Glucides, Fibres, Vitamines C, Vitamine B', 20);
 INSERT INTO PRODUIT
-VALUES();
+VALUES('13','002','','','', '', '', '');
 INSERT INTO PRODUIT
-VALUES();
+VALUES('14','003','','','', '', '', '');
 INSERT INTO PRODUIT
-VALUES();
+VALUES('15','004','','','', '', '', '');
 INSERT INTO PRODUIT
-VALUES();
+VALUES('16','005','','','', '', '', '');
 INSERT INTO PRODUIT
-VALUES();
+VALUES('17','006','','','', '', '', '');
 INSERT INTO PRODUIT
-VALUES();
+VALUES('18','007','','','', '', '', '');
 INSERT INTO PRODUIT
-VALUES();
+VALUES('20','008','','','', '', '', '');
 INSERT INTO PRODUIT
-VALUES();
+VALUES('21','009','','','', '', '', '');
 INSERT INTO PRODUIT
-VALUES();
+VALUES('22','010','','','', '', '', '');
 INSERT INTO PRODUIT
-VALUES();
+VALUES('23','011','','','', '', '', '');
 INSERT INTO PRODUIT
-VALUES();
+VALUES('24','012','','','', '', '', '');
 INSERT INTO PRODUIT
-VALUES();
+VALUES('25','001','Fraise Mara des bois',1.38,'Burban producteur', 'Un parfum très prononcé de fraises des bois, une texture fondante et originale', 'Eau, Glucides, Fibres, Vitamines C, Vitamine B', 20);
 INSERT INTO PRODUIT
-VALUES();
+VALUES('26','002','','','', '', '', '');
 INSERT INTO PRODUIT
-VALUES();
+VALUES('27','003','','','', '', '', '');
 INSERT INTO PRODUIT
-VALUES();
+VALUES('28','004','','','', '', '', '');
 INSERT INTO PRODUIT
-VALUES();
+VALUES('29','005','','','', '', '', '');
 INSERT INTO PRODUIT
-VALUES();
+VALUES('30','006','','','', '', '', '');
 INSERT INTO PRODUIT
-VALUES();
+VALUES('31','007','','','', '', '', '');
 INSERT INTO PRODUIT
-VALUES();
+VALUES('32','008','','','', '', '', '');
 INSERT INTO PRODUIT
-VALUES();
+VALUES('33','009','','','', '', '', '');
 INSERT INTO PRODUIT
-VALUES();
+VALUES('34','010','','','', '', '', '');
 INSERT INTO PRODUIT
-VALUES();
+VALUES('35','011','','','', '', '', '');
 INSERT INTO PRODUIT
-VALUES();
+VALUES('36','012','','','', '', '', '');INSERT INTO PRODUIT
+VALUES('37','001','Fraise Mara des bois',1.38,'Burban producteur', 'Un parfum très prononcé de fraises des bois, une texture fondante et originale', 'Eau, Glucides, Fibres, Vitamines C, Vitamine B', 20);
 INSERT INTO PRODUIT
-VALUES();
+VALUES('38','002','','','', '', '', '');
 INSERT INTO PRODUIT
-VALUES();
+VALUES('39','003','','','', '', '', '');
 INSERT INTO PRODUIT
-VALUES();
+VALUES('40','004','','','', '', '', '');
 INSERT INTO PRODUIT
-VALUES();
+VALUES('41','005','','','', '', '', '');
 INSERT INTO PRODUIT
-VALUES();
+VALUES('42','006','','','', '', '', '');
 INSERT INTO PRODUIT
-VALUES();
+VALUES('43','007','','','', '', '', '');
 INSERT INTO PRODUIT
-VALUES();
+VALUES('44','008','','','', '', '', '');
 INSERT INTO PRODUIT
-VALUES();
+VALUES('45','009','','','', '', '', '');
 INSERT INTO PRODUIT
-VALUES();
+VALUES('46','010','','','', '', '', '');
 INSERT INTO PRODUIT
-VALUES();
+VALUES('47','011','','','', '', '', '');
 INSERT INTO PRODUIT
-VALUES();
+VALUES('48','012','','','', '', '', '');INSERT INTO PRODUIT
+VALUES('49','001','Fraise Mara des bois',1.38,'Burban producteur', 'Un parfum très prononcé de fraises des bois, une texture fondante et originale', 'Eau, Glucides, Fibres, Vitamines C, Vitamine B', 20);
 INSERT INTO PRODUIT
-VALUES();
+VALUES('50','002','','','', '', '', '');
 INSERT INTO PRODUIT
-VALUES();
-INSERT INTO PRODUIT
-VALUES();
+VALUES('51','003','','','', '', '', '');
+
 
 -- ///////////////////////////////////////////////////////////////
 
