@@ -101,7 +101,7 @@ VALUES('12','012','','','', '', '', '');
 INSERT INTO PRODUIT
 VALUES('13','001','Fraise Gariguette',3.00,'Le jardin de Marie','Fraise Gariguette juteuse et parfumée cultivée dans un jardin en Provence',null,300);
 INSERT INTO PRODUIT
-VALUES('13','002','Haricot blanc d\''Espelette',2.50,'Espelette BIO', 'Haricot blanc cultivé selon les méthodes biologiques dans la vallée d\'Espelette',null, 30);
+VALUES('13','002','Haricot blanc d\'Espelette',2.50,'Espelette BIO', 'Haricot blanc cultivé selon les méthodes biologiques dans la vallée d\'Espelette',null, 30);
 INSERT INTO PRODUIT
 VALUES('14','003','','','', '', '', '');
 INSERT INTO PRODUIT
