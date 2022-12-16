@@ -69,108 +69,40 @@ VALUES('010', '10', 'Liquide vaisselle');
 
 -- PRODUITS
 INSERT INTO PRODUIT
-VALUES('1','001','Fraise Mara des bois',1.38,'Burban producteur', 'Un parfum très prononcé de fraises des bois, une texture fondante et originale', null, 200);
+VALUES('','001','Fraise Mara des bois',1.38,'Burban producteur', 'Un parfum très prononcé de fraises des bois, une texture fondante et originale', null, 200);
 INSERT INTO PRODUIT
-VALUES('2','002','Haricot vert à filet de Pau',2.00,'Paulolo', 'Harciot vert cultivé avec passion et tendresse',null, 20);
+VALUES('','001','Fraise Gariguette',3.00,'Le jardin de Marie','Fraise Gariguette juteuse et parfumée cultivée dans un jardin en Provence',null,300);
 INSERT INTO PRODUIT
-VALUES('3','003','Ailes de poulet',4.90,'L''un des morceaux les plus tendres de viande de poulet', 'Boucherie Les Fontaines', null, 15);
+VALUES('','001','Fraise Charlotte',2.75,'Les champs de Bertrand','Fraise Charlotte ferme et aromatique cultivée dans les champs de la vallée de la Loire',null,275);
 INSERT INTO PRODUIT
-VALUES('4','004','Comté',13.95,'La Laiterie Toulousaine', 'Fromage au lait cru à pâte pressée.  A la fois doux, aromatique, parfois légèrement piquant, toujours parfumé', null, 33);
-INSERT INTO PRODUIT
-VALUES('5','005','', ,'Le paradis gourmand', '', , );
-INSERT INTO PRODUIT
-VALUES('6','006','','','', '', '', '');
-INSERT INTO PRODUIT
-VALUES('7','007','','','', '', '', '');
-INSERT INTO PRODUIT
-VALUES('8','008','','','', '', '', '');
-INSERT INTO PRODUIT
-VALUES('9','009','','','', '', '', '');
-INSERT INTO PRODUIT
-VALUES('10','010','','','', '', '', '');
-INSERT INTO PRODUIT
-VALUES('11','011','','','', '', '', '');
-INSERT INTO PRODUIT
-VALUES('12','012','','','', '', '', '');
-INSERT INTO PRODUIT
-VALUES('13','001','Fraise Gariguette',3.00,'Le jardin de Marie','Fraise Gariguette juteuse et parfumée cultivée dans un jardin en Provence',null,300);
-INSERT INTO PRODUIT
-VALUES('13','002','Haricot blanc d\'Espelette',2.50,'Espelette BIO', 'Haricot blanc cultivé selon les méthodes biologiques dans la vallée d\'Espelette',null, 30);
-INSERT INTO PRODUIT
-VALUES('14','003','','','', '', '', '');
-INSERT INTO PRODUIT
-VALUES('15','004','','','', '', '', '');
-INSERT INTO PRODUIT
-VALUES('16','005','','','', '', '', '');
-INSERT INTO PRODUIT
-VALUES('17','006','','','', '', '', '');
-INSERT INTO PRODUIT
-VALUES('18','007','','','', '', '', '');
-INSERT INTO PRODUIT
-VALUES('20','008','','','', '', '', '');
-INSERT INTO PRODUIT
-VALUES('21','009','','','', '', '', '');
-INSERT INTO PRODUIT
-VALUES('22','010','','','', '', '', '');
-INSERT INTO PRODUIT
-VALUES('23','011','','','', '', '', '');
-INSERT INTO PRODUIT
-VALUES('24','012','','','', '', '', '');
-INSERT INTO PRODUIT
-VALUES('25','001','Fraise Charlotte',2.75,'Les champs de Bertrand','Fraise Charlotte ferme et aromatique cultivée dans les champs de la vallée de la Loire',null,275);
-INSERT INTO PRODUIT
-VALUES('26','002','Flageolet du Puy',3.00,'Le Puy BIO', 'Flageolet cultivé avec soin dans la région du Puy en Velay',null, 40);
-INSERT INTO PRODUIT
-VALUES('27','003','','','', '', '', '');
-INSERT INTO PRODUIT
-VALUES('28','004','','','', '', '', '');
-INSERT INTO PRODUIT
-VALUES('29','005','','','', '', '', '');
-INSERT INTO PRODUIT
-VALUES('30','006','','','', '', '', '');
-INSERT INTO PRODUIT
-VALUES('31','007','','','', '', '', '');
-INSERT INTO PRODUIT
-VALUES('32','008','','','', '', '', '');
-INSERT INTO PRODUIT
-VALUES('33','009','','','', '', '', '');
-INSERT INTO PRODUIT
-VALUES('34','010','','','', '', '', '');
-INSERT INTO PRODUIT
-VALUES('35','011','','','', '', '', '');
-INSERT INTO PRODUIT
-VALUES('36','012','','','', '', '', '');
-INSERT INTO PRODUIT
-VALUES('37','001','Fraise Gorella',2.50,'Le marais de Paulo','Fraise Gorella justeuse et sucrée cultivé dans un marais à proximité de Toulouse',null,250);
-INSERT INTO PRODUIT
-VALUES('38','002','Haricot coco de Noirmoutier',3.50,'Noirmoutier BIO', 'Haricot coco cultivé sur l\'île de Noirmoutier en agriculture biologique',null, 50);
-INSERT INTO PRODUIT
-VALUES('39','003','','','', '', '', '');
-INSERT INTO PRODUIT
-VALUES('40','004','','','', '', '', '');
-INSERT INTO PRODUIT
-VALUES('41','005','','','', '', '', '');
-INSERT INTO PRODUIT
-VALUES('42','006','','','', '', '', '');
-INSERT INTO PRODUIT
-VALUES('43','007','','','', '', '', '');
-INSERT INTO PRODUIT
-VALUES('44','008','','','', '', '', '');
-INSERT INTO PRODUIT
-VALUES('45','009','','','', '', '', '');
-INSERT INTO PRODUIT
-VALUES('46','010','','','', '', '', '');
-INSERT INTO PRODUIT
-VALUES('47','011','','','', '', '', '');
-INSERT INTO PRODUIT
-VALUES('48','012','','','', '', '', '');
-INSERT INTO PRODUIT
-VALUES('49','001','Fraise Mara des champs',2.25,'Le potager de Samuel','Fraise Mara des champs robuste et sucrée cultivée dans un potager en Normandie',null,225);
-INSERT INTO PRODUIT
-VALUES('50','002','Haricot tarbais',4.00,'Tarbes BIO', 'Haricot tarbais cultivé avec amour dans la région de Tarbes',null, 60);
-INSERT INTO PRODUIT
-VALUES('51','003','','','', '', '', '');
+VALUES('','001','Fraise Gorella',2.50,'Le marais de Paulo','Fraise Gorella justeuse et sucrée cultivé dans un marais à proximité de Toulouse',null,250);
 
+INSERT INTO PRODUIT
+VALUES('','002','Haricot vert à filet de Pau',2.00,'Paulolo', 'Harciot vert cultivé avec passion et tendresse',null, 20);
+INSERT INTO PRODUIT
+VALUES('','002','Haricot blanc d''Espelette',2.50,'Espelette BIO', 'Haricot blanc cultivé selon les méthodes biologiques dans la vallée d''Espelette',null, 30);
+INSERT INTO PRODUIT
+VALUES('','002','Flageolet du Puy',3.00,'Le Puy BIO', 'Flageolet cultivé avec soin dans la région du Puy en Velay',null, 40);
+INSERT INTO PRODUIT
+VALUES('','002','Haricot coco de Noirmoutier',3.50,'Noirmoutier BIO', 'Haricot coco cultivé sur l''île de Noirmoutier en agriculture biologique',null, 50);
+
+INSERT INTO PRODUIT
+VALUES('','003','Ailes de poulet',10.81,'Boucherie Les Fontaines', 'L''un des morceaux les plus tendres de viande de poulet', null, 47);
+INSERT INTO PRODUIT
+VALUES('','003','Filet de poulet',31.30,'Boucherie Les Fontaines', 'Tranche fine de viande, prélevée sur la poitrine, dans le sens de la longueur', null, 22);
+INSERT INTO PRODUIT
+VALUES('','003','Pilons de poulet',8.90,'Boucherie Les Fontaines', 'Morceau charnu et très prisé, le pilon de poulet est une valeur sûre pour un repas facile et rapide', null, 36);
+INSERT INTO PRODUIT
+VALUES('','003','Cuisses de poulet',12.66,'Boucherie Les Fontaines', 'Viande tendre et savoureuse qu’on aime manger à pleines dents', null, 19);
+
+INSERT INTO PRODUIT
+VALUES('','004','Comté',17.90,'La Laiterie Toulousaine', 'Fromage au lait cru à pâte pressée.  A la fois doux, aromatique, parfois légèrement piquant, toujours parfumé', null, 33);
+INSERT INTO PRODUIT
+VALUES('','004','Roquefort',25.75,'La Laiterie Toulousaine', 'Fromage au lait cru de brebis reconnaissable entre tous par sa couleur ivoire et son délicat persillage vert émeraude,', null, 52);
+INSERT INTO PRODUIT
+VALUES('','004','Feta',18.61,'La Laiterie Toulousaine', 'Fromage grec typique à la texture ferme, onctueuse et à la couleur blanc ivoire, ce fromage à base de lait de brebis et de lait de chèvre', null, 15);
+INSERT INTO PRODUIT
+VALUES('','004','Cheddar',18.45,'La Laiterie Toulousaine', 'Fromgae à pâte pressée typiquement britannique au lait de vache pasteurisé avec un goût puissant et intense aux notes de caramel.', null, 64);
 
 -- ///////////////////////////////////////////////////////////////
 
