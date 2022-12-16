@@ -4,7 +4,7 @@ VALUES('1', 'Alimentation');
 INSERT INTO CATEGORIE (idcategorie, nomcategorie)
 VALUES('2', 'Hygiène');
 INSERT INTO CATEGORIE (idcategorie, nomcategorie)
-VALUES('3', 'Ménager');
+VALUES('3', 'Entretien');
 
 -- CATEGORIE FILLE
 INSERT INTO CATEGORIE (idcategorie, idcategoriemere ,nomcategorie)
@@ -28,11 +28,25 @@ INSERT INTO CATEGORIE (idcategorie, idcategoriemere ,nomcategorie)
 VALUES('09', '2', 'Soins');
 
 INSERT INTO CATEGORIE (idcategorie, idcategoriemere ,nomcategorie)
-VALUES('10', '3', 'Nettoyant cuisine');
+VALUES('10', '3', 'Vaisselle');
 INSERT INTO CATEGORIE (idcategorie, idcategoriemere ,nomcategorie)
-VALUES('11', '3', 'Nettoyant sol');
+VALUES('11', '3', 'Linge');
 INSERT INTO CATEGORIE (idcategorie, idcategoriemere ,nomcategorie)
-VALUES('12', '3', 'Nettoyant salle de bains');
+VALUES('12', '3', 'WC');
+INSERT INTO CATEGORIE (idcategorie, idcategoriemere ,nomcategorie)
+VALUES('13', '3', 'Meubles');
+INSERT INTO CATEGORIE (idcategorie, idcategoriemere ,nomcategorie)
+VALUES('14', '3', 'Jardin');
+INSERT INTO CATEGORIE (idcategorie, idcategoriemere ,nomcategorie)
+VALUES('15', '3', 'Salle de bain');
+INSERT INTO CATEGORIE (idcategorie, idcategoriemere ,nomcategorie)
+VALUES('16', '3', 'Cuisine');
+INSERT INTO CATEGORIE (idcategorie, idcategoriemere ,nomcategorie)
+VALUES('17', '3', 'Sol');
+INSERT INTO CATEGORIE (idcategorie, idcategoriemere ,nomcategorie)
+VALUES('18', '3', 'Poubelle');
+INSERT INTO CATEGORIE (idcategorie, idcategoriemere ,nomcategorie)
+VALUES('19', '3', 'Vitre');
 
 -- SOUS CATEGORIE FILLE
 INSERT INTO CATEGORIE (idcategorie, idcategoriemere ,nomcategorie)
@@ -69,76 +83,74 @@ VALUES('010', '10', 'Liquide vaisselle');
 
 -- PRODUITS
 INSERT INTO PRODUIT
-VALUES('','001','Fraise Mara des bois',1.38,'Burban producteur', 'Un parfum très prononcé de fraises des bois, une texture fondante et originale', null, 200);
+VALUES('1','001','Fraise Mara des bois',1.38,'Burban producteur', 'Un parfum très prononcé de fraises des bois, une texture fondante et originale', null, 200);
 INSERT INTO PRODUIT
-VALUES('','001','Fraise Gariguette',3.00,'Le jardin de Marie','Fraise Gariguette juteuse et parfumée cultivée dans un jardin en Provence',null,300);
+VALUES('2','001','Fraise Gariguette',3.00,'Le jardin de Marie','Fraise Gariguette juteuse et parfumée cultivée dans un jardin en Provence',null,300);
 INSERT INTO PRODUIT
-VALUES('','001','Fraise Charlotte',2.75,'Les champs de Bertrand','Fraise Charlotte ferme et aromatique cultivée dans les champs de la vallée de la Loire',null,275);
+VALUES('3','001','Fraise Charlotte',2.75,'Les champs de Bertrand','Fraise Charlotte ferme et aromatique cultivée dans les champs de la vallée de la Loire',null,275);
 INSERT INTO PRODUIT
-VALUES('','001','Fraise Gorella',2.50,'Le marais de Paulo','Fraise Gorella justeuse et sucrée cultivé dans un marais à proximité de Toulouse',null,250);
-
-INSERT INTO PRODUIT
-VALUES('','002','Haricot vert à filet de Pau',2.00,'Paulolo', 'Harciot vert cultivé avec passion et tendresse',null, 20);
-INSERT INTO PRODUIT
-VALUES('','002','Haricot blanc d''Espelette',2.50,'Espelette BIO', 'Haricot blanc cultivé selon les méthodes biologiques dans la vallée d''Espelette',null, 30);
-INSERT INTO PRODUIT
-VALUES('','002','Flageolet du Puy',3.00,'Le Puy BIO', 'Flageolet cultivé avec soin dans la région du Puy en Velay',null, 40);
-INSERT INTO PRODUIT
-VALUES('','002','Haricot coco de Noirmoutier',3.50,'Noirmoutier BIO', 'Haricot coco cultivé sur l''île de Noirmoutier en agriculture biologique',null, 50);
+VALUES('4','001','Fraise Gorella',2.50,'Le marais de Paulo','Fraise Gorella justeuse et sucrée cultivé dans un marais à proximité de Toulouse',null,250);
 
 INSERT INTO PRODUIT
-VALUES('','003','Ailes de poulet',10.81,'Boucherie Les Fontaines', 'L''un des morceaux les plus tendres de viande de poulet', null, 47);
+VALUES('5','002','Haricot vert à filet de Pau',2.00,'Paulolo', 'Harciot vert cultivé avec passion et tendresse',null, 20);
 INSERT INTO PRODUIT
-VALUES('','003','Filet de poulet',31.30,'Boucherie Les Fontaines', 'Tranche fine de viande, prélevée sur la poitrine, dans le sens de la longueur', null, 22);
+VALUES('6','002','Haricot blanc d''Espelette',2.50,'Espelette BIO', 'Haricot blanc cultivé selon les méthodes biologiques dans la vallée d''Espelette',null, 30);
 INSERT INTO PRODUIT
-VALUES('','003','Pilons de poulet',8.90,'Boucherie Les Fontaines', 'Morceau charnu et très prisé, le pilon de poulet est une valeur sûre pour un repas facile et rapide', null, 36);
+VALUES('7','002','Flageolet du Puy',3.00,'Le Puy BIO', 'Flageolet cultivé avec soin dans la région du Puy en Velay',null, 40);
 INSERT INTO PRODUIT
-VALUES('','003','Cuisses de poulet',12.66,'Boucherie Les Fontaines', 'Viande tendre et savoureuse qu’on aime manger à pleines dents', null, 19);
+VALUES('8','002','Haricot coco de Noirmoutier',3.50,'Noirmoutier BIO', 'Haricot coco cultivé sur l''île de Noirmoutier en agriculture biologique',null, 50);
 
 INSERT INTO PRODUIT
-VALUES('','004','Comté',17.90,'La Laiterie Toulousaine', 'Fromage au lait cru à pâte pressée.  A la fois doux, aromatique, parfois légèrement piquant, toujours parfumé', null, 33);
+VALUES('9','003','Ailes de poulet',10.81,'Boucherie Les Fontaines', 'L''un des morceaux les plus tendres de viande de poulet', null, 47);
 INSERT INTO PRODUIT
-VALUES('','004','Roquefort',25.75,'La Laiterie Toulousaine', 'Fromage au lait cru de brebis reconnaissable entre tous par sa couleur ivoire et son délicat persillage vert émeraude,', null, 52);
+VALUES('10','003','Filet de poulet',31.30,'Boucherie Les Fontaines', 'Tranche fine de viande, prélevée sur la poitrine, dans le sens de la longueur', null, 22);
 INSERT INTO PRODUIT
-VALUES('','004','Feta',18.61,'La Laiterie Toulousaine', 'Fromage grec typique à la texture ferme, onctueuse et à la couleur blanc ivoire, ce fromage à base de lait de brebis et de lait de chèvre', null, 15);
+VALUES('11','003','Pilons de poulet',8.90,'Boucherie Les Fontaines', 'Morceau charnu et très prisé, le pilon de poulet est une valeur sûre pour un repas facile et rapide', null, 36);
 INSERT INTO PRODUIT
-VALUES('','004','Cheddar',18.45,'La Laiterie Toulousaine', 'Fromgae à pâte pressée typiquement britannique au lait de vache pasteurisé avec un goût puissant et intense aux notes de caramel.', null, 64);
+VALUES('12','003','Cuisses de poulet',12.66,'Boucherie Les Fontaines', 'Viande tendre et savoureuse qu’on aime manger à pleines dents', null, 19);
 
-INSERT INTO Produit VALUES (1,1 , 'Poudre lave-vaisselle au sel de Camargue', 14.90, 'Comme Avant', 'Conçue à la main dans un atelier de Fabrication près de Marseille, cette poudre pour lave-vaisselle est une alternative naturelle qui rendra votre vaisselle propre et brillante.', 'Acide citrique, Cristaux de soude, Percarbonate de soude, Sel de Camargue', 23);
+INSERT INTO PRODUIT
+VALUES('13','004','Comté',17.90,'La Laiterie Toulousaine', 'Fromage au lait cru à pâte pressée.  A la fois doux, aromatique, parfois légèrement piquant, toujours parfumé', null, 33);
+INSERT INTO PRODUIT
+VALUES('14','004','Roquefort',25.75,'La Laiterie Toulousaine', 'Fromage au lait cru de brebis reconnaissable entre tous par sa couleur ivoire et son délicat persillage vert émeraude,', null, 52);
+INSERT INTO PRODUIT
+VALUES('15','004','Feta',18.61,'La Laiterie Toulousaine', 'Fromage grec typique à la texture ferme, onctueuse et à la couleur blanc ivoire, ce fromage à base de lait de brebis et de lait de chèvre', null, 15);
+INSERT INTO PRODUIT
+VALUES('16','004','Cheddar',18.45,'La Laiterie Toulousaine', 'Fromgae à pâte pressée typiquement britannique au lait de vache pasteurisé avec un goût puissant et intense aux notes de caramel.', null, 64);
 
-INSERT INTO Produit VALUES (2,2,'Lessive en poudre au bicarbonate', 9.90, 'Comme Avant', 'Cette lessive écologique est composée de seulement 4 ingrédients. Sa composition est simple, naturelle et efficace pour laver son linge (même blanc). Elle ne contient aucun parfum, même naturel, pour des vêtements propres et sans ordeur.', 'Citrate de sodium, Bicarbonate de soude, Cristaux de soude, Percarbonate de soude', 40);
+INSERT INTO Produit VALUES ('17','10' , 'Poudre lave-vaisselle au sel de Camargue', 14.90, 'Comme Avant', 'Conçue à la main dans un atelier de Fabrication près de Marseille, cette poudre pour lave-vaisselle est une alternative naturelle qui rendra votre vaisselle propre et brillante.', 'Acide citrique, Cristaux de soude, Percarbonate de soude, Sel de Camargue', 23);
 
-INSERT INTO Produit VALUES (3,2, '18-EN-1 Savon Liquide Lavande', 2.34, 'Dr. Bronners' , 'Le parfum généreux, direct et suave de la lavande, reconnaissable entre mille, reste un des parfums les plus apaisants. C’est la raison pour laquelle il est utilisé depuis toujours comme élément de détente. L’huile essentielle de lavande bio à des propriétés apaisantes pour le corps et l’esprit.', 'Eau, Cocoate de potassium, Chlorure de potassium, Olivate de potassium, Glycérine, Huilde de lavandin, Hempate de potassium, Potassium Jojobate, Huile de lavande, Acide Citrique', 12);
+INSERT INTO Produit VALUES ('18','11','Lessive en poudre au bicarbonate', 9.90, 'Comme Avant', 'Cette lessive écologique est composée de seulement 4 ingrédients. Sa composition est simple, naturelle et efficace pour laver son linge (même blanc). Elle ne contient aucun parfum, même naturel, pour des vêtements propres et sans ordeur.', 'Citrate de sodium, Bicarbonate de soude, Cristaux de soude, Percarbonate de soude', 40);
 
-INSERT INTO Produit VALUES (3,2, 'Nettoyant Universel', 2.99, 'Method', 'Ce nettoyant universel de method est à base d ingrédients biodégradables', 'Eau, Capryl Glucoside, Laureth-7, Tetrasodium, Glumatate Diacetate, Parfum, Limonene, Potassium Hydroxique, Hexyl, Cinnamal, Colorant', 34);
+INSERT INTO Produit VALUES ('19','008', '18-EN-1 Savon Liquide Lavande', 2.34, 'Dr. Bronners' , 'Le parfum généreux, direct et suave de la lavande, reconnaissable entre mille, reste un des parfums les plus apaisants. C’est la raison pour laquelle il est utilisé depuis toujours comme élément de détente', 'Eau, Cocoate de potassium, Chlorure de potassium, Olivate de potassium, Glycérine, Huilde de lavandin, Hempate de potassium, Potassium Jojobate, Huile de lavande, Acide Citrique', 12);
 
-INSERT INTO Produit VALUES (4,2,'Lessive liquide hypoallergénique 5l', 26.20, 'Etamin du Lys', 'Idéale Pour le textile des bébés, jeunes enfants et tous ceux qui ont une peau sensible. Sans agent de blanchiment, efficace aussi bien à la main qu''en machine et à basse température, elle vous laisse un linge propre et doux!', 'sucrières, palmistes, coco, savon, sodium hydroxymethylglycinate, parfum, eau, florale de camomille, sel, séquestrants', 25);
+INSERT INTO Produit VALUES ('20','3', 'Nettoyant Universel', 2.99, 'Method', 'Ce nettoyant universel de method est à base d ingrédients biodégradables', 'Eau, Capryl Glucoside, Laureth-7, Tetrasodium, Glumatate Diacetate, Parfum, Limonene, Potassium Hydroxique, Hexyl, Cinnamal, Colorant', 34);
 
-INSERT INTO Produit VALUES (5,2,'Détergent à vaisselle bio 5l', 18.50, 'Eco-Clean', 'Notre détergent à vaisselle biologique est fabriqué à partir d''ingrédients naturels et est doux pour les mains. Il laisse votre vaisselle brillante et propre sans utiliser de produits chimiques agressifs.', 'eau, amidon de maïs, coco, savon, sodium hydroxymethylglycinate, parfum, eau, florale de camomille, sel, séquestrants', 20);
+INSERT INTO Produit VALUES ('21','11','Lessive liquide hypoallergénique 5l', 26.20, 'Etamin du Lys', 'Idéale Pour le textile des bébés, jeunes enfants et tous ceux qui ont une peau sensible. Sans agent de blanchiment, efficace aussi bien à la main qu''en machine et à basse température, elle vous laisse un linge propre et doux!', 'sucrières, palmistes, coco, savon, sodium hydroxymethylglycinate, parfum, eau, florale de camomille, sel, séquestrants', 25);
 
-INSERT INTO Produit VALUES (6,2,'Nettoyant multi-surface bio 500ml', 9.99, 'Verte Ville', 'Notre nettoyant multi-surface biologique est idéal pour tous vos besoins de nettoyage quotidiens. Fabriqué à partir d''ingrédients naturels, il est doux pour les surfaces et pour l''environnement.', 'eau, coco, savon, sodium hydroxymethylglycinate, parfum, eau, florale de camomille, sel, séquestrants', 30);
+INSERT INTO Produit VALUES ('22','10','Détergent à vaisselle bio 5l', 18.50, 'Eco-Clean', 'Notre détergent à vaisselle biologique est fabriqué à partir d''ingrédients naturels et est doux pour les mains. Il laisse votre vaisselle brillante et propre sans utiliser de produits chimiques agressifs.', 'eau, amidon de maïs, coco, savon, sodium hydroxymethylglycinate, parfum, eau, florale de camomille, sel, séquestrants', 20);
 
-INSERT INTO Produit VALUES (7,2,'Lessive en poudre hypoallergénique 1kg', 12.99, 'Eco-Lavage', 'Notre lessive en poudre hypoallergénique est douce pour les peaux sensibles et efficace pour enlever les taches difficiles. Fabriquée à partir d''ingrédients naturels, elle est sûre pour votre famille et pour l''environnement.', 'sucrières, palmistes, coco, savon, sodium hydroxymethylglycinate, parfum, eau, florale de camomille, sel, séquestrants', 35);
+INSERT INTO Produit VALUES ('23','3','Nettoyant multi-surface bio 500ml', 9.99, 'Verte Ville', 'Notre nettoyant multi-surface biologique est idéal pour tous vos besoins de nettoyage quotidiens. Fabriqué à partir d''ingrédients naturels, il est doux pour les surfaces et pour l''environnement.', 'eau, coco, savon, sodium hydroxymethylglycinate, parfum, eau, florale de camomille, sel, séquestrants', 30);
 
-INSERT INTO Produit VALUES (8,2,'Déodorant pour les poubelles bio 500ml', 6.99, 'Odeur Fraîche', 'Notre déodorant pour les poubelles biologique est fabriqué à partir d''ingrédients naturels et est doux pour l''environnement. Il neutralise les mauvaises odeurs pour laisser votre poubelle fraîche et propre.', 'eau, coco, savon, sodium hydroxymethylglycinate, parfum, eau, florale de camomille, sel, séquestrants', 40);
+INSERT INTO Produit VALUES ('24','11','Lessive en poudre hypoallergénique 1kg', 12.99, 'Eco-Lavage', 'Notre lessive en poudre hypoallergénique est douce pour les peaux sensibles et efficace pour enlever les taches difficiles. Fabriquée à partir d''ingrédients naturels, elle est sûre pour votre famille et pour l''environnement.', 'sucrières, palmistes, coco, savon, sodium hydroxymethylglycinate, parfum, eau, florale de camomille, sel, séquestrants', 35);
 
-INSERT INTO Produit VALUES (9,2,'Nettoyant pour WC bio 750ml', 7.49, 'Eco-Toilette', 'Notre nettoyant pour WC biologique est efficace pour enlever les taches et les mauvaises odeurs sans utiliser de produits chimiques agressifs. Fabriqué à partir d''ingrédients naturels, il est sûr pour votre famille et pour l''environnement.', 'eau, coco, savon, sodium hydroxymethylglycinate, parfum, eau, florale de camomille, sel, séquestrants', 35);
+INSERT INTO Produit VALUES ('25','18','Déodorant pour les poubelles bio 500ml', 6.99, 'Odeur Fraîche', 'Notre déodorant pour les poubelles biologique est fabriqué à partir d''ingrédients naturels et est doux pour l''environnement. Il neutralise les mauvaises odeurs pour laisser votre poubelle fraîche et propre.', 'eau, coco, savon, sodium hydroxymethylglycinate, parfum, eau, florale de camomille, sel, séquestrants', 40);
 
-INSERT INTO Produit VALUES (10,2,'Nettoyant pour sols bio 1l', 9.99, 'Sol Propre', 'Notre nettoyant pour sols biologique est doux pour les surfaces et l''environnement. Il laisse vos sols propres et brillants sans utiliser de produits chimiques agressifs.', 'eau, coco, savon, sodium hydroxymethylglycinate, parfum, eau, florale de camomille, sel, séquestrants', 30);
+INSERT INTO Produit VALUES ('26','12','Nettoyant pour WC bio 750ml', 7.49, 'Eco-Toilette', 'Notre nettoyant pour WC biologique est efficace pour enlever les taches et les mauvaises odeurs sans utiliser de produits chimiques agressifs. Fabriqué à partir d''ingrédients naturels, il est sûr pour votre famille et pour l''environnement.', 'eau, coco, savon, sodium hydroxymethylglycinate, parfum, eau, florale de camomille, sel, séquestrants', 35);
 
-INSERT INTO Produit VALUES (11,2,'Nettoyant pour meubles en bois bio 500ml', 12.49, 'Bois Brillant', 'Notre nettoyant pour meubles en bois biologique est doux pour les surfaces et l''environnement. Il nourrit et protège vos meubles en bois tout en les laissant brillants et propres.', 'eau, coco, savon, sodium hydroxymethylglycinate, parfum, eau, florale de camomille, sel, séquestrants', 25);
+INSERT INTO Produit VALUES ('27','17','Nettoyant pour sols bio 1l', 9.99, 'Sol Propre', 'Notre nettoyant pour sols biologique est doux pour les surfaces et l''environnement. Il laisse vos sols propres et brillants sans utiliser de produits chimiques agressifs.', 'eau, coco, savon, sodium hydroxymethylglycinate, parfum, eau, florale de camomille, sel, séquestrants', 30);
 
-INSERT INTO Produit VALUES (12,2,'Nettoyant pour vitres bio 500ml', 8.99, 'Vitres Propres', 'Notre nettoyant pour vitres biologique est doux pour les surfaces et l''environnement. Il laisse vos vitres propres et brillantes sans laisser de traces.', 'eau, coco, savon, sodium hydroxymethylglycinate, parfum, eau, florale de camomille, sel, séquestrants', 20);
+INSERT INTO Produit VALUES ('28','13','Nettoyant pour meubles en bois bio 500ml', 12.49, 'Bois Brillant', 'Notre nettoyant pour meubles en bois biologique est doux pour les surfaces et l''environnement. Il nourrit et protège vos meubles en bois tout en les laissant brillants et propres.', 'eau, coco, savon, sodium hydroxymethylglycinate, parfum, eau, florale de camomille, sel, séquestrants', 25);
 
-INSERT INTO Produit VALUES (13,2,'Nettoyant pour cuisines bio 500ml', 9.99, 'Cuisine Propre', 'Notre nettoyant pour cuisines biologique est doux pour les surfaces et l''environnement. Il enlève efficacement les taches et les mauvaises odeurs sans utiliser de produits chimiques agressifs.', 'eau, coco, savon, sodium hydroxymethylglycinate, parfum, eau, florale de camomille, sel, séquestrants', 30);
+INSERT INTO Produit VALUES ('29','19','Nettoyant pour vitres bio 500ml', 8.99, 'Vitres Propres', 'Notre nettoyant pour vitres biologique est doux pour les surfaces et l''environnement. Il laisse vos vitres propres et brillantes sans laisser de traces.', 'eau, coco, savon, sodium hydroxymethylglycinate, parfum, eau, florale de camomille, sel, séquestrants', 20);
 
-INSERT INTO Produit VALUES (14,2,'Nettoyant pour salle de bain bio 500ml', 9.99, 'Salle de Bain Propre', 'Notre nettoyant pour salle de bain biologique est doux pour les surfaces et l''environnement. Il enlève efficacement les taches et les mauvaises odeurs sans utiliser de produits chimiques agressifs.', 'eau, coco, savon, sodium hydroxymethylglycinate, parfum, eau, florale de camomille, sel, séquestrants', 30);
+INSERT INTO Produit VALUES ('30','16','Nettoyant pour cuisines bio 500ml', 9.99, 'Cuisine Propre', 'Notre nettoyant pour cuisines biologique est doux pour les surfaces et l''environnement. Il enlève efficacement les taches et les mauvaises odeurs sans utiliser de produits chimiques agressifs.', 'eau, coco, savon, sodium hydroxymethylglycinate, parfum, eau, florale de camomille, sel, séquestrants', 30);
 
-INSERT INTO Produit VALUES (15,2,'Nettoyant pour jardin bio 1l', 12.99, 'Jardin Propre', 'Notre nettoyant pour jardin biologique est doux pour les surfaces et l''environnement. Il enlève efficacement les taches et les mauvaises odeurs sans utiliser de produits chimiques agressifs.', 'eau, coco, savon, sodium hydroxymethylglycinate, parfum, eau, florale de camomille, sel, séquestrants', 25);
+INSERT INTO Produit VALUES ('31','15','Nettoyant pour salle de bain bio 500ml', 9.99, 'Salle de Bain Propre', 'Notre nettoyant pour salle de bain biologique est doux pour les surfaces et l''environnement. Il enlève efficacement les taches et les mauvaises odeurs sans utiliser de produits chimiques agressifs.', 'eau, coco, savon, sodium hydroxymethylglycinate, parfum, eau, florale de camomille, sel, séquestrants', 30);
 
-INSERT INTO Produit VALUES (16,2,'Nettoyant pour meubles en cuir bio 250ml', 14.99, 'Cuir Propre', 'Notre nettoyant pour meubles en cuir biologique est doux pour les surfaces et l''environnement. Il nourrit et protège vos meubles en cuir tout en les laissant brillants et propres.', 'eau, coco, savon, sodium hydroxymethylglycinate, parfum, eau, florale de camomille, sel, séquestrants', 20);
+INSERT INTO Produit VALUES ('32','14','Nettoyant pour jardin bio 1l', 12.99, 'Jardin Propre', 'Notre nettoyant pour jardin biologique est doux pour les surfaces et l''environnement. Il enlève efficacement les taches et les mauvaises odeurs sans utiliser de produits chimiques agressifs.', 'eau, coco, savon, sodium hydroxymethylglycinate, parfum, eau, florale de camomille, sel, séquestrants', 25);
 
-VALUES('','004','Cheddar',18.45,'La Laiterie Toulousaine', 'Fromgae à pâte pressée typiquement britannique au lait de vache pasteurisé avec un goût puissant et intense aux notes de caramel.', null, 64);
+INSERT INTO Produit VALUES ('33','13','Nettoyant pour meubles en cuir bio 250ml', 14.99, 'Cuir Propre', 'Notre nettoyant pour meubles en cuir biologique est doux pour les surfaces et l''environnement. Il nourrit et protège vos meubles en cuir tout en les laissant brillants et propres.', 'eau, coco, savon, sodium hydroxymethylglycinate, parfum, eau, florale de camomille, sel, séquestrants', 20);
 
 -- ///////////////////////////////////////////////////////////////
 
@@ -200,36 +212,7 @@ INSERT INTO Clients VALUES ('60', '$2y$10$POjKzDoQW.GBG4p9xyyGBe8jwnOJklu4nI9nv.
 ----------------
 --ADMIN--
 ----------------
-insert into Admin values ('000000000001',null,'Balmes', 'Bastien','bastien@gmail.com','000022658410');
-
-
-----------------
---CATEGORIE--
-----------------
-insert into Categorie values ('1',null,'Fruits');
-insert into Categorie values ('2',null,'Légumes');
-insert into Categorie values ('8',null,'Savons');
-
-
-insert into Categorie values ('0001','1','Fraises');
-insert into Categorie values ('100  1','2','Courgette');
-insert into Categorie values ('01001','8','Savons Liquides');
-insert into Categorie values ('01002','8','Savons Solides');
-insert into Categorie values ('10001','2','Salades');
-
-
-
-
-----------------
---PRODUIT--
-----------------
-insert into Produit values ('1111','0001','Fraise Gorella',2.50,'Le marais de Paulo','Fraise Gorella justeuse et sucrée cultivé dans un marais à proximité de Toulouse',null,250);
-insert into Produit values ('1112','0001','Fraise Gariguette',3.00,'Le jardin de Marie','Fraise Gariguette juteuse et parfumée cultivée dans un jardin en Provence',null,300);
-insert into Produit values ('1113','0001','Fraise Charlotte',2.75,'Les champs de Bertrand','Fraise Charlotte ferme et aromatique cultivée dans les champs de la vallée de la Loire',null,275);
-insert into Produit values ('111','0001','Fraise Mara des bois',3.50,'La forêt de Sophie','Fraise Mara des bois délicate et fruitée cultivée dans la forêt de Fontainebleau',null,350);
-insert into Produit values ('1114','0001','Fraise Mara des champs',2.25,'Le potager de Samuel','Fraise Mara des champs robuste et sucrée cultivée dans un potager en Normandie',null,225);
-insert into Produit values ('1115','0001','Fraise des bois',3.25,'La ferme de Jacques','Fraise des bois sauvage et parfumée cueillie à la main dans la ferme de Jacques en Bretagne',null,325);
-
+insert into Admin values ('000000000001',null,'Balmes', 'Bastien','bastien@gmail.com','000022658410'); 
 
 ----------------
 --PAIEMENT&DETAILPAIEMENT--
