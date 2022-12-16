@@ -1,10 +1,10 @@
--- CATEGORIE MERE
+-- CATEGORIE  
 INSERT INTO CATEGORIE (idcategorie, nomcategorie)
 VALUES('1', 'Alimentation');
 INSERT INTO CATEGORIE (idcategorie, nomcategorie)
 VALUES('2', 'Hygiène');
 INSERT INTO CATEGORIE (idcategorie, nomcategorie)
-VALUES('3', 'Maison');
+VALUES('3', 'Ménager');
 
 -- CATEGORIE FILLE
 INSERT INTO CATEGORIE (idcategorie, idcategoriemere ,nomcategorie)
@@ -21,18 +21,18 @@ INSERT INTO CATEGORIE (idcategorie, idcategoriemere ,nomcategorie)
 VALUES('06', '1', 'Salé');
 
 INSERT INTO CATEGORIE (idcategorie, idcategoriemere ,nomcategorie)
-VALUES('07', '2', 'Gel douches');
+VALUES('07', '2', 'Savons');
 INSERT INTO CATEGORIE (idcategorie, idcategoriemere ,nomcategorie)
 VALUES('08', '2', 'Shampoings');
 INSERT INTO CATEGORIE (idcategorie, idcategoriemere ,nomcategorie)
 VALUES('09', '2', 'Soins');
 
 INSERT INTO CATEGORIE (idcategorie, idcategoriemere ,nomcategorie)
-VALUES('10', '3', 'Vaisselle');
+VALUES('10', '3', 'Nettoyant cuisine');
 INSERT INTO CATEGORIE (idcategorie, idcategoriemere ,nomcategorie)
-VALUES('11', '3', 'Décoration');
+VALUES('11', '3', 'Nettoyant sol');
 INSERT INTO CATEGORIE (idcategorie, idcategoriemere ,nomcategorie)
-VALUES('12', '3', 'Linge de maison');
+VALUES('12', '3', 'Nettoyant salle de bains');
 
 -- SOUS CATEGORIE FILLE
 INSERT INTO CATEGORIE (idcategorie, idcategoriemere ,nomcategorie)
@@ -54,22 +54,16 @@ INSERT INTO CATEGORIE (idcategorie, idcategoriemere ,nomcategorie)
 VALUES('006', '06', 'Chips');
 
 INSERT INTO CATEGORIE (idcategorie, idcategoriemere ,nomcategorie)
-VALUES('007', '07', 'Cadum');
+VALUES('006', '07', 'Savons liquides');
 
 INSERT INTO CATEGORIE (idcategorie, idcategoriemere ,nomcategorie)
-VALUES('008', '08', 'Dop');
+VALUES('006', '08', 'Shampoings liquides');
 
 INSERT INTO CATEGORIE (idcategorie, idcategoriemere ,nomcategorie)
-VALUES('009', '09', 'Axe');
+VALUES('007', '09', 'Soin du visage');
 
 INSERT INTO CATEGORIE (idcategorie, idcategoriemere ,nomcategorie)
-VALUES('010', '10', 'Assiettes');
-
-INSERT INTO CATEGORIE (idcategorie, idcategoriemere ,nomcategorie)
-VALUES('011', '11', 'Rangements');
-
-INSERT INTO CATEGORIE (idcategorie, idcategoriemere ,nomcategorie)
-VALUES('012', '12', 'Literie');
+VALUES('008', '10', 'Liquide vaisselle');
 
 -- ///////////////////////////////////////////////////////////////
 
