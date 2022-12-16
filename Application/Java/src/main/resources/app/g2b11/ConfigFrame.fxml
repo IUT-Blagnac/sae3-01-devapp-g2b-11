@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.Slider?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.BorderPane?>
@@ -12,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="280.0" prefWidth="277.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.g2b11.ConfigFrameController">
+<BorderPane prefHeight="303.0" prefWidth="438.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.g2b11.ConfigFrameController">
    <top>
       <Label fx:id="titre" text="Entrepôt VisualApp" BorderPane.alignment="CENTER">
          <font>
@@ -63,4 +65,16 @@
    <bottom>
       <Button fx:id="butValider" mnemonicParsing="false" onMouseClicked="#onButValider" text="Valider" BorderPane.alignment="CENTER" />
    </bottom>
+   <right>
+      <VBox alignment="TOP_CENTER" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Capteur" />
+            <ListView fx:id="lvCapteurs" prefHeight="252.0" prefWidth="137.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </ListView>
+         </children>
+      </VBox>
+   </right>
 </BorderPane>

@@ -6,5 +6,9 @@
     "co2"
   ],
   "seuiltemp" : 8,
-  "seuilhum" : 60
+  "seuilhum" : 60,
+  "alerte" : [
+    "temperature"
+  ],
+  "capteur" : "24e124128c017760"
 }

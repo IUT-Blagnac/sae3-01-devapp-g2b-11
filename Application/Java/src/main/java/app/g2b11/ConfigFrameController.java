@@ -45,6 +45,9 @@ public class ConfigFrameController {
     private CheckBox ckHum;
 
     @FXML
+    private ListView lvCapteurs;
+
+    @FXML
     private TextField txtNomFichier;
 
     @FXML
@@ -59,6 +62,16 @@ public class ConfigFrameController {
     private JsonObject config = new JsonObject();
 
     public void initialize(){
+        lvCapteurs.getItems().add("24e124128c017760");
+        lvCapteurs.getItems().add("24e124128c010091");
+        lvCapteurs.getItems().add("24e124128c014516");
+        lvCapteurs.getItems().add("24e124128c017412");
+        lvCapteurs.getItems().add("24e124128c017943");
+        lvCapteurs.getItems().add("24e124128c012259");
+        lvCapteurs.getItems().add("24e124128c011778");
+        lvCapteurs.getItems().add("24e124128c012114");
+        lvCapteurs.getItems().add("24e124128c013816");
+
         slideSeuilTemp.valueProperty().addListener((observable, oldValue, newValue) -> {
 
             lObsSeuilTemp.setText(Integer.toString(newValue.intValue()));
@@ -78,21 +91,6 @@ public class ConfigFrameController {
 
         return dico.get("nomFichier");
     }
-
-    public int getSeuilTemp() throws FileNotFoundException {
-        Gson gson = new Gson();
-        Map<String, Double> dico = gson.fromJson(new FileReader("src\\config.json"), Map.class);
-
-        return dico.get("seuiltemp").intValue();
-    }
-
-    public int getSeuilHum() throws  FileNotFoundException{
-        Gson gson = new Gson();
-        Map<String, Double> dico = gson.fromJson(new FileReader("src\\config.json"), Map.class);
-
-        return dico.get("seuilhum").intValue();
-    }
-
 
     @FXML
     public void onButValider() {
@@ -120,7 +118,15 @@ public class ConfigFrameController {
 
             a.show();
         }
-        if (txtNomFichier.getText() == null || txtNomFichier.getText().equals("") || txtNomFichier.getText().equals(" ")){
+        else if(lvCapteurs.getSelectionModel().getSelectedItem() == null){
+            Alert a = new Alert(Alert.AlertType.ERROR);
+            a.setTitle("Erreur capteur");
+            a.setHeaderText("Erreur dans la sélection d'un capteur !");
+            a.setContentText("Veuillez choisir un capteur.");
+
+            a.show();
+        }
+        else if (txtNomFichier.getText() == null || txtNomFichier.getText().equals("") || txtNomFichier.getText().equals(" ")){
             Alert a = new Alert(Alert.AlertType.ERROR);
             a.setTitle("Erreur Saisie champ");
             a.setHeaderText("Erreur dans la saisie du nom du fichier !");
@@ -140,6 +146,8 @@ public class ConfigFrameController {
             createJsonConfig.ecrireNomFich(txtNomFichier.getText(), config);
 
             createJsonConfig.choixdata(data, config);
+
+            createJsonConfig.ecrireCapteur((String) lvCapteurs.getSelectionModel().getSelectedItem(), config);
 
             createJsonConfig.choixalerte(alerte, config);
 

@@ -113,11 +113,12 @@ public class DataFrameController {
 
                         System.out.println(datadict.keySet());
                         System.out.println(valTemp);
+                        System.out.println(datadict.get("AlerteTemperature"));
                         // put random number with current time
                         if (datadict.keySet().contains("Temperature")) {
                             dataSeriesTemp.getData().add(new XYChart.Data(simpleDateFormat.format(now), datadict.get("Temperature")));
                             valTemp.add(datadict.get("Temperature"));
-                            if(datadict.get("Temperature") > configController.getSeuilTemp()){
+                            if(datadict.get("AlerteTemperature") == 1.0){
                                 Alert seuilTemp = new Alert(Alert.AlertType.WARNING);
                                 seuilTemp.setTitle("Alerte seuil");
                                 seuilTemp.setHeaderText("Seuil température trop élevé");
@@ -132,7 +133,7 @@ public class DataFrameController {
                         if (datadict.keySet().contains("Humidity")) {
                             dataSeriesHum.getData().add(new XYChart.Data(simpleDateFormat.format(now), datadict.get("Humidity")));
                             valHum.add(datadict.get("Humidity"));
-                            if(datadict.get("Humidity") > configController.getSeuilHum()){
+                            if(datadict.get("AlerteHumidite") == 1.0){
                                 Alert seuilHum = new Alert(Alert.AlertType.WARNING);
                                 seuilHum.setTitle("Alerte seuil");
                                 seuilHum.setHeaderText("Seuil d'humidité trop élevé");
@@ -154,7 +155,7 @@ public class DataFrameController {
                     }
 
                 });
-            }, 0, 1, TimeUnit.MINUTES);
+            }, 0, 10, TimeUnit.MINUTES);
     }
 
 
