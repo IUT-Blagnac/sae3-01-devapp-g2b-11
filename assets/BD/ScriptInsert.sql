@@ -75,15 +75,15 @@ VALUES('012', '12', 'Literie');
 
 -- PRODUITS
 INSERT INTO PRODUIT
-VALUES('1','001','Fraise Mara des bois',6.19,'Burban producteur', 'Un parfum très prononcé de fraise des bois, une texture fondante et originale', 'Eau, Glucides, Fibres, Vitamines C, Vitamine B', 20);
+VALUES('1','001','Fraise Mara des bois',1.38,'Burban producteur', 'Un parfum très prononcé de fraises des bois, une texture fondante et originale', null, 200);
 INSERT INTO PRODUIT
-VALUES('2','002','Haricot vert à filet',4.20,'Les graines Bocquet', 'Haricot vert fins avec une gousses fines et droites, parfaitement rondes, de couleur vert très foncé', 'Graisse, Glucide, Fibre, Protéines', 40);
+VALUES('2','002','Haricot vert à filet de Pau',2.00,'Paulolo', 'Harciot vert cultivé avec passion et tendresse',null, 20);
 INSERT INTO PRODUIT
-VALUES('3','003','Ailes de poulet',4.90,'L''un des morceaux les plus tendres de viande de poulet', 'Boucherie Les Fontaines', 'Eau, Protéines, Lipides', 15);
+VALUES('3','003','Ailes de poulet',4.90,'L''un des morceaux les plus tendres de viande de poulet', 'Boucherie Les Fontaines', null, 15);
 INSERT INTO PRODUIT
-VALUES('4','004','Comté',''13.95,'La Laiterie Toulousaine', 'Fromage au lait cru à pâte pressée.  A la fois doux, aromatique, parfois légèrement piquant, toujours parfumé', 'Lait cru, Ferments lactiques, Présuren, Sel', 33);
+VALUES('4','004','Comté',13.95,'La Laiterie Toulousaine', 'Fromage au lait cru à pâte pressée.  A la fois doux, aromatique, parfois légèrement piquant, toujours parfumé', null, 33);
 INSERT INTO PRODUIT
-VALUES('5','005','Haribo Tagada',9.99,'Le paradis gourmand', 'Un goût, une texture et une allure inimitables, Tagada est le bonbon qui fait le bonheur des petits et des grands', 'Sucre, Sirop de glucose, gélatine, Acide citrique', 47);
+VALUES('5','005','Haribo Tagada',9.99,'Le paradis gourmand', 'Un goût, une texture et une allure inimitables, Tagada est le bonbon qui fait le bonheur des petits et des grands', null, 47);
 INSERT INTO PRODUIT
 VALUES('6','006','','','', '', '', '');
 INSERT INTO PRODUIT
@@ -99,9 +99,9 @@ VALUES('11','011','','','', '', '', '');
 INSERT INTO PRODUIT
 VALUES('12','012','','','', '', '', '');
 INSERT INTO PRODUIT
-VALUES('13','001','Fraise Mara des bois',1.38,'Burban producteur', 'Un parfum très prononcé de fraises des bois, une texture fondante et originale', null, 20);
+VALUES('13','001','Fraise Gariguette',3.00,'Le jardin de Marie','Fraise Gariguette juteuse et parfumée cultivée dans un jardin en Provence',null,300);
 INSERT INTO PRODUIT
-VALUES('13','002','','','', '', '', '');
+VALUES('13','002','Haricot blanc d\''Espelette',2.50,'Espelette BIO', 'Haricot blanc cultivé selon les méthodes biologiques dans la vallée d\'Espelette',null, 30);
 INSERT INTO PRODUIT
 VALUES('14','003','','','', '', '', '');
 INSERT INTO PRODUIT
@@ -123,9 +123,9 @@ VALUES('23','011','','','', '', '', '');
 INSERT INTO PRODUIT
 VALUES('24','012','','','', '', '', '');
 INSERT INTO PRODUIT
-VALUES('25','001','Fraise Mara des bois',1.38,'Burban producteur', 'Un parfum très prononcé de fraises des bois, une texture fondante et originale',null, 20);
+VALUES('25','001','Fraise Charlotte',2.75,'Les champs de Bertrand','Fraise Charlotte ferme et aromatique cultivée dans les champs de la vallée de la Loire',null,275);
 INSERT INTO PRODUIT
-VALUES('26','002','','','', '', '', '');
+VALUES('26','002','Flageolet du Puy',3.00,'Le Puy BIO', 'Flageolet cultivé avec soin dans la région du Puy en Velay',null, 40);
 INSERT INTO PRODUIT
 VALUES('27','003','','','', '', '', '');
 INSERT INTO PRODUIT
@@ -147,9 +147,9 @@ VALUES('35','011','','','', '', '', '');
 INSERT INTO PRODUIT
 VALUES('36','012','','','', '', '', '');
 INSERT INTO PRODUIT
-VALUES('37','001','Fraise Mara des bois',1.38,'Burban producteur', 'Un parfum très prononcé de fraises des bois, une texture fondante et originale', null, 20);
+VALUES('37','001','Fraise Gorella',2.50,'Le marais de Paulo','Fraise Gorella justeuse et sucrée cultivé dans un marais à proximité de Toulouse',null,250);
 INSERT INTO PRODUIT
-VALUES('38','002','','','', '', '', '');
+VALUES('38','002','Haricot coco de Noirmoutier',3.50,'Noirmoutier BIO', 'Haricot coco cultivé sur l\'île de Noirmoutier en agriculture biologique',null, 50);
 INSERT INTO PRODUIT
 VALUES('39','003','','','', '', '', '');
 INSERT INTO PRODUIT
@@ -171,9 +171,9 @@ VALUES('47','011','','','', '', '', '');
 INSERT INTO PRODUIT
 VALUES('48','012','','','', '', '', '');
 INSERT INTO PRODUIT
-VALUES('49','001','Fraise Mara des bois',1.38,'Burban producteur', 'Un parfum très prononcé de fraises des bois, une texture fondante et originale', null, 20);
+VALUES('49','001','Fraise Mara des champs',2.25,'Le potager de Samuel','Fraise Mara des champs robuste et sucrée cultivée dans un potager en Normandie',null,225);
 INSERT INTO PRODUIT
-VALUES('50','002','','','', '', '', '');
+VALUES('50','002','Haricot tarbais',4.00,'Tarbes BIO', 'Haricot tarbais cultivé avec amour dans la région de Tarbes',null, 60);
 INSERT INTO PRODUIT
 VALUES('51','003','','','', '', '', '');
 
