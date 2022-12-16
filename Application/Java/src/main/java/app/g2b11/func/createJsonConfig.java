@@ -48,6 +48,8 @@ public class createJsonConfig {
         c.put("seuilhum", seuilHumid);
     }
 
+    public static void ecrireCapteur(String capteur, JsonObject c){c.put("capteur", capteur);}
+
     public static void choixdata (String[] data, JsonObject c){
         c.put("data", data);
     }
