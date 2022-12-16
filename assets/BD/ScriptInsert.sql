@@ -54,16 +54,16 @@ INSERT INTO CATEGORIE (idcategorie, idcategoriemere ,nomcategorie)
 VALUES('006', '06', 'Chips');
 
 INSERT INTO CATEGORIE (idcategorie, idcategoriemere ,nomcategorie)
-VALUES('006', '07', 'Savons liquides');
+VALUES('007', '07', 'Savons liquides');
 
 INSERT INTO CATEGORIE (idcategorie, idcategoriemere ,nomcategorie)
-VALUES('006', '08', 'Shampoings liquides');
+VALUES('008', '08', 'Shampoings liquides');
 
 INSERT INTO CATEGORIE (idcategorie, idcategoriemere ,nomcategorie)
-VALUES('007', '09', 'Soin du visage');
+VALUES('009', '09', 'Soin du visage');
 
 INSERT INTO CATEGORIE (idcategorie, idcategoriemere ,nomcategorie)
-VALUES('008', '10', 'Liquide vaisselle');
+VALUES('010', '10', 'Liquide vaisselle');
 
 -- ///////////////////////////////////////////////////////////////
 
@@ -77,7 +77,7 @@ VALUES('3','003','Ailes de poulet',4.90,'L''un des morceaux les plus tendres de 
 INSERT INTO PRODUIT
 VALUES('4','004','Comté',13.95,'La Laiterie Toulousaine', 'Fromage au lait cru à pâte pressée.  A la fois doux, aromatique, parfois légèrement piquant, toujours parfumé', null, 33);
 INSERT INTO PRODUIT
-VALUES('5','005','Haribo Tagada',9.99,'Le paradis gourmand', 'Un goût, une texture et une allure inimitables, Tagada est le bonbon qui fait le bonheur des petits et des grands', null, 47);
+VALUES('5','005','', ,'Le paradis gourmand', '', , );
 INSERT INTO PRODUIT
 VALUES('6','006','','','', '', '', '');
 INSERT INTO PRODUIT
