@@ -171,7 +171,7 @@ VALUES('48','009','Masque purifiant à la menthe 50ml','MINT LAB',22.90, 'Masque
 INSERT INTO PRODUIT
 VALUES('49','009','Crème hydratante au jojoba 50ml','NATURAL BEAUTY',24.50, 'Crème hydratante au jojoba, une formule biologique qui nourrit et régénère la peau en profondeur grâce à ses propriétés nourrissantes. Convient à tous les types de peau. ', 'Aqua (eau), simmondsia chinensis seed oil (jojoba), glycerin, cetearyl olivate, sorbitan olivate, cetyl palmitate, panthenol, tocopherol (vitamine E), benzyl alcohol, sodium benzoate, potassium sorbate, citric acid, parfum naturel.', 45);
 INSERT INTO PRODUIT
-VALUES('50','009009','Sérum anti-âge à la bave d''escargot 50ml','SNAIL NATURE',29.99, 'Sérum anti-âge à la bave d''escargot, une formule biologique qui lisse et raffermit la peau grâce à ses propriétés régénérantes. Convient à tous les types de peau. ', 'Aqua (eau), snail secretion filtrate, glycerin, propanediol, sodium hyaluronate, panthenol, allantoin, xanthan gum, tocopherol (vitamine E), benzyl alcohol, sodium benzoate, potassium sorbate, citric acid, parfum naturel.', 30);
+VALUES('50','009','Sérum anti-âge à la bave d''escargot 50ml','SNAIL NATURE',29.99, 'Sérum anti-âge à la bave d''escargot, une formule biologique qui lisse et raffermit la peau grâce à ses propriétés régénérantes. Convient à tous les types de peau. ', 'Aqua (eau), snail secretion filtrate, glycerin, propanediol, sodium hyaluronate, panthenol, allantoin, xanthan gum, tocopherol (vitamine E), benzyl alcohol, sodium benzoate, potassium sorbate, citric acid, parfum naturel.', 30);
 
 -- ///////////////////////////////////////////////////////////////
 
