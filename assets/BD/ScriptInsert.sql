@@ -1,10 +1,3 @@
--- CATEGORIE 
-INSERT INTO CATEGORIE (idcategorie, nomcategorie)
-VALUES('1', 'Alimentation');
-INSERT INTO CATEGORIE (idcategorie, nomcategorie)
-VALUES('2', 'Hygiène');
-INSERT INTO CATEGORIE (idcategorie, nomcategorie)
-VALUES('3', 'Entretien');
 
 -- CATEGORIE FILLE
 INSERT INTO CATEGORIE (idcategorie, idcategoriemere ,nomcategorie)
