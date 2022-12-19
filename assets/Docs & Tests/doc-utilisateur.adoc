@@ -1,1 +1,42 @@
 = DOCUMENTATION UTILISATEUR
+:nofooter:
+:toc: left
+:icons: font
+
+== Guide de l'utilisateur
+
+=== Crée un compte 
+
+Pour se connecter à un compte client, rendez-vous sur la page : [.underline]#Connexion# en cliquant sur le lien disponible sur *l'en-tête* et entrez les informations demander, à savoir le mail et le mot de passe. +
+Au clique du bouton : [.underline]#Se connecter#, si ces deux informations ne sont pas erroné la connection est établie.
+
+=== Se connecter à un compte
+
+Pour crée un compte client, rendez-vous sur page : [.underline]#Connexion# en cliquant sur le lien disponible sur *l'en-tête* et cliquer sur le bouton : [.underline]#Créer un compte chez Royal Bio# pour être redirigez vers le formulaire de création d'un compte. +
+Saissisez ensuite les différent champs et valider en cliquant sur le bouton : *Valider*
+
+.La création d'un compte Royal Bio ne peut être validée si l'un des cas suivant n'est pas respecter : 
+
+. Les champs : _Nom_ et _Prénom_ contiennent un chiffres
+. Le champs _mail_ ne contient pas le symbole : *@*
+. Le champs _mot de passe_ doit contenir au minimum 8 caractères, sachant qu'il doit y avoir au minimum 
+.. une majuscule
+.. une minuscule
+.. un caractère spécial
+
+=== Recherche et consulter des produits
+
+Pour consulter les produits d'un catégorie spécifique, sélectionner celle-ci dans le sous-menu de *l'en-tête* +
+
+Pour recherche un produit spécifique, utilisez la barre de recherche disponible sur *l'en-tête*
+
+WARNING: La recherche peut échouer, votre produit n'existe peut-être pas ou vérifiez l'ortographe 
+
+
+=== Ajouter des produits à son panier
+
+== Guide de l'Administrateur
+
+=== Gérer les produits
+
+=== Gérer les clients
