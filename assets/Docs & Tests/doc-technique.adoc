@@ -1,1 +1,33 @@
 = DOCUMENTATION TECHNIQUE
+:nofooter:
+:toc: left
+:icons: font
+
+== Guide technique du site web
+
+===  Création d'un compte
+
+=== Création du cookie de connexion
+
+Dans un premier temps, nous incluons le fichier qui permet la connexion à la base de données et donc de réalisé les différentes requêtes sur celle-ci. +
+
+Ensuite, nous vérifions si les cookies de connexion existent et sont définies. +
+Si c'est le cas, nous déclarons deux variables qui prendront pour valeurs celles contenues dans les cookies. +
+
+TIP: Si les cookies sont définies, lors de la prochaine connexion de l'utilisateur, les champs seront pré-remplis.
+
+.Le traitement du formulaire se fait dans le fichier : [.underline]#TraitConnexion.php# :
+
+. Vérification si les champs sont remplis
+. Inclusions du fichier permettant la connexion à la base de données
+. Création de deux variables prennant pour valeurs celles des champs et utilisation des méthodes *htmlspecialchars()* et *password_hash()* pour ajouter plus de sécurité contre les attaques XSS et hasher le mot de passe pour ne pas le stocker en clair.
+. Préparation et exécution de la requête SQL qui recherche l'email et le mot de passe taper par l'utilisateur. Cela permet de vérifier que :
+.. l'utilisateur possède bien un compte avec cette adresse mail
+.. que le mot de passe correspond bien à cette adresse mail.
+. Vérification de la validité des  
+
+=== Connexion à un compte 
+
+=== Rechercher et consultation des produits
+
+=== Ajouter des produits au panier
