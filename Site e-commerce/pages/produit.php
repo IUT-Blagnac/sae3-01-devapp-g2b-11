@@ -162,6 +162,7 @@
                             from produit
                             where lower(nomproduit) LIKE '%$_GET[recherche]%'
                         ";
+
                         
                 }
 

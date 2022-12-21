@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/~SAESYS11/styles.css">
 </head>
 <body>
+    <script src="../include/acces.js"></script>
     <?php include "../include/header.php"; ?>
     <div class="container">
         <?php
@@ -50,7 +51,7 @@
         </form>
         
         
-    </div>   ²  
+    </div> 
     <?php include "../include/footer.php"; ?>
 </body>
 </html>
