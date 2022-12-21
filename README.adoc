@@ -1,10 +1,11 @@
 = SAÉ 3.01 2022-2023
+:nofooter:
 :icons: font
 :models: models
 :experimental:
 :incremental:
 :numbered:
-:toc: macro
+:toc: left
 :window: _blank
 :correction!:
 
@@ -28,8 +29,7 @@ ifdef::env-github[]
 :icongit: Git
 endif::[]
 
-// /!\ A MODIFIER !!!
-:baseURL: https://github.com/IUT-Blagnac/sae3-01-template
+:baseURL: https://github.com/IUT-Blagnac/sae3-01-devapp-g2b-11
 
 // Tags
 image:{baseURL}/actions/workflows/blank.yml/badge.svg[Bidon] 
@@ -38,14 +38,11 @@ image:{baseURL}/actions/workflows/tests.yml/badge.svg[Tests]
 image:https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg[License: MPL-2.0, link="https://opensource.org/licenses/MPL-2.0"]
 //---------------------------------------------------------------
 
-TIP: Pensez à mettre à jour les infos dans ce fichier pour que les badges pointent sur les résultats effectifs de vos intégrations continue ou sur la bonne licence logicielle.
-
 WARNING: Ce dépôt présente le projet à développer dans le cadre de la SAÉ 3.01 du BUT1 Informatique de l'IUT de Blagnac.
 
 Ce fichier `README.adoc` (dont vous lisez sûrement le rendu HTML automatiquement effectué par GitHUb), fait partie du dépôt initial cloné à partir du lien GitHub classroom qui vous a été donné en cours (https://classroom.github.com/a/OUF7gxEa).
 Vous trouverez le dépôt "template" qui a servi de base ici : https://github.com/IUT-Blagnac/sae3-01-template. En complément du cours Moodle de la SAE 3.01 (cf. <<liensUtiles>>), ce dépôt template vous permet d'accéder à des exemples d'https://github.com/IUT-Blagnac/sae3-01-template/issues[issues], de https://github.com/IUT-Blagnac/sae3-01-template/releases[releases], ou d'autres artefacts à venir.
 
-toc::[]
 
 == Equipe
 
@@ -56,40 +53,39 @@ Projet est réalisé par::
 - https://github.com/Chris-973[Chrispher MARIE-ANGÉLIQUE]
 - https://github.com/Zekoko[Bastien BALMES]
 
-Tuteur/tutrice enseignant(e) de l'équipe:: mailto:pascal.sotin@univ-tlse2.fr[PSO]
-
-== Contexte général
-
-TIP: Cette partie de votre `README.adoc` peut être supprimée ou mise ailleurs.
-
-=== Dépôt initial
-
-Ce dépôt initial a été créé pour que tous les groupes de 2ème année aient les mêmes informations de départ.
-
-Vous y trouverez des fichiers qui peuvent être supprimés s'ils ne vous sont pas utiles :
-
-- `.gitignore` => un fichier minimaliste des éléments à ne pas pousser en général sur vos dépôts (utiliser la commande `git add -f` pour forcer l'ajout d'un fichier Jar qui ne bougera plus, pour archive par exemple).
-- `.github` => le répertoire qui contient des éléments de gestion de projet :
-** `workflows` => le repertoire qui contient les actions à lancer à chaque push sur votre repo. 
-*** `blank.yml` => un exemple bidon mais dont vous pourrez vérifier l’exécution correcte (1er tag)
-** `ISSUE_TEMPLATE` => le repertoire qui contient quelques templates pour vos issues.
-*** `us.yml` => Exemple de template pour les User Stories
-*** `bug.yml` => Exemple de template pour les issues de bug report
-
-TIP: Adaptez ces fichiers à votre projet et à votre organisation. Et inspirez-vous en pour en ajouter.
-
-[[liensUtiles]]
-=== Liens utiles
-
-- Le https://webetud.iut-blagnac.fr/course/view.php?id=841[cours Moodle] sur la SAE
-- Le dépôt https://github.com/IUT-Blagnac/sae3-01-template[template] qui sert de base à tous les dépôts étudiants.
-- Le lien https://classroom.github.com/a/OUF7gxEa[classroom] si besoin.
-
-TIP: Pensez à utiliser les salons Discord dédiés pour poser vos questions.
+Tuteur/tutrice enseignant(e) de l'équipe:: mailto:pascal.sotin@univ-tlse2.fr[Pascal Sotin]
 
 == Réalisations 
 
-Dossier contenant des informations sur les différents domaines concernés par cette SAE : https://github.com/IUT-Blagnac/sae3-01-devapp-g2b-11/tree/master/assets[Assets]
+.Vous trouverez ci-dessous les liens vers les différentes réalisations effectuée par notre groupe :
+
+. https://github.com/IUT-Blagnac/sae3-01-devapp-g2b-11/tree/master/Site%20e-commerce[Dossier du site web] : En suivant ce lien, vous serez redirigez vers le dossier qui contient les sources code du site e-commerce que nous développons
+
+.. https://github.com/IUT-Blagnac/sae3-01-devapp-g2b-11/tree/master/Site%20e-commerce/img[Dossier img] : Dossier contenant les images utilisées sur le site que nous développons.
+
+.. https://github.com/IUT-Blagnac/sae3-01-devapp-g2b-11/tree/master/Site%20e-commerce/include[Dossier include] : Dossier contenant les fichiers inclues sur plusieurs pages du site que nous développons.
+
+.. https://github.com/IUT-Blagnac/sae3-01-devapp-g2b-11/tree/master/Site%20e-commerce/pages[Dossier pages] : Dossier contenant les différentes pages du site que nous développons
+
+.. https://github.com/IUT-Blagnac/sae3-01-devapp-g2b-11/tree/master/Site%20e-commerce/styles[Dossier styles] : Dossier contenant les différents fichiers de style des pages du site que nous développons
+
+. https://github.com/IUT-Blagnac/sae3-01-devapp-g2b-11/tree/master/Application[Application IOT] : En suivant ce lien, vous serez redirigez vers le dossier contenant les sources code de l'application IOT que nous développons.
+
+.. https://github.com/IUT-Blagnac/sae3-01-devapp-g2b-11/tree/master/Application/Java[Dossier Java] : IHM et code sources Java
+
+.. https://github.com/IUT-Blagnac/sae3-01-devapp-g2b-11/tree/master/Application/Python[Dossier Python] : Code sources Python
+
+. https://github.com/IUT-Blagnac/sae3-01-devapp-g2b-11/tree/master/assets[Dossier Assets] : Dossier contenant les différent dossier et compte rendu du projet que nous développons :
+
+.. https://github.com/IUT-Blagnac/sae3-01-devapp-g2b-11/tree/master/assets/BD[Dossier BD] : Dossier contenant les code sources de la base de données que nous avons développpée
+
+.. https://github.com/IUT-Blagnac/sae3-01-devapp-g2b-11/tree/master/assets/Docs%20%26%20Tests[Dossier Docs & Tests] : Dossier contenant les documentations https://github.com/IUT-Blagnac/sae3-01-devapp-g2b-11/blob/master/assets/Docs%20%26%20Tests/doc-technique.adoc[technique] et https://github.com/IUT-Blagnac/sae3-01-devapp-g2b-11/blob/master/assets/Docs%20%26%20Tests/doc-utilisateur.adoc[utilisateur] ainsi que les différents tests efféctié sur le site et l'application que nous développons
+
+.. https://github.com/IUT-Blagnac/sae3-01-devapp-g2b-11/tree/master/assets/GPO[Dossier GPO] : Dossier contenant l'appel d'offre ainsi que les cahier des charges de notre client
+
+.. https://github.com/IUT-Blagnac/sae3-01-devapp-g2b-11/tree/master/assets/PHP[Dossier PHP] : Dossier contenant les comptes rendu du backend du site que nous développons
+
+.. https://github.com/IUT-Blagnac/sae3-01-devapp-g2b-11/tree/master/assets/Reunion[Dossier Réunion] : Dossier contenant les comptes rendu des réunion des Sprints effectués
 
 == Gestion de projet & Qualité
 
@@ -98,15 +94,16 @@ Utilisez pour cela les fonctionnalités de GitHub pour les https://docs.github.c
 
 De plus ce fichier `README.adoc` devra être à jour des informations suivantes :
 
-- Version courante : https://github.com/IUT-Blagnac/sae3-01-devapp-g2b-11/releases/tag/v0.1[v0.1] (_Pre-release_)
-- Lien vers la doc technique : https://github.com/IUT-Blagnac/sae3-01-devapp-g2b-11/blob/master/assets/Docs/doc-technique.adoc[Doc Technique]
-- Lien vers la doc utilisateur : https://github.com/IUT-Blagnac/sae3-01-devapp-g2b-11/blob/master/assets/Docs/doc-utilisateur.adoc[Doc Utilisateur]
-- Liste des https://github.com/IUT-Blagnac/sae3-01-devapp-g2b-11/issues[User Stories]  et % restant
-- Tests unitaires et plans de test
-- Indicateurs de qualité du code (dette technique)
-- ... tout autre élément que vous jugerez utiles pour démontrer la qualité de votre application
+- Version courante : https://github.com/IUT-Blagnac/sae3-01-devapp-g2b-11/releases/tag/Sprint2[version 2]
 
-=== Évaluations hebdomadaires
+- Liste des https://github.com/IUT-Blagnac/sae3-01-devapp-g2b-11/issues?q=is%3Aissue+is%3Aopen+label%3AUS[User Stories]  et % restant
+
+- Tests unitaires et plans de test
+
+- Indicateurs de qualité du code (dette technique)
+
+
+== Évaluations hebdomadaires
 
 
 
