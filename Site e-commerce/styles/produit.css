@@ -12,59 +12,71 @@
     font-weight: 500;
 }
 
-.produit_container{
-    margin-top: 50px;
-    margin-bottom: 100px;
+select{
+    padding: 20px;
+}
+
+.product_container{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-content: center;
-    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    margin-top: 80px;
 }
 
-.produit_title {
-    font-size: 20px;
-    margin: 20px 0;
-}
-.produit_info,
-.produit_prix{
-    color: #b3b3b3;
-}
-.produit_prix{
-    padding-top: 10px;
-}
-.produit_prix_data{
-    color: rgb(92, 92, 92);
-    font-weight: 500;
-}
-
-.produit_card{
-    /* position: relative; */
+.product_card{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    /* background-color: #F4F4F4; */
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    border-radius: 20px;
-    padding: 50px 20px;
-    max-width: 250px;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
-.produit_btn{
+
+.product_card .product_img img{
+    width: 125px;
+    height: 125px;
+    object-fit: contain;
+    margin-bottom: 5px;
+}
+.product_card .product_title{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.product_data{
+    text-align: left;
+}
+.product_card .product_description{
+    font-size: 15px;
+    color: rgb(92, 92, 92);
+    margin-bottom: 10px;
+}
+.product_card .product_prix{
+    color: rgb(92, 92, 92);
+    margin-bottom: 30px;
+}
+.product_card .product_prix .prix{
+    color: #111;
+    font-size: 20px;
+}
+.product_card .product_btn{
+    display: flex;
+    gap: 20px;
+}
+
+.product_card .product_btn .btn a{
     background-color: #00BF61;
     border: 2px solid #00BF61;
-    border-radius: 50px;
-    padding: 10px 20px;
+    border-radius: 20px;
     color: #fff;
     font-size: 17px;
-    margin-top: 20px;
+    padding: 10px;
     transition: .3s ease-in-out;
-    cursor: pointer;
 }
-.produit_btn:hover{
+
+.product_card .product_btn .btn a:hover{
     background-color: transparent;
     color: #00BF61;
     transition: .3s ease-in-out;
-}
-
-select{
-    padding: 20px;
 }

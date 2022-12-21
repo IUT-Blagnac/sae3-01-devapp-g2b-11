@@ -5,12 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="http://193.54.227.164/~SAESYS11/styles/contact.css">
+    <link rel="stylesheet" href="/~SAESYS11/styles/contact.css">
 
     <!-- INCLUDES LINKS -->
-    <link rel="stylesheet" href="http://193.54.227.164/~SAESYS11/styles.css">
-    <link rel="stylesheet" href="http://193.54.227.164/~SAESYS11/styles/heade.css">
-    <link rel="stylesheet" href="http://193.54.227.164/~SAESYS11/styles/footer.css">
+    <link rel="stylesheet" href="/~SAESYS11/styles.css">
 </head>
 <body>
 <?php include "../include/header.php" ?>
@@ -39,7 +37,7 @@
                 <label for="#">Votre message</label> <br>
                 <textarea name="" cols="39" rows="4" placeholder="Votre message"></textarea> <br>
                 <span class="check">
-                <input type="checkbox" name="conditions" > <label for="#">J'accepte les <a href="#" class="link">Conditions</a></label> <br>
+                    <input type="checkbox" name="conditions" > <label for="#">J'accepte les <a href="#" class="link">Conditions</a></label> <br>
                 </span>
 
                 <input type="submit" value="Envoyer">

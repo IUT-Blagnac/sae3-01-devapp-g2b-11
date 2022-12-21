@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Footer</title>
+    <link rel="stylesheet" href="/~SAESYS11/styles/pied.css">
 </head>
 <body>
     <div class="footer">
@@ -21,7 +22,7 @@
                     </div>
                 </div>
                 <div class="terms">
-                    <label for="#">En s'inscrivant à notre Newletters, vous acceptez les conditions</label>
+                    <label for="#">En s'inscrivant à notre Newletters, vous acceptez <span class="terms_link"><a href="#">les conditions</a></span></label>
                 </div>
             </form>
         </div>
