@@ -1,6 +1,8 @@
 package app.g2b11;
 
 import javafx.application.Platform;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.LineChart;
@@ -8,7 +10,10 @@ import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.VBox;
+import javafx.stage.WindowEvent;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -36,11 +41,19 @@ public class DataFrameController {
     @FXML
     private Label titre;
 
+    @FXML
+    private ListView lvData;
+
+    @FXML
+    private Label lbLastData;
+
+    private VBox vbData;
+
+    private ScheduledExecutorService scheduledExecutorService;
+
     private ConfigFrameController configController = new ConfigFrameController();
 
     private Map<String, Double> datadict = new HashMap<String, Double>();
-
-    private ArrayList<Double> valTemp = new ArrayList<Double>();
 
     private ArrayList<Double> valCO2 = new ArrayList<>();
 
@@ -75,17 +88,20 @@ public class DataFrameController {
             if(datadict.keySet().contains("Humidity")){
                 dataSeriesHum.setName("Humidité en %");
                 chartTemp.getData().add(dataSeriesHum);
+                String msgData = "Humidité : " + datadict.get("Humidity");
+                lvData.getItems().add(msgData);
             }
             if(datadict.keySet().contains("Temperature")){
                 dataSeriesTemp.setName("Température en °C");
                 chartTemp.getData().add(dataSeriesTemp);
+                lvData.getItems().add(("Température : " + datadict.get("Temperature")));
             }
             if(datadict.keySet().contains("CO2")){
                 dataSeriesCO2.setName("Taux de CO2 en ppm / 100");
                 chartTemp.getData().add(dataSeriesCO2);
+                lvData.getItems().add("CO2 : " + datadict.get("CO2"));
             }
             // setup a scheduled executor to periodically put data into the chart
-            ScheduledExecutorService scheduledExecutorService;
             scheduledExecutorService = Executors.newSingleThreadScheduledExecutor();
 
             // put dummy data onto graph per second
@@ -111,16 +127,18 @@ public class DataFrameController {
                             datadict.put(a2[0], Double.valueOf(a2[1]));
                         }
 
-                        System.out.println(datadict.keySet());
-                        System.out.println(valTemp);
-                        System.out.println(datadict.get("AlerteTemperature"));
-                        // put random number with current time
+                        //System.out.println(datadict.keySet());
+                        //System.out.println(valTemp);
+                        //System.out.println(datadict.get("AlerteTemperature"));
+                        lvData.getItems().clear();
+                        // met dans les séries respectives les valeurs demandées par l'utilisateur
                         if (datadict.keySet().contains("Temperature")) {
                             final XYChart.Data<String, Double> dataT = new XYChart.Data(simpleDateFormat.format(now), datadict.get("Temperature"));
-                            dataT.setNode(new HoveredThresholdNodea(simpleDateFormat.format(now), datadict.get("Temperature")));
+                            dataT.setNode(new HoveredThresholdNodea(datadict.get("Temperature"), "temperature"));
                             dataSeriesTemp.getData().add(dataT);
-                            valTemp.add(datadict.get("Temperature"));
-                            if(datadict.get("AlerteTemperature") == 1.0){
+                            lvData.getItems().add("Température : " + datadict.get("Temperature"));
+                            System.out.println("aaaaa");
+                            if(datadict.get("AlerteTemperature") == 1.0){ // gestion des alertes de température
                                 Alert seuilTemp = new Alert(Alert.AlertType.WARNING);
                                 seuilTemp.setTitle("Alerte seuil");
                                 seuilTemp.setHeaderText("Seuil température trop élevé");
@@ -130,17 +148,18 @@ public class DataFrameController {
                         }
                         if (datadict.keySet().contains("CO2")) {
                             final XYChart.Data<String, Double> dataC = new XYChart.Data(simpleDateFormat.format(now), datadict.get("CO2") /100.0);
-                            dataC.setNode(new HoveredThresholdNodea(simpleDateFormat.format(now), datadict.get("CO2")/100));
+                            dataC.setNode(new HoveredThresholdNodea(datadict.get("CO2")/100, "co2"));
                             dataSeriesCO2.getData().add(dataC);
                             valCO2.add((datadict.get("CO2"))/100.0);
-                            System.out.println(datadict.get("CO2"));
+                            lvData.getItems().add("CO2 : " + datadict.get("CO2"));
                         }
                         if (datadict.keySet().contains("Humidity")) {
                             final XYChart.Data<String, Double> dataH = new XYChart.Data(simpleDateFormat.format(now), datadict.get("Humidity"));
-                            dataH.setNode(new HoveredThresholdNodea(simpleDateFormat.format(now), datadict.get("Humidity")));
+                            dataH.setNode(new HoveredThresholdNodea(datadict.get("Humidity"), "humidite"));
                             dataSeriesHum.getData().add(dataH);
                             valHum.add(datadict.get("Humidity"));
-                            if(datadict.get("AlerteHumidite") == 1.0){
+                            lvData.getItems().add("Humidité : " + datadict.get("Humidity"));
+                            if(datadict.get("AlerteHumidite") == 1.0){ // gestion des alertes d'humidité
                                 Alert seuilHum = new Alert(Alert.AlertType.WARNING);
                                 seuilHum.setTitle("Alerte seuil");
                                 seuilHum.setHeaderText("Seuil d'humidité trop élevé");
@@ -166,4 +185,8 @@ public class DataFrameController {
     }
 
 
+    public void endAllScheduledExecutorService() {
+        scheduledExecutorService.shutdown();
+
+    }
 }

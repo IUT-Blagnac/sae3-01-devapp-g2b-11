@@ -1,5 +1,6 @@
 package app.g2b11;
 
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -7,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
 public class EntrepotVisualAppController {
     @FXML
@@ -32,6 +34,7 @@ public class EntrepotVisualAppController {
             Parent root1 = (Parent) fxmlLoader.load();
             stage.setScene(new Scene(root1));
             stage.setResizable(false);
+            stage.setTitle("Configuration");
             stage.show();
         } catch(Exception ex) {
             ex.printStackTrace();
@@ -45,7 +48,18 @@ public class EntrepotVisualAppController {
             Parent root1 = (Parent) fxmlLoader.load();
             stage.setScene(new Scene(root1));
             stage.setResizable(false);
+            stage.setTitle("Visualisation des données");
             stage.show();
+
+            //end all scheduledExecutorService on closing window
+            stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+                @Override
+                public void handle(WindowEvent event) {
+                    DataFrameController controller = fxmlLoader.getController();
+                    controller.endAllScheduledExecutorService();
+                    System.out.println("ENDING");
+                }
+            });
         } catch(Exception ex) {
             ex.printStackTrace();
         }

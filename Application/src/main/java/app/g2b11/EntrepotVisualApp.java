@@ -18,6 +18,11 @@ public class EntrepotVisualApp extends Application {
         stage.show();
     }
 
+    @Override
+    public void stop(){
+        System.out.println("CLOSING");
+    }
+
     public static void main(String[] args) {
         launch();
     }

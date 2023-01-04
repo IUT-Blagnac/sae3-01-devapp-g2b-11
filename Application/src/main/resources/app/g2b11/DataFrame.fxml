@@ -4,11 +4,12 @@
 <?import javafx.scene.chart.LineChart?>
 <?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="b" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.g2b11.DataFrameController">
+<BorderPane fx:id="b" prefHeight="426.0" prefWidth="722.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.g2b11.DataFrameController">
    <center>
       <VBox BorderPane.alignment="CENTER">
          <children>
@@ -30,4 +31,12 @@
          </font>
       </Label>
    </top>
+   <right>
+      <VBox alignment="TOP_CENTER" prefHeight="400.0" prefWidth="134.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="lbLastData" alignment="TOP_CENTER" contentDisplay="CENTER" text="Dernières données" />
+            <ListView fx:id="lvData" prefHeight="383.0" prefWidth="178.0" />
+         </children>
+      </VBox>
+   </right>
 </BorderPane>

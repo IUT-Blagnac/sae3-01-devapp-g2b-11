@@ -9,16 +9,15 @@ import javafx.scene.paint.Color;
 
 class HoveredThresholdNodea extends StackPane {
 
-    public HoveredThresholdNodea(String date, Double doub) {
+    public HoveredThresholdNodea(Double doub, String typed) {
         setPrefSize(15, 15);
 
-        final Label label = createDataThresholdLabel(String.valueOf(date), doub);
+        final Label label = createDataThresholdLabel(doub, typed);
 
         setOnMouseEntered(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {
                 getChildren().setAll(label);
-                setCursor(Cursor.NONE);
                 toFront();
             }
         });
@@ -30,13 +29,10 @@ class HoveredThresholdNodea extends StackPane {
         });
     }
 
-    private Label createDataThresholdLabel(String string, Object object) {
+    private Label createDataThresholdLabel(Object object, String typed) {
         final Label label = new Label(object + "");
-        label.getStyleClass().addAll("default-color0", "chart-line-symbol", "chart-series-line");
-        label.setStyle("-fx-font-size: 20; -fx-font-weight: bold;");
-
-            label.setTextFill(Color.GREEN);
-            label.setStyle("-fx-border-color: GREEN;");
+        label.getStyleClass().addAll( "chart-line-symbol");
+        label.setStyle("-fx-font-size: 11; -fx-font-weight: bold;");
 
         label.setMinSize(Label.USE_PREF_SIZE, Label.USE_PREF_SIZE);
         return label;
