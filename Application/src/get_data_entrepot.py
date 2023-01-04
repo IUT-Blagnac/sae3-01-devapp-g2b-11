@@ -13,7 +13,7 @@ mqttserver = "chirpstack.iut-blagnac.fr"
 mqttport = 1883
 
 def get_data(mqtt, obj, msg):
-    f = open(config["nomFichier"], O_WRONLY | O_CREAT | O_TRUNC, 0o600)
+    f = open("data/"+config["nomFichier"], O_WRONLY | O_CREAT | O_TRUNC, 0o600)
     jsonMsg = json.loads(msg.payload)
     for data in config["data"]:
         donnee = jsonMsg["object"][data]
@@ -25,14 +25,18 @@ def get_data(mqtt, obj, msg):
             msg = ("Temperature:" + str(donnee)).encode()
             if ((donnee > config["seuiltemp"])and (data in alerte)):
                 print("ALERTE ! Température de l'entrepôt trop élevée pour la conservation des aliments !")
-                write(f, bytes(b"AlerteTemperautre:1\n"))
+                write(f, bytes(b"AlerteTemperature:1.0\n"))
+            else :
+                write(f, bytes(b"AlerteTemperature:0.0\n"))
             write(f, bytes(msg + b"\n"))
             print("Temperature: ", donnee)
         elif(data == "humidity"):
-            msg = ("Humidité:" + str(donnee)).encode()
+            msg = ("Humidity:" + str(donnee)).encode()
             if ((donnee > config["seuilhum"]) and (data in alerte)):
                 print("ALERTE ! Humidité de l'entrepôt trop élevée pour la conservation des aliments !")
-                write(f, bytes(b"AlerteHumidite:1\n"))
+                write(f, bytes(b"AlerteHumidite:1.0\n"))
+            else :
+                write(f, bytes(b"AlerteHumidite:0.0\n"))
             write(f, bytes(msg + b"\n"))
             print("Humidité: ", donnee)
     print("---------------------------------")
@@ -45,7 +49,6 @@ client.connect(mqttserver, mqttport, 600)
 print(config["capteur"])
 
 client.subscribe("application/1/device/"+config["capteur"]+"/event/up")
-#24e124128c017760
 
 client.on_message = get_data
 

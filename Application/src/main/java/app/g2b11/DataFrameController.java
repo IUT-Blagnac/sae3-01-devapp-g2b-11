@@ -81,7 +81,7 @@ public class DataFrameController {
                 chartTemp.getData().add(dataSeriesTemp);
             }
             if(datadict.keySet().contains("CO2")){
-                dataSeriesCO2.setName("Taux de CO2");
+                dataSeriesCO2.setName("Taux de CO2 en ppm / 100");
                 chartTemp.getData().add(dataSeriesCO2);
             }
             // setup a scheduled executor to periodically put data into the chart
@@ -116,7 +116,9 @@ public class DataFrameController {
                         System.out.println(datadict.get("AlerteTemperature"));
                         // put random number with current time
                         if (datadict.keySet().contains("Temperature")) {
-                            dataSeriesTemp.getData().add(new XYChart.Data(simpleDateFormat.format(now), datadict.get("Temperature")));
+                            final XYChart.Data<String, Double> dataT = new XYChart.Data(simpleDateFormat.format(now), datadict.get("Temperature"));
+                            dataT.setNode(new HoveredThresholdNodea(simpleDateFormat.format(now), datadict.get("Temperature")));
+                            dataSeriesTemp.getData().add(dataT);
                             valTemp.add(datadict.get("Temperature"));
                             if(datadict.get("AlerteTemperature") == 1.0){
                                 Alert seuilTemp = new Alert(Alert.AlertType.WARNING);
@@ -127,11 +129,16 @@ public class DataFrameController {
                             }
                         }
                         if (datadict.keySet().contains("CO2")) {
-                            dataSeriesCO2.getData().add(new XYChart.Data(simpleDateFormat.format(now), datadict.get("CO2")));
-                            valCO2.add((datadict.get("CO2")));
+                            final XYChart.Data<String, Double> dataC = new XYChart.Data(simpleDateFormat.format(now), datadict.get("CO2") /100.0);
+                            dataC.setNode(new HoveredThresholdNodea(simpleDateFormat.format(now), datadict.get("CO2")/100));
+                            dataSeriesCO2.getData().add(dataC);
+                            valCO2.add((datadict.get("CO2"))/100.0);
+                            System.out.println(datadict.get("CO2"));
                         }
                         if (datadict.keySet().contains("Humidity")) {
-                            dataSeriesHum.getData().add(new XYChart.Data(simpleDateFormat.format(now), datadict.get("Humidity")));
+                            final XYChart.Data<String, Double> dataH = new XYChart.Data(simpleDateFormat.format(now), datadict.get("Humidity"));
+                            dataH.setNode(new HoveredThresholdNodea(simpleDateFormat.format(now), datadict.get("Humidity")));
+                            dataSeriesHum.getData().add(dataH);
                             valHum.add(datadict.get("Humidity"));
                             if(datadict.get("AlerteHumidite") == 1.0){
                                 Alert seuilHum = new Alert(Alert.AlertType.WARNING);

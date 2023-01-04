@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="303.0" prefWidth="438.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.g2b11.ConfigFrameController">
+<BorderPane prefHeight="303.0" prefWidth="438.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.g2b11.ConfigFrameController">
    <top>
       <Label fx:id="titre" text="Entrepôt VisualApp" BorderPane.alignment="CENTER">
          <font>
@@ -49,14 +49,14 @@
             <TextField fx:id="txtNomFichier" GridPane.columnIndex="1" />
             <VBox alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <children>
-                  <Label fx:id="lObsSeuilTemp" text="8" />
-                  <Slider fx:id="slideSeuilTemp" max="30.0" value="8.0" />
+                  <Label fx:id="lObsSeuilTemp" disable="true" text="8" />
+                  <Slider fx:id="slideSeuilTemp" disable="true" max="30.0" value="8.0" />
                </children>
             </VBox>
             <VBox alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <children>
-                  <Label fx:id="lObsSeuilHum" text="60" />
-                  <Slider fx:id="slideSeuilHum" value="60.0" />
+                  <Label fx:id="lObsSeuilHum" disable="true" text="60" />
+                  <Slider fx:id="slideSeuilHum" disable="true" value="60.0" />
                </children>
             </VBox>
          </children>

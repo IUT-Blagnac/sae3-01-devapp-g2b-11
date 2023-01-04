@@ -83,6 +83,14 @@ public class ConfigFrameController {
             lObsSeuilHum.setText(Integer.toString(newValue.intValue()));
 
         });
+
+        //Désactive le label et le slider de seuil de température
+        lObsSeuilTemp.disableProperty().bind(ckTemp.selectedProperty().not());
+        slideSeuilTemp.disableProperty().bind(ckTemp.selectedProperty().not());
+
+        //Désactive le label et le slider de seuil d'humidité
+        lObsSeuilHum.disableProperty().bind(ckHum.selectedProperty().not());
+        slideSeuilHum.disableProperty().bind(ckHum.selectedProperty().not());
     }
 
     public String getNomFich() throws FileNotFoundException {
