@@ -22,12 +22,6 @@
         <div class="subheader">
             <ul class="menu">
                 <li><a href="/~SAESYS11/">Accueil</a></li>
-                <li><a href="/~SAESYS11/pages/produit.php?recherche=Aliments">Alimentation</a>
-                </li>
-                <li><a href="/~SAESYS11/pages/produit.php?recherche=Hygiène">Hygiène</a>
-                </li>
-                <li><a href="/~SAESYS11/pages/produit.php?recherche=Entretien">Entretien</a>
-                </li>
             </ul>
         </div>
     

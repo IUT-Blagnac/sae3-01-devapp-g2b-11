@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,34 +14,24 @@
     <?php include "../includeAdmin/headerAdmin.php"; ?>
     <div class="container">
         <?php
-        	if(isset($_COOKIE['cookieIdent']) && isset($_COOKIE['cookieMdp'])){
-        		$login = $_COOKIE['cookieIdent'];
-                $pwd = $_COOKIE['cookieMdp'];
-        	}else{
-                $login ="";
-                $pwd = "";
+            if(isset($_GET['msgErreur'])){
+                echo "<br>Erreur d'identification";
             }
         ?>
-        <form action="TraitConnexionAdmin.php" method="POST">
+
+        <form method="POST" action="TraitconnexionAdmin.php">
             <h1 class="title">Connexion</h1>
             
-            <label for="email" class="subtitle"><b>Nom d 'utilisateur</b></label>
-            <input type="email" value="<?php echo($login); ?>" placeholder="Entrer votre email" name="email" required>
+            <label for="text" class="subtitle"><b>Numéro Employé</b></label>
+            <input type="text" placeholder="Entrer votre numéro d'employé" name="numEmp" required>
 
             <label for="password" class="subtitle"><b>Mot de passe</b></label>
-            <input type="password" value="<?php echo($pwd); ?>"placeholder="Entrer le mot de passe" name="password" required>
+            <input type="password" placeholder="Entrer le mot de passe" name="password" required>
 
-            <span class="check">
-                <input type="checkbox" name="memo" > 
-                <label for="memo" class="souvenir">Se souvenir de moi</label>
-            </span>
 
             <div class="button">
                 <div class="submit btn">
                     <input type="submit" id='submit' value='Me connecter' >
-                </div>
-                <div class="cration btn">
-                    <a href="/~SAESYS11/pages/inscription.php"><input type="button" value="Crée votre compte"></a>
                 </div>
             </div>
             <br>
