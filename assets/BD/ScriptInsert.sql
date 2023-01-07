@@ -166,7 +166,7 @@ VALUES('49','009','Crème hydratante au jojoba 50ml',24.50,'NATURAL BEAUTY', 'Cr
 INSERT INTO PRODUIT
 VALUES('50','009','Sérum anti-âge à la bave d''escargot 50ml',29.99,'SNAIL NATURE', 'Sérum anti-âge à la bave d''escargot, une formule biologique qui lisse et raffermit la peau grâce à ses propriétés régénérantes. Convient à tous les types de peau. ', 'Aqua (eau), snail secretion filtrate, glycerin, propanediol, sodium hyaluronate, panthenol, allantoin, xanthan gum, tocopherol (vitamine E), benzyl alcohol, sodium benzoate, potassium sorbate, citric acid, parfum naturel.', 30);
 INSERT INTO PRODUIT
-VALUES('51', '005', 'Chouchou Miel Bio', '15.20', 'La confiserie bio', 'Les chouchous au miel seront ravir vos papilles d’en temps. Ce parfum cacahuète et la douceur du goût du miel sont la combinaison parfait pour rappeler les souvenirs d’enfance', NULL, 55);
+VALUES('51', '005', 'Chouchou Miel Bio', 15.20, 'La confiserie bio', 'Les chouchous au miel seront ravir vos papilles d’en temps. Ce parfum cacahuète et la douceur du goût du miel sont la combinaison parfait pour rappeler les souvenirs d’enfance', NULL, 55);
 -- ///////////////////////////////////////////////////////////////
 
 ----------------
