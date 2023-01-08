@@ -14,6 +14,11 @@
     <?php include "../includeAdmin/headerAdmin.php"; ?>
     <div class="container">
         <?php
+            session_start();
+            if(isset($_SESSION['access'])){
+                session_destroy();
+            }
+
             if(isset($_GET['msgErreur'])){
                 echo "<br>Erreur d'identification";
             }

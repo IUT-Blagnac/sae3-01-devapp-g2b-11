@@ -12,7 +12,7 @@
         
         <form action="firstConAdmin.php" method="POST">
 
-            <input type="password" placeholder="Entrer le mot de passe" name="password" required>
+            <input type="password" placeholder="Entrer le mot de passe" name="password" autofocus required>
 
             <input type="submit" id='submit' value='Me connecter' >
 

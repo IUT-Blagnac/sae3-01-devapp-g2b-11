@@ -6,16 +6,8 @@
     padding: 10px 50px;
 }
 
-main .title {
-    color: #444;
-    font-size: 50px;
-    font-weight: 500;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-}
-
-.button a{
-    position: relative;
+.ajout .button a{
+	position: relative;
     color: #fff;
     padding: 1rem 1.5rem;
     border-radius: 50px;
@@ -24,8 +16,8 @@ main .title {
     transition: .3s ease-in-out ;
 }
 
-.button:hover a{
-    /*color: #00BF61;*/
+.ajout .button:hover a{
+	/*color: #00BF61;*/
     transform: scale(1.25);
     transition: .3s ease-in-out;
     gap: 10px;

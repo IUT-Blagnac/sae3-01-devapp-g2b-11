@@ -30,7 +30,7 @@
                 $_SESSION['mailAdmin'] = $admin['MAILADMIN'];
 
                 // Redirection vers la page d'accueil
-                header ('location: ../indexAdmin.php?');
+                header ('location: ../indexAdmin.php?pnumEmp='.$_SESSION['numEmploye']);
             }else{
                 // Redirection vers la page d'accueil avec un message d'erreur
                 header ('location: ../pagesAdmin/connexionAdmin.php?msgErreur=Tentative%20d%27acces%20interdite');
@@ -39,4 +39,5 @@
             
         }
     }
+    oci_close($connect);
 ?>

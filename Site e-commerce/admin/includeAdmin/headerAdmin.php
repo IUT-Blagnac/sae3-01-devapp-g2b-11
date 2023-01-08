@@ -21,7 +21,10 @@
 
         <div class="subheader">
             <ul class="menu">
-                <li><a href="/~SAESYS11/">Accueil</a></li>
+                <!-- <?php 
+                    //require_once "../includeAdmin/destroySession.php";
+                ?> -->
+                <li><a href="/~SAESYS11/" onclick="destroySession()">Accueil</a></li>
             </ul>
         </div>
     

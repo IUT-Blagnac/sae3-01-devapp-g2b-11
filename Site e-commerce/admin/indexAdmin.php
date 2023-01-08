@@ -17,10 +17,17 @@
 	<?php include "./includeAdmin/headerAdmin.php"; ?>
 
 	<main>
+		<input type="submit" value="Retour" onclick="document.location.href='./pagesAdmin/connexionAdmin'"/>
+
+		<div class="title">
+			<?php  
+				print "<h1>Administrateur : ".$_SESSION['nomAdmin']." ".$_SESSION['prenomAdmin']."</h1>";
+			?>
+		</div>
 		<!--mettre crud clients crud produits -->
 		<div class="gestionClient container">
 			<div class="button">
-				<a href="./pagesAdmin/GestionProduits.php">Gestion des Clients</a>
+				<a href="./pagesAdmin/GestionClient.php">Gestion des Clients</a>
 			</div>
 		</div>
 
@@ -29,7 +36,14 @@
 				<a href="./pagesAdmin/GestionProduits.php">Gestion des produits</a>
 			</div>
 		</div>
+
+		<div class="gestionMessagerie container">
+			<div class="button">
+				<a href="">Messagerie clientèle</a>
+			</div>
+		</div>
 	</main>
 
 	<?php include "./includeAdmin/footerAdmin.php"; ?>
 </body>
+</html>
