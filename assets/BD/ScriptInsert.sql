@@ -1,5 +1,12 @@
+-- CATEGORIES MERES 
+INSERT INTO CATEGORIE (idcategorie ,nomcategorie)
+VALUES('1', 'Alimentation');
+INSERT INTO CATEGORIE (idcategorie ,nomcategorie)
+VALUES('1', 'Hygiène');
+INSERT INTO CATEGORIE (idcategorie ,nomcategorie)
+VALUES('1', 'Entretien');
 
--- CATEGORIE FILLE
+-- CATEGORIES FILLES
 INSERT INTO CATEGORIE (idcategorie, idcategoriemere ,nomcategorie)
 VALUES('01', '1', 'Fruits');
 INSERT INTO CATEGORIE (idcategorie, idcategoriemere ,nomcategorie)
