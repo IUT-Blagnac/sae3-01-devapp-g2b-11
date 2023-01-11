@@ -15,6 +15,7 @@
 <body>
     
     <?php include "include/header.php"; ?>
+    
     <main>
         <div class="apropos container">
                 <div class="apropos_content">
@@ -28,7 +29,7 @@
                         </p>
                     </div>
                     <div class="button">
-                        <a href="">En savoir plus</a>
+                        <a href="/~SAESYS11/pages/apropos.php">En savoir plus</a>
                     </div>
                 </div>
                 <div class="apropos_img">

@@ -1,0 +1,41 @@
+/* ----------ELEMENTS COMMUNS---------- */
+.container{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+    padding: 10px 50px;
+}
+
+.ajout .button a{
+	position: relative;
+    color: #fff;
+    padding: 1rem 1.5rem;
+    border-radius: 50px;
+    background-color: #00BF61;
+    border: 2px solid #00BF61;
+    transition: .3s ease-in-out ;
+}
+
+.ajout .button:hover a{
+	/*color: #00BF61;*/
+    transform: scale(1.25);
+    transition: .3s ease-in-out;
+    gap: 10px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+
+/*recherche*/
+.recherche form{
+    display: flex;
+    align-items: center;
+}
+
+.recherche .icon{
+    position: absolute;
+    padding-left: 10px;
+}
+
+.recherche .input{
+    position: relative;
+}

@@ -1,0 +1,70 @@
+/* /////////////////////////////////////////////////////// */
+
+.deconnexion_container{
+    display: flex;
+    background-color: #f4f4f4;
+    gap: 50px;
+}
+
+.left{
+    text-align: center;
+    border: 1px solid #555;
+    padding: 30px;
+}
+
+.left .user-profile img{
+    width: 200px;
+}
+.left .user-name{
+    font-size: 30px;
+    margin: 15px 0;
+}
+
+.left .button{
+    background-color: red;
+    padding: 10px;
+    font-size: 20px;
+}
+.left .button a{
+    color: #fff;
+}
+
+.right{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px;
+}
+
+
+.right .info{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.right .title{
+    font-size: 30px;
+}
+
+
+.right .info-label_title{
+    margin-bottom: 10px;
+}
+
+.right .info-label_data{
+    border: 1px solid #555;
+    padding: 6px;
+    color: #888;
+}
+
+.right .button{
+    display: flex;
+    gap: 50px;
+}
+.right .btn{
+    background-color: red;
+    padding: 10px;
+    color: #fff;
+    font-size: 18px;
+}
