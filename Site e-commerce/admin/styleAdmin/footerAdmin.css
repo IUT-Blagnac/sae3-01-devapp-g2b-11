@@ -1,0 +1,89 @@
+.footer {
+  display: flex;
+  justify-content: space-around;
+  background-color: #f4f4f4;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  align-items: center;
+  margin-top: 150px;
+}
+
+.footer_newletters .title {
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.footer_newletters .subtitle {
+  color: #555;
+  font-size: 15px;
+}
+.footer_newletters .input {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.footer_newletters .email input {
+  padding-left: 20px;
+  margin-right: 10px;
+  width: 250px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid #111;
+}
+.footer_newletters .submit input {
+  margin-right: 20px;
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  border: 2px solid #00bf61;
+  background-color: #00bf61;
+  color: #fff;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+.footer_newletters .submit input:hover {
+  background-color: transparent;
+  color: #00bf61;
+  transition: 0.3s ease-in-out;
+}
+.footer_newletters .terms {
+  color: #555;
+}
+.footer_newletters .terms_link a {
+  color: #555;
+  font-weight: 500;
+  text-decoration: underline;
+}
+.footer_list {
+  display: flex;
+}
+.footer_list .title {
+  font-size: 20px;
+  font-weight: 500;
+}
+.footer_list ul {
+  margin-right: 50px;
+}
+
+.footer_list ul a {
+  color: #555;
+  position: relative;
+  padding-bottom: 3px;
+}
+.footer_list ul a::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 1.5px;
+  background-color: #555;
+  bottom: 0;
+  transition: 0.3s ease-in-out;
+}
+.footer_list ul a:hover::before {
+  width: 100%;
+  transition: 0.3s ease-in-out;
+}
+.footer_list ul li {
+  padding-top: 20px;
+}

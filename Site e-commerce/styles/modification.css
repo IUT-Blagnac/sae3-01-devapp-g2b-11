@@ -1,0 +1,64 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.container .content {
+  margin: 50px auto;
+  padding: 50px;
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.content .title {
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.formulaire form {
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.formulaire label {
+  font-size: 18px;
+  margin: 0 20px;
+}
+
+.formulaire form input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 200px;
+  height: 30px;
+  padding: 0 10px;
+  outline: none;
+  border: 1px solid #111;
+}
+
+.formulaire input[type="submit"] {
+  margin: auto;
+  padding: 10px 20px;
+  font-size: 20px;
+  border: 1px solid #00bf61;
+  background-color: #00bf61;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.formulaire input[type="submit"]:hover {
+  background-color: transparent;
+  color: #00bf61;
+  transition: 0.3s ease-in-out;
+}

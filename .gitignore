@@ -1,7 +1,6 @@
 # JMB 2022 -- Adapted from https://gist.github.com/JonathanGawrych/32afe529fd519a7312df
 
 # Package Files #
-*.jar
 *.war
 *.ear
 

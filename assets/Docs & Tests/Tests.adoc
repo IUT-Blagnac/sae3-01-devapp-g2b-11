@@ -1,0 +1,103 @@
+= TESTS
+:nofooter:
+:toc: left
+:icons: font
+
+== Tests du site web
+
+=== Création d'un compte 
+
+==== Test fonctionnel
+Lors de ce test, nous vérifions si la création d'un compte depuis le site e-commerce est possible si l'utilisateur saisie des données valides.
+Pour ce faire, nous allons crée un nouveau client depuis le site e-commerce. + 
+Pour ce faire nous allons entrez les différentes données via le formulaire qui se trouve sur le page inscription.php :
+
+----
+Nom : Torres
+Prénom : Christine 
+Email : christine@gmail.com
+Mot de passe : Christine.2211**a
+----
+
+[insérer image]
+
+Lors du clique sur le bouton *Valider*, le nouveau client est insérer dans la base de donées et il est désormais possible de ce connecter à celui-ci :
+
+[insérer image]
+
+==== Test non fonctionnel
+Lors de ce test, nous vérifions si l'inscription d'un compte depuis le site e-commerce est impossible si l'utilisateur saisie des données non valides. +
+Pour ce faire nous allons entrez différentes données via le formulaire qui se trouve sur la page inscription.php :
+
+----
+Nom : eubanks
+Prénom : williams 
+Email : williams@gmail
+Mot de passe : williams1
+----
+
+[insérer image]
+
+Lors du clique sur le bouton *Valider*, le nouveau client ne peut être insérer dans la base de donnée car les données saisies ne se sont pas valides :
+
+[insérer image]
+
+=== Connexion à un compte
+
+==== Test fonctionnel
+Lors de ce test, nous vérifions si la connexion à un compte depuis le site e-commerce est possible si l'utilisateur saisie les bons identifiants. +
+Pour ce faire, nous allons nous connecter à un compte depuis le site e-commerce en saisissant de mauvais identifiants. + 
+Pour ce faire nous allons entrez les différentes données via le formulaire qui se trouve sur la page connexion.php :
+
+----
+Email : christine@gmail.com
+Mot de passe : Christine.2211**a
+----
+
+[insérer image]
+
+Lors du clique sur le bouton *Me connecter*, la connexion est établie et les informations du client sont accessibles depuis la page où était présent le formulaire de connexion. +
+Il est désormais possible pour un utilisateur connecter de se déconnecter ou de modifier les informations de son compte :
+
+[insérer image]
+
+==== Test non fonctionnel 
+Lors de ce test, nous vérifions si la connexion à un compte depuis le site e-commerce est impossible si l'utilisateur saisie les mauvais identifiants. +
+Pour ce faire nous allons entrez les différentes données via le formulaire qui se trouve sur la page connexion.php :
+
+----
+Email : christine@gmail.com
+Mot de passe : Christopher.2211
+----
+
+[insérer image]
+
+Lors du clique sur le bouton *Me connecter*, la connexion n'est pas établie car les données saisie, en l'occurence le mot de passe ne correspond pas au compte du client. +
+L'utilisateur est redirigez vers la page d'accueil avec un message d'erreur :
+
+[insérer image]
+
+=== Recherche des produits
+
+==== Test fonctionnel
+Lors de ce test, nous vérifions si il est possible de rechercher des produits via la barre de recherche. +
+Pour ce faire nous allons entrez le nom du produit rechercher dans la barre de recherche disponible sur le header : 
+
+[insérer image]
+
+Lors du clique sur le bouton *Entrez*, la recherche est effectuer et l'utilisateur est redirigez vers la page *produits.php* dans laquelle apparaît tous les produits correspondant à sa recherche :
+
+[insérer image]
+
+==== Test non fonctionnel
+Lors de ce test, nous vérifions la recherche d'un produit via la barre de recherche dans le cas où le produit est inexistant. +
+Pour ce faire nous allons entrez le nom du produits dans la barre de recherche disponible sur le header : 
+
+[insérer image]
+
+Lors du clique sur le bouton *Entrer*, la recherche est effectuer et l'utilisateur est redirigez vers la page *produits.php*. +
+Malheureusement, la recherche n'a trouvé aucun produits correspondant au produit saisie par l'utilisateur est donc un message d'erreur apparaît.
+
+[insérer image]
+
+== Tests de l'Application

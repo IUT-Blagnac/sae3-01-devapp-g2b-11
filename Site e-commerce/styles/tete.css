@@ -1,0 +1,195 @@
+header{
+    display: block;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 var(--mb-3);
+    background-color: #fff;
+    align-items: center;
+}
+.header .navlogo{
+    display: flex;
+    align-items: center;
+}
+.header .title{
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-medium);
+    letter-spacing: 2px;
+}
+.header .navbar ul{
+    display: flex;
+    align-items: center;
+    gap: var(--mb-1-5);
+}
+.navbar .panier i{
+    font-size: 1.5rem;
+}
+
+.header .recherche form{
+    display: flex;
+    align-items: center;
+}
+.header .recherche .icon{
+    position: absolute;
+    padding-left: 10px;
+}
+.header .recherche .input{
+    position: relative;
+}
+
+
+.header .navbar input{
+    position: relative;
+    outline: none;
+    background: url("src/img/search-logo.png") no-repeat 9px 9px;
+    padding: 0.15rem;
+    border: 1px solid #111;
+    border-radius: 20px;
+    width: 150px;
+    height: 25px;
+    padding-left: 30px;
+    transition: all .3s ease-in-out;
+}
+.navbar input:focus{
+    width: 250px;
+    transition: all .3s ease-in-out;
+}
+.header .navbar a{
+    position: relative;
+    padding-bottom: 5px;
+    color: #00BF61;
+    font-size: 1.15rem;
+}
+
+.header .navbar a.button{
+    background-color: #00BF61;
+    color: #fff;
+    padding: var(--mb-0-5) var(--mb-1-5);
+    border: 2px #00BF61 solid;
+    border-radius: 20px;
+    transition: all .3s ease-in-out;
+}
+.header .navbar a.button:hover{
+    background-color: transparent;
+    color: #00BF61;
+    transition: all .3s ease-in-out;
+}
+
+.header .toggle{
+    font-size: 30px;
+    color: #00BF61;
+    display: none;
+}
+.subheader .menu{
+    display: flex;
+    justify-content: space-around;
+    background-color: #00BF61;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    
+}
+.submenu{
+    background-color: #00BF61;
+    position: absolute;
+    display: none;
+    transition: all .3s ease-in-out;
+}
+.subheader li{
+    position: relative;
+    transition: all .3s ease-in-out;
+}
+.subheader li a{
+    display: block;
+    font-size: 1.25rem;
+    padding: 1.15rem;  
+    color: #fff;
+    width: 150px;
+    text-align: center;
+}
+.subheader li:hover{
+    background-color: #009B4F;
+    transition: all .3s ease-in-out;
+}
+.subheader li:hover .submenu{
+    display: block;
+    transition: all .3s ease-in-out;
+}
+.submenu li a{
+    font-size: 1rem;
+} 
+
+
+/* BREAKPOINTS */
+/* for large devices */
+@media screen and (max-width: 992px){
+    
+}
+
+/* for medium devices */
+@media screen and (max-width: 768px){
+    .header {
+        border-bottom: 1px solid #111;
+        position: relative;
+        z-index: 2;
+        /* gap: 30px; */
+    }
+    .header .navbar{
+        display: flex;
+        gap: 30px;
+    }
+    .header .navbar li{
+        display: none;
+    }
+    .navbar .recherche input{
+        max-width: 100px  ;
+    }
+    .navbar .recherche input:focus{
+        max-width: 150px;
+    }
+    .navbar .recherche input::placeholder{
+        color: transparent;
+    }
+    .header .toggle{
+        display: block;
+    }
+    .subheader{
+        z-index: 1;
+        position: absolute;
+        top: -195%;
+        /* left: -100%; */
+        width: 100%;
+        transition: .8s ease-in-out;
+    }
+    .subheader ul{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        /* height: 20vh; */
+        
+    }
+    .subheader.active{
+        top: 120px;
+        transition: .8s ease-in-out;
+    }
+    .submenu{
+        left: -500px;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .navbar .recherche input{
+        max-width: 1px ;
+    }
+    .navbar .recherche input:focus{
+        max-width: 70px;
+    }
+}
+
+/* for smaller devices */
+@media screen and (max-width: 350px){
+
+}
