@@ -1,3 +1,4 @@
+// -------- HEADER RESPONSIVE -------------
 const btn = document.querySelector(".toggle");
 const nav = document.querySelector(".subheader");
 

@@ -29,7 +29,7 @@
         <div class="footer_list">
             <ul>
                 <div class="title">A propos</div>
-                <li><a href="#">Qui sommes nous ?</a></li>
+                <li><a href="/~SAESYS11/pages/apropos.php">Qui sommes nous ?</a></li>
                 <li><a href="#">Nos services</a></li>
                 <li><a href="#">Hiérarchie du site</a></li>
             </ul>

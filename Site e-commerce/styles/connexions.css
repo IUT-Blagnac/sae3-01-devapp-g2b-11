@@ -1,78 +1,157 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+  /* background-color: red; */
+}
 
-.container{
-    width:400px;
-    margin:0 auto;
-    margin-top:5%;
-    margin-bottom: 5%;
-   
-   
-   }
-   /* Bordered form */
-   .container form {
-    width:100%;
-    padding: 30px;
-    border: 1px solid #f1f1f1;
-    background:  white;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-    
-   }
-   .container h1{
-    width: 38%;
-    margin: 0 auto;
-    padding-bottom: 10px;
-   }
-   
-   /* Full-width inputs */
-   .container input {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    transition: all .3s ease-in-out;
-   }
-   
-   /* Set a style for all buttons */
-   .container input[type=submit] {
-    background-color: #00BF61;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    
-    cursor: pointer;
-    width: 100%;
-    border: 1px solid #00BF61;
-    border-radius: 5px;
-   }
-   .container input[type=submit]:hover {
-    background-color: white;
-    color: #00BF61;
-    border: 1px solid #00BF61;
-    border-radius: 5px;
-    transition: all .3s ease-in-out;
-   }
-   
-   .container input[type=button] {
-    background-color: #00BF61;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    
-    cursor: pointer;
-    width: 100%;
-    border: 1px solid #00BF61;
-    border-radius: 5px;
-   }
-   .container input[type=button]:hover {
-    background-color: white;
-    color: #00BF61;
-    border: 1px solid #00BF61;
-    border-radius: 5px;
-    transition: all .3s ease-in-out;
-   }
-   .mdp{
-       font-family:arial, sans-serif;
-       color:gray;
-       font-size: 10px;
-   }
+.container form {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  width: 400px;
+  text-align: left;
+  gap: 10px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.container .title {
+  /* margin-bottom: 20px; */
+  text-align: center;
+}
+
+.container .subtitle {
+  font-size: 18px;
+  /* margin-bottom: 8px; */
+}
+
+.container input[type="email"],
+input[type="password"],
+input[type="text"] {
+  height: 40px;
+  padding-left: 20px;
+}
+
+.container .check {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+
+.container input[type="checkbox"] {
+  position: relative;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.container input[type="checkbox"]:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 0;
+  left: 0;
+  border: 2px solid #555555;
+  border-radius: 3px;
+  background-color: white;
+}
+.container input[type="checkbox"]:checked:after {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 10px;
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  top: 2px;
+  left: 6px;
+}
+
+.container .button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  gap: 20px;
+}
+
+.container .btn input {
+  border: 2px solid #00bf61;
+  background-color: #00bf61;
+  color: #fff;
+  padding: 15px;
+  font-size: 18px;
+  width: 400px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+.container .btn input:hover {
+  background-color: transparent;
+  color: #00bf61;
+  transition: 0.3s ease-in-out;
+}
+
+.container .info {
+  margin-top: 20px;
+  color: #555;
+}
+.container .info ul {
+  padding-left: 40px;
+}
+.container .info ul li {
+  list-style: square;
+}
+
+.informations {
+  /* background-color: rebeccapurple; */
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  padding: 50px;
+}
+
+.informations .title {
+  font-size: 35px;
+}
+
+.informations .content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  font-size: 20px;
+}
+
+.box {
+  padding-top: 10px;
+}
+
+.informations .button {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
+.informations .button a {
+  font-size: 20px;
+  color: #fff;
+  background-color: #00bf61;
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: 1px solid #00bf61;
+  transition: 0.3s ease-in-out;
+}
+
+.informations .button a:hover {
+  background-color: transparent;
+  color: #00bf61;
+}

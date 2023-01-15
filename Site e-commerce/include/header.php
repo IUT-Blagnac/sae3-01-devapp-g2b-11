@@ -20,7 +20,7 @@
             <div class="navbar">
                 <ul>
                     <div class="recherche">
-                        <form action="/~SAESYS11/pages/produit.php">
+                        <form id="form" action="/~SAESYS11/pages/produit.php">
                             <div class="icon"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></div>
                             <div class="input"><input type="text" name="recherche" placeholder="Recherche un produit ..."></div>
                         </form>
@@ -43,28 +43,28 @@
         <div class="subheader">
             <ul class="menu">
                 <li><a href="/~SAESYS11/">Accueil</a></li>
-                <li><a href="/~SAESYS11/pages/produit.php?recherche=Aliments">Alimentation</a>
+                <li><a href="/~SAESYS11/pages/produit.php?recherche=Aliments&tri=asc">Alimentation</a>
                     <ul class="submenu">
-                        <li><a href="/~SAESYS11/pages/produit.php?recherche=Fruits">Fruits</a></li>
-                        <li><a href="/~SAESYS11/pages/produit.php?recherche=Légumes">Légumes</a></li>
-                        <li><a href="/~SAESYS11/pages/produit.php?recherche=Salé">Salé</a></li>
-                        <li><a href="/~SAESYS11/pages/produit.php?recherche=Sucré">Sucré</a></li>
-                        <li><a href="/~SAESYS11/pages/produit.php?recherche=Crémerie">Crémerie & oeufs</a></li>
-                        <li><a href="/~SAESYS11/pages/produit.php?recherche=Viandes">Viandes</a></li>
+                        <li><a href="/~SAESYS11/pages/produit.php?recherche=Fruits&tri=asc">Fruits</a></li>
+                        <li><a href="/~SAESYS11/pages/produit.php?recherche=Légumes&tri=asc">Légumes</a></li>
+                        <li><a href="/~SAESYS11/pages/produit.php?recherche=Salé&tri=asc">Salé</a></li>
+                        <li><a href="/~SAESYS11/pages/produit.php?recherche=Sucré&tri=asc">Sucré</a></li>
+                        <li><a href="/~SAESYS11/pages/produit.php?recherche=Crémerie&tri=asc">Crémerie & oeufs</a></li>
+                        <li><a href="/~SAESYS11/pages/produit.php?recherche=Viandes&tri=asc">Viandes</a></li>
                     </ul>
                 </li>
-                <li><a href="/~SAESYS11/pages/produit.php?recherche=Hygiène">Hygiène</a>
+                <li><a href="/~SAESYS11/pages/produit.php?recherche=Hygiène&tri=asc">Hygiène</a>
                     <ul class="submenu">
-                        <li><a href="/~SAESYS11/pages/produit.php?recherche=Savons">Savons</a></li>
-                        <li><a href="/~SAESYS11/pages/produit.php?recherche=Shampoings">Shampooings</a></li>
-                        <li><a href="/~SAESYS11/pages/produit.php?recherche=Soins et visage">Soins & Visage</a></li>
+                        <li><a href="/~SAESYS11/pages/produit.php?recherche=Savons&tri=asc">Savons</a></li>
+                        <li><a href="/~SAESYS11/pages/produit.php?recherche=Shampoings&tri=asc">Shampooings</a></li>
+                        <li><a href="/~SAESYS11/pages/produit.php?recherche=Soins et visage&tri=asc">Soins & Visage</a></li>
                     </ul>
                 </li>
-                <li><a href="/~SAESYS11/pages/produit.php?recherche=Entretien">Entretien</a>
+                <li><a href="/~SAESYS11/pages/produit.php?recherche=Entretien&tri=asc">Entretien</a>
                     <ul class="submenu">
-                        <li><a href="/~SAESYS11/pages/produit.php?recherche=Linge">Soin du linge</a></li>
-                        <li><a href="/~SAESYS11/pages/produit.php?recherche=Menage">Vaiselle & Ménage</a></li>
-                        <li><a href="/~SAESYS11/pages/produit.php?recherche=Décoration">Décoration</a></li>
+                        <li><a href="/~SAESYS11/pages/produit.php?recherche=Linge&tri=asc">Soin du linge</a></li>
+                        <li><a href="/~SAESYS11/pages/produit.php?recherche=Menage&tri=asc">Vaiselle & Ménage</a></li>
+                        <li><a href="/~SAESYS11/pages/produit.php?recherche=Décoration&tri=asc">Décoration</a></li>
                     </ul>
                 </li>
             </ul>
