@@ -7,11 +7,6 @@
 
 === Crée un compte 
 
-Pour se connecter à un compte client, rendez-vous sur la page : [.underline]#Connexion# en cliquant sur le lien disponible sur *l'en-tête* et entrez les informations demander, à savoir le mail et le mot de passe. +
-Au clique du bouton : [.underline]#Se connecter#, si ces deux informations ne sont pas erroné la connection est établie.
-
-=== Se connecter à un compte
-
 Pour crée un compte client, rendez-vous sur page : [.underline]#Connexion# en cliquant sur le lien disponible sur *l'en-tête* et cliquer sur le bouton : [.underline]#Créer un compte chez Royal Bio# pour être redirigez vers le formulaire de création d'un compte. +
 Saissisez ensuite les différent champs et valider en cliquant sur le bouton : *Valider*
 
@@ -23,6 +18,11 @@ Saissisez ensuite les différent champs et valider en cliquant sur le bouton : *
 .. une majuscule
 .. une minuscule
 .. un caractère spécial
+
+=== Se connecter à un compte
+
+Pour se connecter à un compte client, rendez-vous sur la page : [.underline]#Connexion# en cliquant sur le lien disponible sur *l'en-tête* et entrez les informations demander, à savoir le mail et le mot de passe. +
+Au clique du bouton : [.underline]#Se connecter#, si ces deux informations ne sont pas erroné la connection est établie.
 
 === Recherche et consulter des produits
 
@@ -37,6 +37,19 @@ WARNING: La recherche peut échouer, votre produit n'existe peut-être pas ou v�
 
 == Guide de l'Administrateur
 
+=== se connecter à un compte Administrateur
+
+Pour se connecter à un compte Administrateur, rendez-vous sur la page : [.underline.]#Connexion#. +
+Depuis cette page entrer le code confidentiel pour être redirigez vers le formulaire pour entrer le mot de passe pour accéder au formulaire de connexion à un compte Administrateur. +
+Entrez les informations demander, à savoir le code d'employer ainsi que le mot de passe correspondant. +
+Au clique du bouton : [.underline.]#Se connecter#, si ces deux informations ne sont pas erroné la connexion est établie.
+
 === Gérer les produits
 
+
 === Gérer les clients
+
+TIPS: Pour pouvoir gérer les produits, l'utilisateur doit être connecté à un compte Administrateur.
+
+En cliquant sur le bouton : [.underline.]#Gérer les clients#, l'Administrateur est redirigez vers une page dans laquelle est présente un tableau listant tous les comptes créer sur le site web. +
+Dans les deux dernière colonnes de ce tableau sont disponible un bouton pour modifier les informations du compte sélectionner ou bien le supprimer. +
