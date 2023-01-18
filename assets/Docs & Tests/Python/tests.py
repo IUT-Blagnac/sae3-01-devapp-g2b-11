@@ -1,41 +1,45 @@
+import time
 import paho.mqtt.client as mqtt
 import json
-import os
+from os import *
 import sys
 import signal
-import time
+
+
 
 # test sur la configuration
 try:
     # vérifie que le fichier existe
-    assert os.access('config.json', os.F_OK)
+    assert access('config.json', F_OK)
     # vérifie que le script à le droit de lecture sur le fichier
-    assert os.access('config.json', os.R_OK)
+    assert access('config.json', R_OK)
     # lit le fichier de configuration
-    with open('config.json', 'r') as config_file:
-        config_json = json.load(config_file)
+    config_file = open('config.json', O_RDONLY)
+    config_raw = read(config_file, 1024)
+    config_json = json.loads(config_raw.decode())
+    close(config_file)
 
     # charge la configuration
-    data_wanted = config_json['data']
+    datas = config_json['data']
     alert_temp = config_json['seuiltemp']
     alert_hum = config_json['seuilhum']
-    file_name = config_json['nomFichier']
-    alert_data = config_json['alerte']
-    device_id = config_json['capteur']
+    nom_fich = config_json['nomFichier']
+    alerts_data = config_json['alerte']
+    capteur = config_json['capteur']
     host = "chirpstack.iut-blagnac.fr"
     port = 1883
 
     # test les options
-    assert isinstance(data_wanted, type([]))
-    assert all(isinstance(data, str) for data in data_wanted)
-    assert len(data_wanted) >= 1
+    assert isinstance(datas, type([]))
+    assert all(isinstance(data, str) for data in datas)
+    assert len(datas) >= 1
     assert isinstance(alert_temp, (int, float))
     assert isinstance(alert_hum, (int, float))
-    assert isinstance(file_name, str)
-    assert isinstance(alert_data, type([]))
-    assert all(isinstance(data, str) for data in alert_data)
-    assert isinstance(device_id, str)
-    assert len(device_id) == 16
+    assert isinstance(nom_fich, str)
+    assert isinstance(alerts_data, type([]))
+    assert all(isinstance(data, str) for data in alerts_data)
+    assert isinstance(capteur, str)
+    assert len(capteur) == 16
     assert isinstance(host, str)
     assert isinstance(port, int)
     assert 0 < port < 65536
@@ -46,8 +50,9 @@ except:
 
 # initialise les données JSON
 data_json = json.loads('{}')
-for data_name in data_wanted:
-    data_json[data_name] = 0
+#for data_name in data_wanted:
+ #   print(data_name)
+  #  data_json[data_name] = 0
 
 # unité et leur nom en français
 units = {
@@ -57,29 +62,29 @@ units = {
 }
 
 def on_connect(client, userdata, flags, rc):
-    print(f'Connecté au seveur MQTT {host} sur le port {port}.')
+    print('Connecté au seveur MQTT '+ host + ' sur le port '+str(port)+'.')
     # s'abonne aux appareils voulus
-    client.subscribe(f'application/1/device/{device_id}/event/up')
+    client.subscribe('application/1/device/' + capteur + '/event/up')
     # définit une alarme
     signal.alarm(5*60)
 
 def on_message(client, userdata, msg):
-    payload_json = json.loads(msg.payload)
+    f = open(config_json["nomFichier"][:len(config_json["nomFichier"])-4] + "_test.txt", O_WRONLY | O_CREAT | O_TRUNC, 0o600)
+    payload_json = json.loads(msg.payload.decode())
+    data_object = payload_json['object']
     # sauvegarde chaque données voulues
-    for data_name in data_wanted:
-        if data_name in payload_json:
-            data_json[data_name] = payload_json[data_name]
-            # vérifie si les données reçues dépassent les seuils d'alerte
-            if data_name in alert_data:
-                if data_name == 'humidity' and data_json[data_name] > alert_hum:
-                    print(f"Alerte: L'humidité est supérieure à {alert_hum} %RH!")
-                elif data_name == 'temperature' and data_json[data_name] > alert_temp:
-                    print(f"Alerte: La température est supérieure à {alert_temp}°C!")
+    for data in datas:
+        data_json[data] = data_object[data]
+        print(data_json[data])
+    print('-----Capteur :', msg.topic, '-----')
+    print('Heure :', time.strftime('%H:%M:%S'))
+    print('Données reçues :', data_json)
     # écrit les données dans un fichier
-    with open(file_name, 'w') as data_file:
-        json.dump(data_json, data_file)
-
-
+    data_txt = json.dumps(data_json, indent=4)
+    print(data_txt.encode())
+    write(f, bytes(data_txt.encode()))
+    close(f)
+    signal.alarm(5 * 60)
 
 # crée un client MQTT
 client = mqtt.Client()
@@ -90,6 +95,7 @@ client.on_message = on_message
 
 # se connecte au broker MQTT
 client.connect(host, port, 60)
+
 
 # boucle pour rester connecté au broker
 client.loop_forever()
