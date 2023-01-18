@@ -10,11 +10,11 @@ alerte = config["alerte"]
 
 mqttserver = "chirpstack.iut-blagnac.fr"
 mqttport = 1883
-frequency = 5 # in minutes
+frequency = 5 # en minutes
 
 def get_data(mqtt, obj, msg):
     f = open("data/"+config["nomFichier"], O_WRONLY | O_CREAT | O_TRUNC, 0o600)
-    jsonMsg = json.loads(msg.payload)
+    jsonMsg = json.loads(msg.payload.decode())
     for data in config["data"]:
         donnee = jsonMsg["object"][data]
         if(data == "co2"):
@@ -53,4 +53,4 @@ client.on_message = get_data
 
 while True:
     client.loop()
-    time.sleep(frequency * 60)  # sleep for frequency minutes
+    time.sleep(frequency * 60)  # fréquence de lecture du fichier
