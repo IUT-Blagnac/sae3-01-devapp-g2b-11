@@ -100,7 +100,7 @@ Utilisez pour cela les fonctionnalités de GitHub pour les https://docs.github.c
 
 De plus ce fichier `README.adoc` devra être à jour des informations suivantes :
 
-- Version courante : https://github.com/IUT-Blagnac/sae3-01-devapp-g2b-11/releases/tag/Sprint2[version 2]
+- Version courante : https://github.com/IUT-Blagnac/sae3-01-devapp-g2b-11/releases/tag/Sprint4[Sprint 4]
 
 - Liste des https://github.com/IUT-Blagnac/sae3-01-devapp-g2b-11/issues?q=is%3Aissue+is%3Aopen+label%3AUS[User Stories]  et % restant
 
