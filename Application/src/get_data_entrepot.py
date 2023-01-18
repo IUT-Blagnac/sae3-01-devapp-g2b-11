@@ -1,16 +1,16 @@
 import json
-
 import paho.mqtt.client as mqtt
-
 from os import *
+import time
 
 c = open('config.json', O_RDONLY)
-config = json.loads(read(c, 1000))
+config = json.loads(read(c, 1000).decode())
 
 alerte = config["alerte"]
 
 mqttserver = "chirpstack.iut-blagnac.fr"
 mqttport = 1883
+frequency = 5 # in minutes
 
 def get_data(mqtt, obj, msg):
     f = open("data/"+config["nomFichier"], O_WRONLY | O_CREAT | O_TRUNC, 0o600)
@@ -40,17 +40,17 @@ def get_data(mqtt, obj, msg):
             write(f, bytes(msg + b"\n"))
             print("Humidité: ", donnee)
     print("---------------------------------")
+    close(f)
 
 print("Connexion au server MQTT...")
 
 client = mqtt.Client()
 client.connect(mqttserver, mqttport, 600)
 
-print(config["capteur"])
-
 client.subscribe("application/1/device/"+config["capteur"]+"/event/up")
 
 client.on_message = get_data
 
-client.loop_forever()
-
+while True:
+    client.loop()
+    time.sleep(frequency * 60)  # sleep for frequency minutes
