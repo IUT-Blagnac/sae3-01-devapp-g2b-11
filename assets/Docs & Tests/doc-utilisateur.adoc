@@ -7,8 +7,10 @@
 
 === Crée un compte 
 
-Pour crée un compte client, rendez-vous sur page : [.underline]#Connexion# en cliquant sur le lien disponible sur *l'en-tête* et cliquer sur le bouton : [.underline]#Créer un compte chez Royal Bio# pour être redirigez vers le formulaire de création d'un compte. +
-Saissisez ensuite les différent champs et valider en cliquant sur le bouton : *Valider*
+Pour crée un compte client, rendez-vous sur page : [.underline]#Connexion# en cliquant sur le lien disponible sur *l'en-tête* et cliquer sur le bouton : [.underline]#Créer un compte chez Royal Bio# pour être redirigez vers le formulaire de création d'un compte : +
+Saissisez ensuite les différent champs et valider en cliquant sur le bouton : *Valider* +
+
+image:./img/formInscri.png[Formulaire d'inscription]  +
 
 .La création d'un compte Royal Bio ne peut être validée si l'un des cas suivant n'est pas respecter : 
 
@@ -22,34 +24,118 @@ Saissisez ensuite les différent champs et valider en cliquant sur le bouton : *
 === Se connecter à un compte
 
 Pour se connecter à un compte client, rendez-vous sur la page : [.underline]#Connexion# en cliquant sur le lien disponible sur *l'en-tête* et entrez les informations demander, à savoir le mail et le mot de passe. +
-Au clique du bouton : [.underline]#Se connecter#, si ces deux informations ne sont pas erroné la connection est établie.
+
+image:./img/formConn.png[Formulaire de connexion]  +
+
+Au clique du bouton : [.underline]#Se connecter#, si ces deux informations ne sont pas erroné la connection est établie. +
+
+image:./img/infoConn.png[Infos connexion]  +
 
 === Recherche et consulter des produits
 
-Pour consulter les produits d'un catégorie spécifique, sélectionner celle-ci dans le sous-menu de *l'en-tête* +
+Pour consulter les produits d'une catégorie spécifique, sélectionner celle-ci dans le sous-menu de *l'en-tête* +
 
-Pour recherche un produit spécifique, utilisez la barre de recherche disponible sur *l'en-tête*
+image:./img/categorie.png[Catégories]  +
+
+image:./img/produitCatego.png[Produits]  +
+
+Pour rechercher un produit spécifique, utilisez la barre de recherche disponible sur *l'en-tête*
+
+image:./img/barreRecherche.png[Barre de recherche]  +
+
+image:./img/produitRecherche.png[Produits]  +
 
 WARNING: La recherche peut échouer, votre produit n'existe peut-être pas ou vérifiez l'ortographe 
 
+=== Ajouter et consulter des produits dans son panier
 
-=== Ajouter des produits à son panier
+WARNING: Pour utiliser cette fonctionnalité, l'utilisateur doit être connecté à un compte
+
+Pour ajouter un produit à son panier, le client doit dans un premier temps se rendre sur la page des produits et cliquer sur le bouton : [.underline]#Ajouter au panier# du produit désirer (une alerte s'affiche) : +
+
+image:./img/produitDesirer.png[Produit désirer]  +
+
+image:./img/alerte.png[Alerte]  +
+
+Pour consulter les produits de son panier, le client doit se rendre sur la page de son panier en cliquant sur le logo représentatif sur *l'entête* : +
+
+image:./img/panier.png[Logo du panier]  +
+
+image:./img/pagePanier.png[Page du panier]  
+
+=== Gérer les produits dans son panier 
+
+=== Réaliser une commande
 
 == Guide de l'Administrateur
 
 === se connecter à un compte Administrateur
 
-Pour se connecter à un compte Administrateur, rendez-vous sur la page : [.underline.]#Connexion#. +
-Depuis cette page entrer le code confidentiel pour être redirigez vers le formulaire pour entrer le mot de passe pour accéder au formulaire de connexion à un compte Administrateur. +
-Entrez les informations demander, à savoir le code d'employer ainsi que le mot de passe correspondant. +
-Au clique du bouton : [.underline.]#Se connecter#, si ces deux informations ne sont pas erroné la connexion est établie.
+Pour se connecter à un compte Administrateur, rendez-vous sur la page : [.underline]#Connexion#. +
+Depuis cette page, saisissez les informations administrateur dans le formulaire : +
+
+image:./img/formConn.png[Formulaire de connexion]  +
+
+Si ces informations sont valides, l'utilisateur sera redirigez vers une page lui demandant le mot de passe des Administrateurs : +
+
+image:./img/motPasseAdmin.png[Mot de passe admin]  +
+
+Si le mot de passe saisit est valide, il sera redirigez à nouveau vers une page dans laquelle est présente un formulaire de connexion où il devra saisir sont numéro d'employé et le mot de passe associé à ce numéro : +
+
+image:./img/formAdmin.png[Formulaire de connexio admin]  +
+
+Si les informations saisies sont correct, l'utilisateur est redirigez vers une page dans laquelle sont présent des boutons permettant respectivement de redirigez vers les pages pour faire le CRUD des clients et des produits ainsi que gérer les messages clients : 
+
+image:./img/pageAdmin.png[Page Administrateur]  +
 
 === Gérer les produits
 
+WARNING: Pour utiliser cette fonctionnalité, l'utilisateur doit être connecté à un compte administrateur. 
+
+Pour faire le CRUD des produits, l'administrateur doit cliquer sur le bouton : *Gérer les produits* depuis la page [.underline]#Administrateur# : 
+
+image:./img/btnGestionProduit.png[Bouton gestion des produits]  +
+
+ce qui aura pour effet de le redirigez vers une page dans laquelle la liste de touts les produits est présente dans un tableau :
+
+image:./img/pageGestionProduit.png[Page gestion produits]  +
+
+Depuis cette page, l'Administrateur aura la possibilité de faire trois actions différentes : +
+
+* Ajouter un produit
+* Modifier les informations d'un produit
+* Supprimer un produit
+
+La fonctionnalité permettant d'ajouter un produit redirige l'administrateur vers une page dans laquelle est présente un formaulaire dans lequel il est invité à entrer les nouvelles informations : 
+
+image:./img/pageAjoutProduit.png[Page d'ajout d'un produit]  +
+
+La fonctionnalité permettant de modifier les informations d'un produit redirige l'Administrateur vers une page dans laquelle est présente un formulaire dans lequel il est invité à entrer les nouvelles informations : 
+
+image:./img/pageModifInfoProduit.png[Page modification d'un produit]  +
 
 === Gérer les clients
 
-TIPS: Pour pouvoir gérer les produits, l'utilisateur doit être connecté à un compte Administrateur.
+WARNING: Pour utilliser cette fonctionnalité, l'utilisateur doit être connecté à un compte administrateur.
 
-En cliquant sur le bouton : [.underline.]#Gérer les clients#, l'Administrateur est redirigez vers une page dans laquelle est présente un tableau listant tous les comptes créer sur le site web. +
-Dans les deux dernière colonnes de ce tableau sont disponible un bouton pour modifier les informations du compte sélectionner ou bien le supprimer. +
+Pour faire le CRUD des clients, l'administrateur doit cliquer sur le bouton : *Gestion des clients* depuis la page [.undeline]#Administrateur# : 
+
+image:./img/btnGestionCli.png[Bouton gestion des clients]  +
+
+ce qui aura pour effet de le redirigez vers une page dans laquelle est présente la liste des clients du site dans un tableau : 
+
+image:./img/pageGestionCli.png[Page gestion des clients]  +
+
+Depuis cette page, l'administrateur aura la possibilité de faire trois actions différentes : +
+
+* Ajouter un client 
+* Modifier les informations d'un client
+* Supprimer un client
+
+La fonctionnalité permettant d'ajouter un client redirige l'administrateur vers une page dans laquelle est présente un formaulaire dans lequel il est invité à entrer les nouvelles informations : 
+
+image:./img/pageAjoutCli.png[Page d'ajout d'un client]  +
+
+La fonctionnalité permettant de modifier les informations d'un client redirige l'administrateur vers une page dans laquelle est présente un formulaire dans lequel il est invité à entrer les nouvelles informations : 
+
+image:./img/pageGestionCli.png[Page modification d'un client]  +
