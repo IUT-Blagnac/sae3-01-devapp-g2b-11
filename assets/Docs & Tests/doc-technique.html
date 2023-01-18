@@ -446,12 +446,18 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_guide_technique_du_site_web">Guide technique du site web</a>
 <ul class="sectlevel2">
 <li><a href="#_création_dun_compte">Création d&#8217;un compte</a></li>
-<li><a href="#_création_du_cookie_de_connexion">Création du cookie de connexion</a></li>
-<li><a href="#_connexion_à_un_compte">Connexion à un compte</a></li>
+<li><a href="#_connexion_à_un_compte_cookie_de_connexion">Connexion à un compte &amp; cookie de connexion</a></li>
+<li><a href="#_consulter_et_modifier_ses_informations">Consulter et modifier ses informations</a></li>
 <li><a href="#_rechercher_et_consultation_des_produits">Rechercher et consultation des produits</a></li>
 <li><a href="#_ajouter_des_produits_au_panier">Ajouter des produits au panier</a></li>
+<li><a href="#_gérer_les_produits_de_sont_panier">Gérer les produits de sont panier</a></li>
+<li><a href="#_réaliser_une_commande">Réaliser une commande</a></li>
+<li><a href="#_se_connecter_à_un_compte_administrateur">se connecter à un compte Administrateur</a></li>
+<li><a href="#_gérer_les_produits">Gérer les produits</a></li>
+<li><a href="#_gérer_les_clients">Gérer les clients</a></li>
 </ul>
 </li>
+<li><a href="#_guide_technique_de_lapplication_iot">Guide technique de l&#8217;Application IOT</a></li>
 </ul>
 </div>
 </div>
@@ -461,69 +467,168 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sectionbody">
 <div class="sect2 data-line-8">
 <h3 id="_création_dun_compte">Création d&#8217;un compte</h3>
-
+<div class="paragraph data-line-10">
+<p>La création d&#8217;un compte sur le site web s&#8217;effectue grâce à un formulaire qui sera traité dans le fichier : <span class="underline">TraitInscription.php</span>.<br></p>
 </div>
-<div class="sect2 data-line-10">
-<h3 id="_création_du_cookie_de_connexion">Création du cookie de connexion</h3>
 <div class="paragraph data-line-12">
-<p>Dans un premier temps, nous incluons le fichier qui permet la connexion à la base de données et donc de réalisé les différentes requêtes sur celle-ci.<br></p>
+<p><span class="image"><img src="./img/code_formInscri.png" alt="code du formulaire d&#8217;inscription"></span> <br></p>
 </div>
 <div class="paragraph data-line-14">
-<p>Ensuite, nous vérifions si les cookies de connexion existent et sont définies.<br>
-Si c&#8217;est le cas, nous déclarons deux variables qui prendront pour valeurs celles contenues dans les cookies.<br></p>
+<p>Pour traiter ce formulaire, dans un premier temps nous devons inclure le fichier qui permet de nous connecter à la base de données :</p>
 </div>
-<div class="admonitionblock tip data-line-17">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-Si les cookies sont définies, lors de la prochaine connexion de l&#8217;utilisateur, les champs seront pré-remplis.
-</td>
-</tr>
-</table>
+<div class="paragraph data-line-16">
+<p><span class="image"><img src="./img/code_formInscri.png" alt="code du formulaire d&#8217;inscription"></span> <br></p>
 </div>
-<div class="olist arabic data-line-21">
-<div class="title">Le traitement du formulaire se fait dans le fichier : <span class="underline">TraitConnexion.php</span> :</div>
-<ol class="arabic">
+<div class="paragraph data-line-18">
+<p>Ensuite nous mettons en place plusieurs regex qui permettent de vérifier la validité des champs saisie :</p>
+</div>
+<div class="ulist data-line-20">
+<ul>
+<li class="data-line-20">
+<p>Le nom et le prénom doivent commencer par une majuscule</p>
+</li>
 <li class="data-line-21">
-<p>Vérification si les champs sont remplis</p>
+<p>Le mail doit se termine par @ suivie d&#8217;une chaîne puis d&#8217;un point suivie d&#8217;une chaîne</p>
 </li>
 <li class="data-line-22">
-<p>Inclusions du fichier permettant la connexion à la base de données</p>
+<p>Le mot de passe doit contenir au minimum 8 caractères dont 1 majuscule, 1 minuscule, 1 chiffre et 1 caractère spéciale.</p>
 </li>
-<li class="data-line-23">
-<p>Création de deux variables prennant pour valeurs celles des champs et utilisation des méthodes <strong>htmlspecialchars()</strong> et <strong>password_hash()</strong> pour ajouter plus de sécurité contre les attaques XSS et hasher le mot de passe pour ne pas le stocker en clair.</p>
-</li>
-<li class="data-line-24">
-<p>Préparation et exécution de la requête SQL qui recherche l&#8217;email et le mot de passe taper par l&#8217;utilisateur. Cela permet de vérifier que :</p>
-<div class="olist loweralpha data-line-25">
-<ol class="loweralpha" type="a">
-<li class="data-line-25">
-<p>l&#8217;utilisateur possède bien un compte avec cette adresse mail</p>
-</li>
-<li class="data-line-26">
-<p>que le mot de passe correspond bien à cette adresse mail.</p>
-</li>
-</ol>
+</ul>
 </div>
+<div class="paragraph data-line-24">
+<p><span class="image"><img src="./img/code_regex.png" alt="code des regex"></span></p>
+</div>
+<div class="paragraph data-line-26">
+<p>Ensuite, nous préparons et éxecutons une requête qui recherche la dernière ID des clients pour la stocker dans une variable + 1. Elle sera utilisé comme ID du nouveau client :</p>
+</div>
+<div class="paragraph data-line-28">
+<p><span class="image"><img src="./img/code_idMax.png" alt="code de la requête SQL"></span></p>
+</div>
+<div class="paragraph data-line-30">
+<p>Par la suite, nous préparons et éxecutons une requête qui recherche les informations des client qui ont le mail saisie par l&#8217;utilisateur.<br>
+Si des résultat sont trouvés, cela veux dire qu&#8217;un compte est déjà crée avec cette adresse et donc l&#8217;utilisateur doit saisir un nouveau mail :</p>
+</div>
+<div class="paragraph data-line-33">
+<p><span class="image"><img src="./img/code_mailPresent.png" alt="code de la requête SQL"></span></p>
+</div>
+<div class="paragraph data-line-35">
+<p>Si aucun mail est trouvé, alors nous préparons et éxecutons une nouvelle requête SQL qui permet d&#8217;insérer dans la base de données le compte avec ses informations :</p>
+</div>
+<div class="paragraph data-line-37">
+<p><span class="image"><img src="./img/code_mailPresent.png" alt="code de l&#8217;ajout d&#8217;un compte client"></span></p>
+</div>
+</div>
+<div class="sect2 data-line-39">
+<h3 id="_connexion_à_un_compte_cookie_de_connexion">Connexion à un compte &amp; cookie de connexion</h3>
+<div class="paragraph data-line-41">
+<p>La connexion à un compte sur le site web s&#8217;effectue grâce à un formulaire qui sera traité dans le fichier : <span class="underline">TraitConnexion.php</span>.<br>
+Nous vérifions avant tout si une connexion est déjà établie grâce à la variable de <strong>SESSION</strong>, si ce n&#8217;est pas le cas nous affichons un formulaire dans lequelle l&#8217;utilisateur devra saisir ses informations :</p>
+</div>
+<div class="paragraph data-line-44">
+<p><span class="image"><img src="./img/code_formConn.png" alt="code du formulaire de connexion"></span> <br></p>
+</div>
+<div class="paragraph data-line-46">
+<p>Pour traiter ce formulaire, dans un premier nous devons lancer la session et inclure le fichier qui permet de nous connecter à la base de données :</p>
+</div>
+<div class="paragraph data-line-48">
+<p><span class="image"><img src="./img/code_connBD.png" alt="code de la connexion à la BD"></span> <br></p>
+</div>
+<div class="paragraph data-line-50">
+<p>Ensuite, dans une conditions qui vérifie que les champs ont bien été saisies, nous préparons et exécutons une requête qui recherche le mail saisie par l&#8217;utilisateur dans la base de données :</p>
+</div>
+<div class="paragraph data-line-52">
+<p><span class="image"><img src="./img/code_rechercheMail.png" alt="code de la requête SQL"></span> <br></p>
+</div>
+<div class="paragraph data-line-54">
+<p>Si un mail est trouvé dans la base de données, nous vérifions que le mot de passe saisie par l&#8217;utilisateur correspond à ce mail.<br>
+Si c&#8217;est le cas une session est crée avec les informations du client et ce dernier et redirigez vers la page d&#8217;accueil.<br>
+De plus, une condition vérifie si l&#8217;utilisateur à choisi d&#8217;avoir un cookie de connexion. Si c&#8217;est le cas celui-ci est crée avec pour valeur le mail du client ce qui aura pour effet de pré-remplir les champs lors de sa prochaine connexion :</p>
+</div>
+<div class="paragraph data-line-58">
+<p><span class="image"><img src="./img/code_motPasseValide.png" alt="code de la vérification du mot de passe"></span></p>
+</div>
+</div>
+<div class="sect2 data-line-60">
+<h3 id="_consulter_et_modifier_ses_informations">Consulter et modifier ses informations</h3>
+<div class="paragraph data-line-62">
+<p>La consultation des informations d&#8217;un client s&#8217;effectue depuis la page <span class="underline">Connexion.php</span>.<br></p>
+</div>
+<div class="paragraph data-line-64">
+<p>Nous vérifions si une <strong>SESSION</strong> est crée est si la clé <strong>access</strong> à pour valeur <strong>oui</strong>.<br>
+Si c&#8217;est le cas, nous affichons les informations de l&#8217;utilisateur :</p>
+</div>
+<div class="paragraph data-line-67">
+<p><span class="image"><img src="./img/code_pageInfo.png" alt="code de la page informations"></span></p>
+</div>
+<div class="paragraph data-line-69">
+<p>Pour accéder à la modification de ses informations, le client doit cliquer sur le bouton : <strong>Modifier</strong> qui le redirige vers la page : <span class="underline">modification.php</span> dans laquelle est présent un formulaire qui sera traité dans la page : <span class="underline">TraitModification.php</span> :</p>
+</div>
+<div class="paragraph data-line-71">
+<p><span class="image"><img src="./img/code_pageModification.png" alt="code de la page modification"></span></p>
+</div>
+<div class="paragraph data-line-73">
+<p>Pour traité se formulaire, lançons d&#8217;abord la <strong>SESSION</strong> et incluons le fichier qui permet de se connecter à la base de données :</p>
+</div>
+<div class="paragraph data-line-75">
+<p><span class="image"><img src="./img/code_connBD.png" alt="code de la connection à la BD"></span></p>
+</div>
+<div class="paragraph data-line-77">
+<p>Ensuite, nous mettons en place plusieurs regex qui vérifie que :</p>
+</div>
+<div class="ulist data-line-79">
+<ul>
+<li class="data-line-79">
+<p>Le nom et le prénom doivent commencer par une majuscule</p>
 </li>
-</ol>
+<li class="data-line-80">
+<p>Le mail doit se termine par @ suivie d&#8217;une chaîne puis d&#8217;un point suivie d&#8217;une chaîne</p>
+</li>
+<li class="data-line-81">
+<p>Le mot de passe doit contenir au minimum 8 caractères dont 1 majuscule, 1 minuscule, 1 chiffre et 1 caractère spéciale.</p>
+</li>
+<li class="data-line-82">
+<p>Le numéro de téléphone doit contenir exactement 10 chiffre</p>
+</li>
+</ul>
+</div>
+<div class="paragraph data-line-84">
+<p><span class="image"><img src="./img/code_regex2.png" alt="code des regex"></span></p>
 </div>
 </div>
-<div class="sect2 data-line-28">
-<h3 id="_connexion_à_un_compte">Connexion à un compte</h3>
-
-</div>
-<div class="sect2 data-line-30">
+<div class="sect2 data-line-86">
 <h3 id="_rechercher_et_consultation_des_produits">Rechercher et consultation des produits</h3>
 
 </div>
-<div class="sect2 data-line-32">
+<div class="sect2 data-line-88">
 <h3 id="_ajouter_des_produits_au_panier">Ajouter des produits au panier</h3>
 
 </div>
+<div class="sect2 data-line-90">
+<h3 id="_gérer_les_produits_de_sont_panier">Gérer les produits de sont panier</h3>
+
+</div>
+<div class="sect2 data-line-92">
+<h3 id="_réaliser_une_commande">Réaliser une commande</h3>
+
+</div>
+<div class="sect2 data-line-94">
+<h3 id="_se_connecter_à_un_compte_administrateur">se connecter à un compte Administrateur</h3>
+
+</div>
+<div class="sect2 data-line-96">
+<h3 id="_gérer_les_produits">Gérer les produits</h3>
+
+</div>
+<div class="sect2 data-line-98">
+<h3 id="_gérer_les_clients">Gérer les clients</h3>
+
+</div>
+</div>
+</div>
+<div class="sect1 data-line-100">
+<h2 id="_guide_technique_de_lapplication_iot">Guide technique de l&#8217;Application IOT</h2>
+<div class="sectionbody">
+
 </div>
 </div>
 </div>

@@ -7,27 +7,94 @@
 
 ===  Création d'un compte
 
-=== Création du cookie de connexion
+La création d'un compte sur le site web s'effectue grâce à un formulaire qui sera traité dans le fichier : [.underline]#TraitInscription.php#. + 
 
-Dans un premier temps, nous incluons le fichier qui permet la connexion à la base de données et donc de réalisé les différentes requêtes sur celle-ci. +
+image:./img/code_formInscri.png[code du formulaire d'inscription]  +
 
-Ensuite, nous vérifions si les cookies de connexion existent et sont définies. +
-Si c'est le cas, nous déclarons deux variables qui prendront pour valeurs celles contenues dans les cookies. +
+Pour traiter ce formulaire, dans un premier temps nous devons inclure le fichier qui permet de nous connecter à la base de données : 
 
-TIP: Si les cookies sont définies, lors de la prochaine connexion de l'utilisateur, les champs seront pré-remplis.
+image:./img/code_formInscri.png[code du formulaire d'inscription]  +
 
-.Le traitement du formulaire se fait dans le fichier : [.underline]#TraitConnexion.php# :
+Ensuite nous mettons en place plusieurs regex qui permettent de vérifier la validité des champs saisie :
 
-. Vérification si les champs sont remplis
-. Inclusions du fichier permettant la connexion à la base de données
-. Création de deux variables prennant pour valeurs celles des champs et utilisation des méthodes *htmlspecialchars()* et *password_hash()* pour ajouter plus de sécurité contre les attaques XSS et hasher le mot de passe pour ne pas le stocker en clair.
-. Préparation et exécution de la requête SQL qui recherche l'email et le mot de passe taper par l'utilisateur. Cela permet de vérifier que :
-.. l'utilisateur possède bien un compte avec cette adresse mail
-.. que le mot de passe correspond bien à cette adresse mail.
-. Vérification de la validité des  
+* Le nom et le prénom doivent commencer par une majuscule
+* Le mail doit se termine par @ suivie d'une chaîne puis d'un point suivie d'une chaîne
+* Le mot de passe doit contenir au minimum 8 caractères dont 1 majuscule, 1 minuscule, 1 chiffre et 1 caractère spéciale. 
 
-=== Connexion à un compte 
+image:./img/code_regex.png[code des regex]
+
+Ensuite, nous préparons et éxecutons une requête qui recherche la dernière ID des clients pour la stocker dans une variable + 1. Elle sera utilisé comme ID du nouveau client :
+
+image:./img/code_idMax.png[code de la requête SQL]
+
+Par la suite, nous préparons et éxecutons une requête qui recherche les informations des client qui ont le mail saisie par l'utilisateur. +
+Si des résultat sont trouvés, cela veux dire qu'un compte est déjà crée avec cette adresse et donc l'utilisateur doit saisir un nouveau mail :
+
+image:./img/code_mailPresent.png[code de la requête SQL]
+
+Si aucun mail est trouvé, alors nous préparons et éxecutons une nouvelle requête SQL qui permet d'insérer dans la base de données le compte avec ses informations : 
+
+image:./img/code_mailPresent.png[code de l'ajout d'un compte client]
+
+=== Connexion à un compte & cookie de connexion
+
+La connexion à un compte sur le site web s'effectue grâce à un formulaire qui sera traité dans le fichier : [.underline]#TraitConnexion.php#. +
+Nous vérifions avant tout si une connexion est déjà établie grâce à la variable de *SESSION*, si ce n'est pas le cas nous affichons un formulaire dans lequelle l'utilisateur devra saisir ses informations : 
+
+image:./img/code_formConn.png[code du formulaire de connexion]  +
+
+Pour traiter ce formulaire, dans un premier nous devons lancer la session et inclure le fichier qui permet de nous connecter à la base de données : 
+
+image:./img/code_connBD.png[code de la connexion à la BD]  +
+
+Ensuite, dans une conditions qui vérifie que les champs ont bien été saisies, nous préparons et exécutons une requête qui recherche le mail saisie par l'utilisateur dans la base de données : 
+
+image:./img/code_rechercheMail.png[code de la requête SQL]  +
+
+Si un mail est trouvé dans la base de données, nous vérifions que le mot de passe saisie par l'utilisateur correspond à ce mail. +
+Si c'est le cas une session est crée avec les informations du client et ce dernier et redirigez vers la page d'accueil. +
+De plus, une condition vérifie si l'utilisateur à choisi d'avoir un cookie de connexion. Si c'est le cas celui-ci est crée avec pour valeur le mail du client ce qui aura pour effet de pré-remplir les champs lors de sa prochaine connexion : 
+
+image:./img/code_motPasseValide.png[code de la vérification du mot de passe]  
+
+=== Consulter et modifier ses informations
+
+La consultation des informations d'un client s'effectue depuis la page [.underline]#Connexion.php#. +
+
+Nous vérifions si une *SESSION* est crée est si la clé *access* à pour valeur *oui*. +
+Si c'est le cas, nous affichons les informations de l'utilisateur : 
+
+image:./img/code_pageInfo.png[code de la page informations]
+
+Pour accéder à la modification de ses informations, le client doit cliquer sur le bouton : *Modifier* qui le redirige vers la page : [.underline]#modification.php# dans laquelle est présent un formulaire qui sera traité dans la page : [.underline]#TraitModification.php# : 
+
+image:./img/code_pageModification.png[code de la page modification]
+
+Pour traité se formulaire, lançons d'abord la *SESSION* et incluons le fichier qui permet de se connecter à la base de données :
+
+image:./img/code_connBD.png[code de la connection à la BD]
+
+Ensuite, nous mettons en place plusieurs regex qui vérifie que : 
+
+* Le nom et le prénom doivent commencer par une majuscule
+* Le mail doit se termine par @ suivie d'une chaîne puis d'un point suivie d'une chaîne
+* Le mot de passe doit contenir au minimum 8 caractères dont 1 majuscule, 1 minuscule, 1 chiffre et 1 caractère spéciale. 
+* Le numéro de téléphone doit contenir exactement 10 chiffre
+
+image:./img/code_regex2.png[code des regex]
 
 === Rechercher et consultation des produits
 
 === Ajouter des produits au panier
+
+=== Gérer les produits de sont panier
+
+=== Réaliser une commande
+
+=== se connecter à un compte Administrateur
+
+=== Gérer les produits
+
+=== Gérer les clients
+
+== Guide technique de l'Application IOT
