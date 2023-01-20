@@ -171,6 +171,32 @@ image:./img/code_TraitConnAdmin2.png[code du traitement du deuxième formulaire 
 
 === Gérer les produits
 
+==== Ajouter un produit
+
+L'ajout d'un produit est faite grâce à un formulaire dans la page [.underline]#AjoutProduit.php# qui est traité dans la page  [.underline.]#TraitAjoutProduit# :
+
+image:./img/code_formAjoutProduit.png[code du formulaire d'ajout d'un produit]
+
+Pour traité se formulaire, nous vérifions que les différents champs ont étés saisies et différentes regex : 
+
+image:./img/code_formAjoutProduit.png[code du traitement du formulaire d'ajout d'un produit]
+
+Ensuite, nous préparons et éxecutons une requête SQL qui permet de rechercher les produits et les ajouter à un tableau. +
+    
+image:./img/code_TraitFormAjoutProduit2.png[code du traitement du formulaire d'ajout d'un produit]
+
+Ensuite nous vérifions que le produit à créer n'existe pas déjà et on incrément la valeur de *l'idProduit* :
+
+image:./img/code_TraitFormAjoutProduit3.png[code du traitement du formulaire d'ajout d'un produit]
+
+Enfin nous insérons dans la base de données le nouveau produit crée : 
+
+image:./img/code_TraitFormAjoutProduit4.png[code du traitement du formulaire d'ajout d'un produit]
+
+==== Modifier un produit
+
+==== Supprimer un produit
+
 === Gérer les clients
 
 === Gérer la messagerie client 

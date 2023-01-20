@@ -734,26 +734,66 @@ Si un employé est trouvé, et que le mot de passe saisie correspond au compte d
 </div>
 <div class="sect2 data-line-172">
 <h3 id="_gérer_les_produits">Gérer les produits</h3>
+<div class="sect3 data-line-174">
+<h4 id="_ajouter_un_produit">Ajouter un produit</h4>
+<div class="paragraph data-line-176">
+<p>L&#8217;ajout d&#8217;un produit est faite grâce à un formulaire dans la page <span class="underline">AjoutProduit.php</span> qui est traité dans la page  <span class="underline ">TraitAjoutProduit</span> :</p>
+</div>
+<div class="paragraph data-line-178">
+<p><span class="image"><img src="./img/code_formAjoutProduit.png" alt="code du formulaire d&#8217;ajout d&#8217;un produit"></span></p>
+</div>
+<div class="paragraph data-line-180">
+<p>Pour traité se formulaire, nous vérifions que les différents champs ont étés saisies et différentes regex :</p>
+</div>
+<div class="paragraph data-line-182">
+<p><span class="image"><img src="./img/code_formAjoutProduit.png" alt="code du traitement du formulaire d&#8217;ajout d&#8217;un produit"></span></p>
+</div>
+<div class="paragraph data-line-184">
+<p>Ensuite, nous préparons et éxecutons une requête SQL qui permet de rechercher les produits et les ajouter à un tableau.<br></p>
+</div>
+<div class="paragraph data-line-186">
+<p><span class="image"><img src="./img/code_TraitFormAjoutProduit2.png" alt="code du traitement du formulaire d&#8217;ajout d&#8217;un produit"></span></p>
+</div>
+<div class="paragraph data-line-188">
+<p>Ensuite nous vérifions que le produit à créer n&#8217;existe pas déjà et on incrément la valeur de <strong>l&#8217;idProduit</strong> :</p>
+</div>
+<div class="paragraph data-line-190">
+<p><span class="image"><img src="./img/code_TraitFormAjoutProduit3.png" alt="code du traitement du formulaire d&#8217;ajout d&#8217;un produit"></span></p>
+</div>
+<div class="paragraph data-line-192">
+<p>Enfin nous insérons dans la base de données le nouveau produit crée :</p>
+</div>
+<div class="paragraph data-line-194">
+<p><span class="image"><img src="./img/code_TraitFormAjoutProduit4.png" alt="code du traitement du formulaire d&#8217;ajout d&#8217;un produit"></span></p>
+</div>
+</div>
+<div class="sect3 data-line-196">
+<h4 id="_modifier_un_produit">Modifier un produit</h4>
 
 </div>
-<div class="sect2 data-line-174">
+<div class="sect3 data-line-198">
+<h4 id="_supprimer_un_produit">Supprimer un produit</h4>
+
+</div>
+</div>
+<div class="sect2 data-line-200">
 <h3 id="_gérer_les_clients">Gérer les clients</h3>
 
 </div>
-<div class="sect2 data-line-176">
+<div class="sect2 data-line-202">
 <h3 id="_gérer_la_messagerie_client">Gérer la messagerie client</h3>
 
 </div>
 </div>
 </div>
-<div class="sect1 data-line-178">
+<div class="sect1 data-line-204">
 <h2 id="_guide_technique_de_lapplication_iot">Guide technique de l&#8217;Application IOT</h2>
 <div class="sectionbody">
-<div class="sect2 data-line-180">
+<div class="sect2 data-line-206">
 <h3 id="_partie_python">Partie Python</h3>
 
 </div>
-<div class="sect2 data-line-182">
+<div class="sect2 data-line-208">
 <h3 id="_partie_java">Partie Java</h3>
 
 </div>

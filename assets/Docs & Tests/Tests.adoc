@@ -77,6 +77,25 @@ L'utilisateur est redirigez vers la page d'accueil avec un message d'erreur :
 
 [insérer image]
 
+=== Déconnexion d'un compte
+Lors de ce test, nous vérifions que la déconnexion d'un compte est fonctionnelle. +
+Pour ce faire nous devons être connecté à un compte et ce rendre dans la page [.underline]#connexion.php# (mon compte). +
+En cliquant sur le bouton *Se déconnecter*, notre session est supprimer et nous somme rediriger vers la page d'accueil. +
+Le page [.underline]#connexion.php# affiche le formulaire de connexion :
+
+=== Modifier ses informations 
+
+==== Test fonctionnel
+Lors de ce test, nous vérifions que la modifications des informations de son compte est fonctionnelle. +
+Pour ce faire, nous devons nous rendre sur la page [.underline]#connexion.php# (mon compte) et cliquer sur le bouton *Modifier* +
+Nous sommes redirigez vers la page [.underline]#modification.php# dans laquelle nous saisissons nos nouvelles informations. +
+Au clique du bouton *Valider* nous sommes redirigez vers la page [.underline]#connexion.php# et nous constatons que nos informations ont biens étés modifier : 
+
+==== Test non fonctionnel
+Lors de ce test, nous vérifions que la modifications des informations de son compte n'est pas fonctionnelle si nous ne rentrons pas des valeurs correct dans les champs du formulaire. +
+Pour ce faire, nous devons nous rendre sur la page [.underline]#connexion.php# (mon compte) dans laquelle est présente un formulaire dans lequelle nous rentrons nos nouvelles informations (sans respecter la validité des champs). +
+Au clique du bouton *Valider* nous sommes redirigez vers la page [.underline]#connexion.php# (mon compte) et nous constatons que nos informations non pas étés changer et qu'un message d'erreur est présent dans la barre du navigateur : 
+
 === Recherche des produits
 
 ==== Test fonctionnel
@@ -99,5 +118,80 @@ Lors du clique sur le bouton *Entrer*, la recherche est effectuer et l'utilisate
 Malheureusement, la recherche n'a trouvé aucun produits correspondant au produit saisie par l'utilisateur est donc un message d'erreur apparaît.
 
 [insérer image]
+
+=== Ajout de produit à son panier
+
+==== Test fonctionnel
+Lors de ce test, nous vérifions s'il est possible d'ajouter un produit à son panier. +
+Pour ce faire nous devons dans un premier temps être connecté et se rendre dans la page des produits. +
+Ensuite, nous devons cliquer sur le boutons *Ajouter au panier* du produit que nous souhaitons. +
+Le message présent dans l'alerte qui s'affiche doit être un message de succès : 
+
+==== Test non fonctionnel
+Lors de ce test, nous vérifions qu'il est impossible d'ajouter des produits à son panier si nous ne sommes pas connecter. +
+Nous nous rendons dans la page [.underline]#produit.php# sans se connecter. +
+Lorsque nous cliquons sur le boutons : *Ajouter au panier* sur un produit souhaitez, le message présent dans l'alerte doit être un message d'erreur : 
+
+=== Gestion et consultation des produit dans son panier 
+
+==== Supprimer un produit
+
+==== Augmenter la quantité d'un produit
+
+=== Passer commande
+
+==== Test fonctionnel
+
+==== Test non fonctionnel
+
+=== Connexion compte Admin 
+
+==== Test fonctionnel 
+Lors de ce test, nous vérifions si la connexion à un compte Administrateur est fonctionnel. +
+Pour ce faire dans un premier nous devons nous rendre dans la page [.underline]#connexion.php# dans laquelle 
+
+==== Test non fonctionnel
+
+=== Gestion des produits
+
+==== Ajouter un produit
+
+===== Test fonctionnel 
+
+===== Test non fonctionnel
+
+==== Modifier un produit
+
+===== Test fonctionnel 
+
+===== Test non fonctionnel
+
+==== Supprimer un client
+
+===== Test fonctionnel 
+
+===== Test non fonctionnel
+
+=== Gestion des clients
+
+==== Ajouter un client
+
+===== Test fonctionnel 
+
+===== Test non fonctionnel
+
+==== Modifier un client
+
+===== Test fonctionnel 
+
+===== Test non fonctionnel
+
+==== Supprimer un client
+
+===== Test fonctionnel 
+
+===== Test non fonctionnel
+
+=== Gestion messagerie client 
 
 == Tests de l'Application
