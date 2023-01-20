@@ -459,7 +459,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_gestion_messagerie_client">Gestion messagerie client</a></li>
 </ul>
 </li>
-<li><a href="#_tests_de_lapplication">Tests de l&#8217;Application</a></li>
+<li><a href="#_tests_de_lapplication">Tests de l&#8217;Application</a>
+<ul class="sectlevel2">
+<li><a href="#_paramétrage">Paramétrage</a></li>
+<li><a href="#_récupération_et_affichage_des_données">Récupération et affichage des données</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -476,25 +481,24 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 Pour ce faire, nous allons crée un nouveau client depuis le site e-commerce.<br>
 Pour ce faire nous allons entrez les différentes données via le formulaire qui se trouve sur le page inscription.php :</p>
 </div>
-<div class="listingblock data-line-15">
-<div class="content">
-<pre>Nom : Torres
-Prénom : Christine
-Email : christine@gmail.com
-Mot de passe : Christine.2211**a</pre>
+<div class="paragraph data-line-15">
+<p><span class="image"><img src="./img/test_inscription1.png" alt="Formulaire d&#8217;inscription"></span><br>
+<span class="image"><img src="./img/test_inscription2.png" alt="Formulaire d&#8217;inscription"></span></p>
 </div>
-</div>
-<div class="paragraph data-line-24">
+<div class="paragraph data-line-18">
 <p>Lors du clique sur le bouton <strong>Valider</strong>, le nouveau client est insérer dans la base de donées et il est désormais possible de ce connecter à celui-ci :</p>
 </div>
+<div class="paragraph data-line-20">
+<p><span class="image"><img src="./img/test_inscription2.png" alt="Informations de connexion"></span></p>
 </div>
-<div class="sect3 data-line-28">
+</div>
+<div class="sect3 data-line-24">
 <h4 id="_test_non_fonctionnel">Test non fonctionnel</h4>
-<div class="paragraph data-line-29">
+<div class="paragraph data-line-25">
 <p>Lors de ce test, nous vérifions si l&#8217;inscription d&#8217;un compte depuis le site e-commerce est impossible si l&#8217;utilisateur saisie des données non valides.<br>
 Pour ce faire nous allons entrez différentes données via le formulaire qui se trouve sur la page inscription.php :</p>
 </div>
-<div class="listingblock data-line-32">
+<div class="listingblock data-line-28">
 <div class="content">
 <pre>Nom : eubanks
 Prénom : williams
@@ -502,214 +506,296 @@ Email : williams@gmail
 Mot de passe : williams1</pre>
 </div>
 </div>
-<div class="paragraph data-line-41">
-<p>Lors du clique sur le bouton <strong>Valider</strong>, le nouveau client ne peut être insérer dans la base de donnée car les données saisies ne se sont pas valides :</p>
+<div class="paragraph data-line-35">
+<p><span class="image"><img src="./img/test_inscriptionNOK1.png" alt="Formulaire d&#8217;inscription"></span><br>
+<span class="image"><img src="./img/test_inscriptionNOK2.png" alt="Formulaire d&#8217;inscription"></span></p>
+</div>
+<div class="paragraph data-line-38">
+<p>Lors du clique sur le bouton <strong>Valider</strong>, le nouveau client ne peut être insérer dans la base de donnée car les données saisies ne se sont pas valides et nous sommes redirigez vers la page d&#8217;inscription avec un message d&#8217;erreur sur la barre du navigateur :</p>
+</div>
+<div class="paragraph data-line-40">
+<p><span class="image"><img src="./img/test_inscriptionNOK4.png" alt="Formulaire d&#8217;inscription"></span></p>
 </div>
 </div>
 </div>
-<div class="sect2 data-line-45">
+<div class="sect2 data-line-42">
 <h3 id="_connexion_à_un_compte">Connexion à un compte</h3>
-<div class="sect3 data-line-47">
+<div class="sect3 data-line-44">
 <h4 id="_test_fonctionnel_2">Test fonctionnel</h4>
-<div class="paragraph data-line-48">
+<div class="paragraph data-line-45">
 <p>Lors de ce test, nous vérifions si la connexion à un compte depuis le site e-commerce est possible si l&#8217;utilisateur saisie les bons identifiants.<br>
 Pour ce faire, nous allons nous connecter à un compte depuis le site e-commerce en saisissant de mauvais identifiants.<br>
 Pour ce faire nous allons entrez les différentes données via le formulaire qui se trouve sur la page connexion.php :</p>
 </div>
-<div class="listingblock data-line-52">
+<div class="listingblock data-line-49">
 <div class="content">
 <pre>Email : christine@gmail.com
 Mot de passe : Christine.2211**a</pre>
 </div>
 </div>
-<div class="paragraph data-line-59">
+<div class="paragraph data-line-56">
 <p>Lors du clique sur le bouton <strong>Me connecter</strong>, la connexion est établie et les informations du client sont accessibles depuis la page où était présent le formulaire de connexion.<br>
 Il est désormais possible pour un utilisateur connecter de se déconnecter ou de modifier les informations de son compte :</p>
 </div>
 </div>
-<div class="sect3 data-line-64">
+<div class="sect3 data-line-61">
 <h4 id="_test_non_fonctionnel_2">Test non fonctionnel</h4>
-<div class="paragraph data-line-65">
+<div class="paragraph data-line-62">
 <p>Lors de ce test, nous vérifions si la connexion à un compte depuis le site e-commerce est impossible si l&#8217;utilisateur saisie les mauvais identifiants.<br>
 Pour ce faire nous allons entrez les différentes données via le formulaire qui se trouve sur la page connexion.php :</p>
 </div>
-<div class="listingblock data-line-68">
+<div class="listingblock data-line-65">
 <div class="content">
 <pre>Email : christine@gmail.com
 Mot de passe : Christopher.2211</pre>
 </div>
 </div>
-<div class="paragraph data-line-75">
+<div class="paragraph data-line-72">
 <p>Lors du clique sur le bouton <strong>Me connecter</strong>, la connexion n&#8217;est pas établie car les données saisie, en l&#8217;occurence le mot de passe ne correspond pas au compte du client.<br>
 L&#8217;utilisateur est redirigez vers la page d&#8217;accueil avec un message d&#8217;erreur :</p>
 </div>
 </div>
 </div>
-<div class="sect2 data-line-80">
+<div class="sect2 data-line-77">
 <h3 id="_déconnexion_dun_compte">Déconnexion d&#8217;un compte</h3>
-
+<div class="paragraph data-line-78">
+<p>Lors de ce test, nous vérifions que la déconnexion d&#8217;un compte est fonctionnelle.<br>
+Pour ce faire nous devons être connecté à un compte et ce rendre dans la page <span class="underline">connexion.php</span> (mon compte).<br>
+En cliquant sur le bouton <strong>Se déconnecter</strong>, notre session est supprimer et nous somme rediriger vers la page d&#8217;accueil.<br>
+Le page <span class="underline">connexion.php</span> affiche le formulaire de connexion :</p>
 </div>
-<div class="sect2 data-line-82">
+</div>
+<div class="sect2 data-line-83">
 <h3 id="_modifier_ses_informations">Modifier ses informations</h3>
-<div class="sect3 data-line-84">
+<div class="sect3 data-line-85">
 <h4 id="_test_fonctionnel_3">Test fonctionnel</h4>
-
+<div class="paragraph data-line-86">
+<p>Lors de ce test, nous vérifions que la modifications des informations de son compte est fonctionnelle.<br>
+Pour ce faire, nous devons nous rendre sur la page <span class="underline">connexion.php</span> (mon compte) et cliquer sur le bouton <strong>Modifier</strong><br>
+Nous sommes redirigez vers la page <span class="underline">modification.php</span> dans laquelle nous saisissons nos nouvelles informations.<br>
+Au clique du bouton <strong>Valider</strong> nous sommes redirigez vers la page <span class="underline">connexion.php</span> et nous constatons que nos informations ont biens étés modifier :</p>
 </div>
-<div class="sect3 data-line-86">
-<h4 id="_test_non_fonctionnel_3">Test non fonctionnel</h4>
-
 </div>
-</div>
-<div class="sect2 data-line-89">
-<h3 id="_recherche_des_produits">Recherche des produits</h3>
 <div class="sect3 data-line-91">
-<h4 id="_test_fonctionnel_4">Test fonctionnel</h4>
+<h4 id="_test_non_fonctionnel_3">Test non fonctionnel</h4>
 <div class="paragraph data-line-92">
+<p>Lors de ce test, nous vérifions que la modifications des informations de son compte n&#8217;est pas fonctionnelle si nous ne rentrons pas des valeurs correct dans les champs du formulaire.<br>
+Pour ce faire, nous devons nous rendre sur la page <span class="underline">connexion.php</span> (mon compte) dans laquelle est présente un formulaire dans lequelle nous rentrons nos nouvelles informations (sans respecter la validité des champs).<br>
+Au clique du bouton <strong>Valider</strong> nous sommes redirigez vers la page <span class="underline">connexion.php</span> (mon compte) et nous constatons que nos informations non pas étés changer et qu&#8217;un message d&#8217;erreur est présent dans la barre du navigateur :</p>
+</div>
+</div>
+</div>
+<div class="sect2 data-line-96">
+<h3 id="_recherche_des_produits">Recherche des produits</h3>
+<div class="sect3 data-line-98">
+<h4 id="_test_fonctionnel_4">Test fonctionnel</h4>
+<div class="paragraph data-line-99">
 <p>Lors de ce test, nous vérifions si il est possible de rechercher des produits via la barre de recherche.<br>
 Pour ce faire nous allons entrez le nom du produit rechercher dans la barre de recherche disponible sur le header :</p>
 </div>
-<div class="paragraph data-line-97">
+<div class="paragraph data-line-104">
 <p>Lors du clique sur le bouton <strong>Entrez</strong>, la recherche est effectuer et l&#8217;utilisateur est redirigez vers la page <strong>produits.php</strong> dans laquelle apparaît tous les produits correspondant à sa recherche :</p>
 </div>
 </div>
-<div class="sect3 data-line-101">
+<div class="sect3 data-line-108">
 <h4 id="_test_non_fonctionnel_4">Test non fonctionnel</h4>
-<div class="paragraph data-line-102">
+<div class="paragraph data-line-109">
 <p>Lors de ce test, nous vérifions la recherche d&#8217;un produit via la barre de recherche dans le cas où le produit est inexistant.<br>
 Pour ce faire nous allons entrez le nom du produits dans la barre de recherche disponible sur le header :</p>
 </div>
-<div class="paragraph data-line-107">
+<div class="paragraph data-line-114">
 <p>Lors du clique sur le bouton <strong>Entrer</strong>, la recherche est effectuer et l&#8217;utilisateur est redirigez vers la page <strong>produits.php</strong>.<br>
 Malheureusement, la recherche n&#8217;a trouvé aucun produits correspondant au produit saisie par l&#8217;utilisateur est donc un message d&#8217;erreur apparaît.</p>
 </div>
 </div>
 </div>
-<div class="sect2 data-line-112">
+<div class="sect2 data-line-119">
 <h3 id="_ajout_de_produit_à_son_panier">Ajout de produit à son panier</h3>
-<div class="sect3 data-line-114">
+<div class="sect3 data-line-121">
 <h4 id="_test_fonctionnel_5">Test fonctionnel</h4>
-
+<div class="paragraph data-line-122">
+<p>Lors de ce test, nous vérifions s&#8217;il est possible d&#8217;ajouter un produit à son panier.<br>
+Pour ce faire nous devons dans un premier temps être connecté et se rendre dans la page des produits.<br>
+Ensuite, nous devons cliquer sur le boutons <strong>Ajouter au panier</strong> du produit que nous souhaitons.<br>
+Le message présent dans l&#8217;alerte qui s&#8217;affiche doit être un message de succès :</p>
 </div>
-<div class="sect3 data-line-116">
+</div>
+<div class="sect3 data-line-127">
 <h4 id="_test_non_fonctionnel_5">Test non fonctionnel</h4>
-
+<div class="paragraph data-line-128">
+<p>Lors de ce test, nous vérifions qu&#8217;il est impossible d&#8217;ajouter des produits à son panier si nous ne sommes pas connecter.<br>
+Nous nous rendons dans la page <span class="underline">produit.php</span> sans se connecter.<br>
+Lorsque nous cliquons sur le boutons : <strong>Ajouter au panier</strong> sur un produit souhaitez, le message présent dans l&#8217;alerte doit être un message d&#8217;erreur :</p>
 </div>
 </div>
-<div class="sect2 data-line-118">
+</div>
+<div class="sect2 data-line-132">
 <h3 id="_gestion_et_consultation_des_produit_dans_son_panier">Gestion et consultation des produit dans son panier</h3>
-<div class="sect3 data-line-120">
+<div class="sect3 data-line-134">
 <h4 id="_supprimer_un_produit">Supprimer un produit</h4>
 
 </div>
-<div class="sect3 data-line-122">
+<div class="sect3 data-line-136">
 <h4 id="_augmenter_la_quantité_dun_produit">Augmenter la quantité d&#8217;un produit</h4>
 
 </div>
 </div>
-<div class="sect2 data-line-124">
+<div class="sect2 data-line-138">
 <h3 id="_passer_commande">Passer commande</h3>
-<div class="sect3 data-line-126">
+<div class="sect3 data-line-140">
 <h4 id="_test_fonctionnel_6">Test fonctionnel</h4>
 
 </div>
-<div class="sect3 data-line-128">
+<div class="sect3 data-line-142">
 <h4 id="_test_non_fonctionnel_6">Test non fonctionnel</h4>
 
 </div>
 </div>
-<div class="sect2 data-line-130">
+<div class="sect2 data-line-144">
 <h3 id="_connexion_compte_admin">Connexion compte Admin</h3>
-<div class="sect3 data-line-132">
+<div class="sect3 data-line-146">
 <h4 id="_test_fonctionnel_7">Test fonctionnel</h4>
-
+<div class="paragraph data-line-147">
+<p>Lors de ce test, nous vérifions si la connexion à un compte Administrateur est fonctionnel.<br>
+Pour ce faire dans un premier nous devons nous rendre dans la page <span class="underline">connexion.php</span> dans laquelle nous devons saisir les identifiant de l&#8217;entreprise, soit l&#8217;email : <strong>RoyalBio@gmail.com</strong> et le mot de passe qui correspond à cet email.<br>
+Nous sommes ensuite redirrigez vers une page qui nous demande le mot de passe Administrateur et lorsque l&#8217;on saisit le bon mot de passe, un formulaire de connexion à un compte Administrateur s&#8217;affiche.<br>
+Nous saisissons le numéro d&#8217;un employé et le mot de passe qui correspond, et une connexion est bien établie :</p>
 </div>
-<div class="sect3 data-line-134">
+</div>
+<div class="sect3 data-line-152">
 <h4 id="_test_non_fonctionnel_7">Test non fonctionnel</h4>
-
+<div class="paragraph data-line-153">
+<p>Lors de ce test, nous vérifions s&#8217;il est impossible de se connecter à un compte Administrateur si nous saisissons le mauvais mot de passe.<br>
+Pour ce faire dans un premier nous devons nous rendre dans la page <span class="underline">connexion.php</span> dans laquelle nous devons saisir les identifiant de l&#8217;entreprise, soit l&#8217;email : <strong>RoyalBio@gmail.com</strong> et le mot de passe qui correspond à cet email.<br>
+Nous sommes ensuite redirrigez vers une page qui nous demande le mot de passe Administrateur et lorsque l&#8217;on saisit le bon mot de passe, un formulaire de connexion à un compte Administrateur s&#8217;affiche.<br>
+Nous saisissons le numéro d&#8217;un employé mais un mot de passe qui ne correspond pas à cet employé.<br>
+La connexion n&#8217;est pas établie et nous sommes redirigez vers la page de connexion avec un message d&#8217;erreur :</p>
 </div>
 </div>
-<div class="sect2 data-line-136">
+</div>
+<div class="sect2 data-line-159">
 <h3 id="_gestion_des_produits">Gestion des produits</h3>
-<div class="sect3 data-line-138">
+<div class="sect3 data-line-161">
 <h4 id="_ajouter_un_produit">Ajouter un produit</h4>
-<div class="sect4 data-line-140">
+<div class="sect4 data-line-163">
 <h5 id="_test_fonctionnel_8">Test fonctionnel</h5>
-
+<div class="paragraph data-line-164">
+<p>Lors de ce test, nous vérifions si en temps qu&#8217;Administrateur il est possible d&#8217;ajouter un produit sur le site web.<br>
+Pour ce faire, sur la page d&#8217;Administration nous cliquons sur le bouton <strong>Gestion des produits</strong> qui nous redirige sur une page dans laquelle est afficher tous les produits.<br>
+En cliquant sur le bouton <strong>Ajouter un produit</strong>, un formuaire s&#8217;affiche dans lequel nous saisissons les données du nouveau produit.<br>
+Lorsque nous cliquons sur le bouton <strong>Valider</strong>, le produit est ajouter sur le site web et nous sommes redirigez vers la page Administration</p>
 </div>
-<div class="sect4 data-line-142">
+</div>
+<div class="sect4 data-line-169">
 <h5 id="_test_non_fonctionnel_8">Test non fonctionnel</h5>
-
+<div class="paragraph data-line-170">
+<p>Lors de ce test, nous vérifions que si nous insérons de mauvaises données, le produit n&#8217;est pas ajouter.<br>
+Pour ce faire, sur la page d&#8217;Administration nous cliquons sur le bouton <strong>Gestion des produits</strong> qui nous redirige sur une page dans laquelle est afficher tous les produits.<br>
+En cliquant sur le bouton <strong>Ajouter un produit</strong>, un formuaire s&#8217;affiche dans lequel nous saisissons les informations du nouveau produit en ne respectant pas la validité des champs.<br>
+Lorsque nous cliquons sur le bouton <strong>Valider</strong>, le produit n&#8217;est pas ajouter sur le site web et nous sommes redirigez vers la page Administration et un message d&#8217;erreur est présent dans la barre du navigateur.</p>
 </div>
 </div>
-<div class="sect3 data-line-144">
+</div>
+<div class="sect3 data-line-175">
 <h4 id="_modifier_un_produit">Modifier un produit</h4>
-<div class="sect4 data-line-146">
+<div class="sect4 data-line-177">
 <h5 id="_test_fonctionnel_9">Test fonctionnel</h5>
-
+<div class="paragraph data-line-178">
+<p>Lors de ce test, nous vérifions si en temps qu&#8217;Administrateur il est possible de modifier les informations d&#8217;un produit sur le site web.<br>
+Pour ce faire, sur la page d&#8217;Administration nous cliquon sur le bouton <strong>Gestion des produits</strong> qui nous redirige sur une page dans laquelle est afficher tous les produits.<br>
+En cliquant sur le <strong>logo de modification</strong> d&#8217;un produit, un formulaire s&#8217;affiche dans lequel nous saisissons les nouvelles données du produit.<br>
+En cliquant sur le bouton <strong>Valider</strong>, le produit est mise à jour sur le site web et nous sommes redirigez vers la page Administration.</p>
 </div>
-<div class="sect4 data-line-148">
+</div>
+<div class="sect4 data-line-183">
 <h5 id="_test_non_fonctionnel_9">Test non fonctionnel</h5>
-
+<div class="paragraph data-line-184">
+<p>Lors de ce test, nous vérifions si en temps qu&#8217;Administrateur il est possible de modifier les informations d&#8217;un produit sur le site web.<br>
+Pour ce faire, sur la page d&#8217;Administration nous cliquon sur le bouton <strong>Gestion des produits</strong> qui nous redirige sur une page dans laquelle est afficher tous les produits.<br>
+En cliquant sur le <strong>logo de modification</strong> d&#8217;un produit, un formulaire s&#8217;affiche dans lequel nous saisissons les nouvelles données du produit en ne respectant pas la validité des champs.<br>
+Lorsque nous cliquons sur le bouton <strong>Valider</strong>, le produit n&#8217;est pas mis à jour sur le site web et nous sommes redirigez vers la page Administration et un message d&#8217;erreur est présent dans la barre du navigateur.</p>
 </div>
 </div>
-<div class="sect3 data-line-150">
+</div>
+<div class="sect3 data-line-189">
 <h4 id="_supprimer_un_client">Supprimer un client</h4>
-<div class="sect4 data-line-152">
-<h5 id="_test_fonctionnel_10">Test fonctionnel</h5>
-
-</div>
-<div class="sect4 data-line-154">
-<h5 id="_test_non_fonctionnel_10">Test non fonctionnel</h5>
-
+<div class="paragraph data-line-190">
+<p>Lors de ce test, nous vérifions si en temps qu&#8217;Administrateur il est possible de supprimer un produit du site web.<br>
+Pour ce faire, sur la page d&#8217;Administration nous cliquon sur le bouton <strong>Gestion des produits</strong> qui nous redirige sur une page dans laquelle est afficher tous les produits.<br>
+En cliquant sur le <strong>logo de suppression</strong> d&#8217;un produit, celui-ci est supprimer du site web.</p>
 </div>
 </div>
 </div>
-<div class="sect2 data-line-156">
+<div class="sect2 data-line-194">
 <h3 id="_gestion_des_clients">Gestion des clients</h3>
-<div class="sect3 data-line-158">
+<div class="sect3 data-line-196">
 <h4 id="_ajouter_un_client">Ajouter un client</h4>
-<div class="sect4 data-line-160">
-<h5 id="_test_fonctionnel_11">Test fonctionnel</h5>
-
+<div class="sect4 data-line-198">
+<h5 id="_test_fonctionnel_10">Test fonctionnel</h5>
+<div class="paragraph data-line-199">
+<p>Lors de ce test, nous vérifions si en temps qu&#8217;Administrateur il est possible d&#8217;ajouter un client sur le site web.<br>
+Pour ce faire, sur la page d&#8217;Administration nous cliquon sur le bouton <strong>Gestion des clients</strong> qui nous redirige sur une page dans laquelle est afficher tous les clients.<br>
+En cliquant sur le bouton <strong>Ajouter un client</strong>, un formulaire s&#8217;affiche dans lequel nous saisissons les données du nouveau client.<br>
+En cliquant sur le bouton <strong>Valider</strong>, le nouveau client est ajouter sur le site web et nous sommes redirigez vers la page de <strong>Gestion des clients</strong>.</p>
 </div>
-<div class="sect4 data-line-162">
-<h5 id="_test_non_fonctionnel_11">Test non fonctionnel</h5>
-
+</div>
+<div class="sect4 data-line-204">
+<h5 id="_test_non_fonctionnel_10">Test non fonctionnel</h5>
+<div class="paragraph data-line-205">
+<p>Lors de ce test, nous vérifions qu&#8217;il est impossible d&#8217;ajouter un nouveau client sur le site web si les données saisies ne respectent pas la validité des champs.<br>
+Pour ce faire, sur la page d&#8217;Administration nous cliquon sur le bouton <strong>Gestion des clients</strong> qui nous redirige sur une page dans laquelle est afficher tous les clients.<br>
+En cliquant sur le bouton <strong>Ajouter un client</strong>, un formulaire s&#8217;affiche dans lequel nous saisissons les données du nouveau client en ne respectant pas la validité des champs.<br>
+En cliquant sur le bouton <strong>Valider</strong>, le nouveau client n&#8217;est pas ajouter au le site web et nous sommes redirigez vers la page de <strong>Gestion des clients</strong> avec un message d&#8217;erreur dans la barre du navigateur.</p>
 </div>
 </div>
-<div class="sect3 data-line-164">
+</div>
+<div class="sect3 data-line-210">
 <h4 id="_modifier_un_client">Modifier un client</h4>
-<div class="sect4 data-line-166">
-<h5 id="_test_fonctionnel_12">Test fonctionnel</h5>
-
+<div class="sect4 data-line-212">
+<h5 id="_test_fonctionnel_11">Test fonctionnel</h5>
+<div class="paragraph data-line-213">
+<p>Lors de ce test, nous vérifions qu&#8217;un Administrateur peut modifier les informations des client.<br>
+Pour ce faire, sur la page d&#8217;Administration nous cliquon sur le bouton <strong>Gestion des clients</strong> qui nous redirige sur une page dans laquelle est afficher tous les clients.<br>
+En cliquant sur le  <strong>logo de modification</strong>, un formulaire s&#8217;affiche dans lequel nous saisissons les nouvelles données du client.<br>
+En cliquant sur le bouton <strong>Valider</strong>, le client est mis à jour sur le site web et nous sommes redirigez vers la page de <strong>Gestion des clients</strong></p>
 </div>
-<div class="sect4 data-line-168">
-<h5 id="_test_non_fonctionnel_12">Test non fonctionnel</h5>
-
+</div>
+<div class="sect4 data-line-218">
+<h5 id="_test_non_fonctionnel_11">Test non fonctionnel</h5>
+<div class="paragraph data-line-219">
+<p>Lors de ce test, nous vérifions que les modification d&#8217;un Administrateur sur un client ne sont pas mis à jour si les données ne respectent pas les champs.<br>
+Pour ce faire, sur la page d&#8217;Administration nous cliquon sur le bouton <strong>Gestion des clients</strong> qui nous redirige sur une page dans laquelle est afficher tous les clients.<br>
+En cliquant sur le  <strong>logo de modification</strong>, un formulaire s&#8217;affiche dans lequel nous saisissons les nouvelles données du client en ne respectant pas la validité des champs.<br>
+En cliquant sur le bouton <strong>Valider</strong>, le client n&#8217;est pas mis à jour sur le site web et nous sommes redirigez vers la page de <strong>Gestion des clients</strong> et un message d&#8217;erreur et afficher dans la barre du navigateur.</p>
 </div>
 </div>
-<div class="sect3 data-line-170">
+</div>
+<div class="sect3 data-line-224">
 <h4 id="_supprimer_un_client_2">Supprimer un client</h4>
-<div class="sect4 data-line-172">
-<h5 id="_test_fonctionnel_13">Test fonctionnel</h5>
-
-</div>
-<div class="sect4 data-line-174">
-<h5 id="_test_non_fonctionnel_13">Test non fonctionnel</h5>
-
+<div class="paragraph data-line-225">
+<p>Lors de ce test, nous vérifions qu&#8217;un Administrateur peut supprimer un client du site web.<br>
+Pour ce faire, sur la page d&#8217;Administration nous cliquon sur le bouton <strong>Gestion des clients</strong> qui nous redirige sur une page dans laquelle est afficher tous les clients.<br>
+En cliquant sur le <strong>logo de suppression</strong>, le compte du client est supprimé et nous sommes redirigez vers la page de <strong>Gestion des clients</strong><br></p>
 </div>
 </div>
 </div>
-<div class="sect2 data-line-176">
+<div class="sect2 data-line-229">
 <h3 id="_gestion_messagerie_client">Gestion messagerie client</h3>
 
 </div>
 </div>
 </div>
-<div class="sect1 data-line-178">
+<div class="sect1 data-line-231">
 <h2 id="_tests_de_lapplication">Tests de l&#8217;Application</h2>
 <div class="sectionbody">
+<div class="sect2 data-line-233">
+<h3 id="_paramétrage">Paramétrage</h3>
 
+</div>
+<div class="sect2 data-line-235">
+<h3 id="_récupération_et_affichage_des_données">Récupération et affichage des données</h3>
+
+</div>
 </div>
 </div>
 </div>
