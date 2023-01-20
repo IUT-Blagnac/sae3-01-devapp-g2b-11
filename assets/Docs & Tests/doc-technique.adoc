@@ -57,6 +57,18 @@ De plus, une condition vérifie si l'utilisateur à choisi d'avoir un cookie de 
 
 image:./img/code_motPasseValide.png[code de la vérification du mot de passe]  
 
+=== Se déconnecter 
+
+La connexion est caractériser par la création d'une *SESSIONS* et éventuellement d'un cookie de connexion. +
+Pour permettre la deconnexion, il faut donc détruire cette *SESSIONS* et éventuellement le cookie de connexion. + 
+Cette deconnexion est traité par le fichier : [.underline]#deconnexion.php# : 
+
+image:./img/code_deconnexion.png[code de la deconnexion]  
+
+Avant tous, nous lançons la *SESSIONS* et nous supprimons toutes les valeurs de celles-ci et en mettant la valeur *non* pour la clé *access*. +
+Ensuite, si un cookie de connexion est présent, nous le détruisons. +
+L'utilisateur est finalement redirigez la page d'accueil avec un message de déconnexion réussite dans la barre du navigateur.
+
 === Consulter et modifier ses informations
 
 La consultation des informations d'un client s'effectue depuis la page [.underline]#Connexion.php#. +
@@ -83,7 +95,28 @@ Ensuite, nous mettons en place plusieurs regex qui vérifie que :
 
 image:./img/code_regex2.png[code des regex]
 
-=== Rechercher et consultation des produits
+=== Recherche et consultation des produits
+
+La consultation des produits se fait de deux manières différentes : grâce au *catégorie* et à la *barre de recherche*. +
+Elles se font dans la page : [.underline]#produit.php#. +
+Au clique de chaque catégorie, l'information *recherche* de la barre du navigateur est mise à jour : 
+
+image:./img/code_menuHeader.png[code du menu du header]
+
+Cette information sera traité sur la page : [.underline]#produit.php# dans un *switch*. +
+Pour chaque *case*, une requête SQL différente sera mise en place selon la catégorie (l'information *recherche*) : 
+
+image:./img/code_switchCase.png[code du switch case]
+
+le *default* de se switch sera utilisé pour la barre de recherche : 
+
+image:./img/code_switchCaseDefault.png[code du default du switch case]
+
+Pour afficher les produit, dans un premier temps nous préparons et éxecutons la requête selon le *case* du *switch*. +
+Si il n'y a pas d'erreurs, nous parcourons les résultats et nous affichons les produits et leurs informations :
+
+image:./img/code_affichageProduit.png[code affichage des produits]
+image:./img/code_affichageProduit2.png[code affichage des produits]
 
 === Ajouter des produits au panier
 
@@ -98,3 +131,7 @@ image:./img/code_regex2.png[code des regex]
 === Gérer les clients
 
 == Guide technique de l'Application IOT
+
+=== Partie Python
+
+=== Partie Java

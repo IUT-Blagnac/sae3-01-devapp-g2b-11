@@ -447,8 +447,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="#_création_dun_compte">Création d&#8217;un compte</a></li>
 <li><a href="#_connexion_à_un_compte_cookie_de_connexion">Connexion à un compte &amp; cookie de connexion</a></li>
+<li><a href="#_se_déconnecter">Se déconnecter</a></li>
 <li><a href="#_consulter_et_modifier_ses_informations">Consulter et modifier ses informations</a></li>
-<li><a href="#_rechercher_et_consultation_des_produits">Rechercher et consultation des produits</a></li>
+<li><a href="#_recherche_et_consultation_des_produits">Recherche et consultation des produits</a></li>
 <li><a href="#_ajouter_des_produits_au_panier">Ajouter des produits au panier</a></li>
 <li><a href="#_gérer_les_produits_de_sont_panier">Gérer les produits de sont panier</a></li>
 <li><a href="#_réaliser_une_commande">Réaliser une commande</a></li>
@@ -457,7 +458,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_gérer_les_clients">Gérer les clients</a></li>
 </ul>
 </li>
-<li><a href="#_guide_technique_de_lapplication_iot">Guide technique de l&#8217;Application IOT</a></li>
+<li><a href="#_guide_technique_de_lapplication_iot">Guide technique de l&#8217;Application IOT</a>
+<ul class="sectlevel2">
+<li><a href="#_partie_python">Partie Python</a></li>
+<li><a href="#_partie_java">Partie Java</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -549,86 +555,137 @@ De plus, une condition vérifie si l&#8217;utilisateur à choisi d&#8217;avoir u
 </div>
 </div>
 <div class="sect2 data-line-60">
-<h3 id="_consulter_et_modifier_ses_informations">Consulter et modifier ses informations</h3>
+<h3 id="_se_déconnecter">Se déconnecter</h3>
 <div class="paragraph data-line-62">
+<p>La connexion est caractériser par la création d&#8217;une <strong>SESSIONS</strong> et éventuellement d&#8217;un cookie de connexion.<br>
+Pour permettre la deconnexion, il faut donc détruire cette <strong>SESSIONS</strong> et éventuellement le cookie de connexion.<br>
+Cette deconnexion est traité par le fichier : <span class="underline">deconnexion.php</span> :</p>
+</div>
+<div class="paragraph data-line-66">
+<p><span class="image"><img src="./img/code_deconnexion.png" alt="code de la deconnexion"></span></p>
+</div>
+<div class="paragraph data-line-68">
+<p>Avant tous, nous lançons la <strong>SESSIONS</strong> et nous supprimons toutes les valeurs de celles-ci et en mettant la valeur <strong>non</strong> pour la clé <strong>access</strong>.<br>
+Ensuite, si un cookie de connexion est présent, nous le détruisons.<br>
+L&#8217;utilisateur est finalement redirigez la page d&#8217;accueil avec un message de déconnexion réussite dans la barre du navigateur.</p>
+</div>
+</div>
+<div class="sect2 data-line-72">
+<h3 id="_consulter_et_modifier_ses_informations">Consulter et modifier ses informations</h3>
+<div class="paragraph data-line-74">
 <p>La consultation des informations d&#8217;un client s&#8217;effectue depuis la page <span class="underline">Connexion.php</span>.<br></p>
 </div>
-<div class="paragraph data-line-64">
+<div class="paragraph data-line-76">
 <p>Nous vérifions si une <strong>SESSION</strong> est crée est si la clé <strong>access</strong> à pour valeur <strong>oui</strong>.<br>
 Si c&#8217;est le cas, nous affichons les informations de l&#8217;utilisateur :</p>
 </div>
-<div class="paragraph data-line-67">
+<div class="paragraph data-line-79">
 <p><span class="image"><img src="./img/code_pageInfo.png" alt="code de la page informations"></span></p>
 </div>
-<div class="paragraph data-line-69">
+<div class="paragraph data-line-81">
 <p>Pour accéder à la modification de ses informations, le client doit cliquer sur le bouton : <strong>Modifier</strong> qui le redirige vers la page : <span class="underline">modification.php</span> dans laquelle est présent un formulaire qui sera traité dans la page : <span class="underline">TraitModification.php</span> :</p>
 </div>
-<div class="paragraph data-line-71">
+<div class="paragraph data-line-83">
 <p><span class="image"><img src="./img/code_pageModification.png" alt="code de la page modification"></span></p>
 </div>
-<div class="paragraph data-line-73">
+<div class="paragraph data-line-85">
 <p>Pour traité se formulaire, lançons d&#8217;abord la <strong>SESSION</strong> et incluons le fichier qui permet de se connecter à la base de données :</p>
 </div>
-<div class="paragraph data-line-75">
+<div class="paragraph data-line-87">
 <p><span class="image"><img src="./img/code_connBD.png" alt="code de la connection à la BD"></span></p>
 </div>
-<div class="paragraph data-line-77">
+<div class="paragraph data-line-89">
 <p>Ensuite, nous mettons en place plusieurs regex qui vérifie que :</p>
 </div>
-<div class="ulist data-line-79">
+<div class="ulist data-line-91">
 <ul>
-<li class="data-line-79">
+<li class="data-line-91">
 <p>Le nom et le prénom doivent commencer par une majuscule</p>
 </li>
-<li class="data-line-80">
+<li class="data-line-92">
 <p>Le mail doit se termine par @ suivie d&#8217;une chaîne puis d&#8217;un point suivie d&#8217;une chaîne</p>
 </li>
-<li class="data-line-81">
+<li class="data-line-93">
 <p>Le mot de passe doit contenir au minimum 8 caractères dont 1 majuscule, 1 minuscule, 1 chiffre et 1 caractère spéciale.</p>
 </li>
-<li class="data-line-82">
+<li class="data-line-94">
 <p>Le numéro de téléphone doit contenir exactement 10 chiffre</p>
 </li>
 </ul>
 </div>
-<div class="paragraph data-line-84">
+<div class="paragraph data-line-96">
 <p><span class="image"><img src="./img/code_regex2.png" alt="code des regex"></span></p>
 </div>
 </div>
-<div class="sect2 data-line-86">
-<h3 id="_rechercher_et_consultation_des_produits">Rechercher et consultation des produits</h3>
-
+<div class="sect2 data-line-98">
+<h3 id="_recherche_et_consultation_des_produits">Recherche et consultation des produits</h3>
+<div class="paragraph data-line-100">
+<p>La consultation des produits se fait de deux manières différentes : grâce au <strong>catégorie</strong> et à la <strong>barre de recherche</strong>.<br>
+Elles se font dans la page : <span class="underline">produit.php</span>.<br>
+Au clique de chaque catégorie, l&#8217;information <strong>recherche</strong> de la barre du navigateur est mise à jour :</p>
 </div>
-<div class="sect2 data-line-88">
+<div class="paragraph data-line-104">
+<p><span class="image"><img src="./img/code_menuHeader.png" alt="code du menu du header"></span></p>
+</div>
+<div class="paragraph data-line-106">
+<p>Cette information sera traité sur la page : <span class="underline">produit.php</span> dans un <strong>switch</strong>.<br>
+Pour chaque <strong>case</strong>, une requête SQL différente sera mise en place selon la catégorie (l&#8217;information <strong>recherche</strong>) :</p>
+</div>
+<div class="paragraph data-line-109">
+<p><span class="image"><img src="./img/code_switchCase.png" alt="code du switch case"></span></p>
+</div>
+<div class="paragraph data-line-111">
+<p>le <strong>default</strong> de se switch sera utilisé pour la barre de recherche :</p>
+</div>
+<div class="paragraph data-line-113">
+<p><span class="image"><img src="./img/code_switchCaseDefault.png" alt="code du default du switch case"></span></p>
+</div>
+<div class="paragraph data-line-115">
+<p>Pour afficher les produit, dans un premier temps nous préparons et éxecutons la requête selon le <strong>case</strong> du <strong>switch</strong>.<br>
+Si il n&#8217;y a pas d&#8217;erreurs, nous parcourons les résultats et nous affichons les produits et leurs informations :</p>
+</div>
+<div class="paragraph data-line-118">
+<p><span class="image"><img src="./img/code_affichageProduit.png" alt="code affichage des produits"></span>
+<span class="image"><img src="./img/code_affichageProduit2.png" alt="code affichage des produits"></span></p>
+</div>
+</div>
+<div class="sect2 data-line-121">
 <h3 id="_ajouter_des_produits_au_panier">Ajouter des produits au panier</h3>
 
 </div>
-<div class="sect2 data-line-90">
+<div class="sect2 data-line-123">
 <h3 id="_gérer_les_produits_de_sont_panier">Gérer les produits de sont panier</h3>
 
 </div>
-<div class="sect2 data-line-92">
+<div class="sect2 data-line-125">
 <h3 id="_réaliser_une_commande">Réaliser une commande</h3>
 
 </div>
-<div class="sect2 data-line-94">
+<div class="sect2 data-line-127">
 <h3 id="_se_connecter_à_un_compte_administrateur">se connecter à un compte Administrateur</h3>
 
 </div>
-<div class="sect2 data-line-96">
+<div class="sect2 data-line-129">
 <h3 id="_gérer_les_produits">Gérer les produits</h3>
 
 </div>
-<div class="sect2 data-line-98">
+<div class="sect2 data-line-131">
 <h3 id="_gérer_les_clients">Gérer les clients</h3>
 
 </div>
 </div>
 </div>
-<div class="sect1 data-line-100">
+<div class="sect1 data-line-133">
 <h2 id="_guide_technique_de_lapplication_iot">Guide technique de l&#8217;Application IOT</h2>
 <div class="sectionbody">
+<div class="sect2 data-line-135">
+<h3 id="_partie_python">Partie Python</h3>
 
+</div>
+<div class="sect2 data-line-137">
+<h3 id="_partie_java">Partie Java</h3>
+
+</div>
 </div>
 </div>
 </div>

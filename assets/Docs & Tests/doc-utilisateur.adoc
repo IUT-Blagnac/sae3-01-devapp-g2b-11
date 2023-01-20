@@ -3,9 +3,11 @@
 :toc: left
 :icons: font
 
-== Guide de l'utilisateur
+== Guide du site web
 
-=== Crée un compte 
+=== Guide de l'utilisateur
+
+==== Crée un compte 
 
 Pour crée un compte client, rendez-vous sur page : [.underline]#Connexion# en cliquant sur le lien disponible sur *l'en-tête* et cliquer sur le bouton : [.underline]#Créer un compte chez Royal Bio# pour être redirigez vers le formulaire de création d'un compte : +
 Saissisez ensuite les différent champs et valider en cliquant sur le bouton : *Valider* +
@@ -21,7 +23,7 @@ image:./img/formInscri.png[Formulaire d'inscription]  +
 .. une minuscule
 .. un caractère spécial
 
-=== Se connecter à un compte
+==== Se connecter à un compte
 
 Pour se connecter à un compte client, rendez-vous sur la page : [.underline]#Connexion# en cliquant sur le lien disponible sur *l'en-tête* et entrez les informations demander, à savoir le mail et le mot de passe. +
 
@@ -31,7 +33,7 @@ Au clique du bouton : [.underline]#Se connecter#, si ces deux informations ne so
 
 image:./img/infoConn.png[Infos connexion]  +
 
-=== Recherche et consulter des produits
+==== Recherche et consulter des produits
 
 Pour consulter les produits d'une catégorie spécifique, sélectionner celle-ci dans le sous-menu de *l'en-tête* +
 
@@ -47,7 +49,7 @@ image:./img/produitRecherche.png[Produits]  +
 
 WARNING: La recherche peut échouer, votre produit n'existe peut-être pas ou vérifiez l'ortographe 
 
-=== Ajouter et consulter des produits dans son panier
+==== Ajouter et consulter des produits dans son panier
 
 WARNING: Pour utiliser cette fonctionnalité, l'utilisateur doit être connecté à un compte
 
@@ -63,13 +65,13 @@ image:./img/panier.png[Logo du panier]  +
 
 image:./img/pagePanier.png[Page du panier]  
 
-=== Gérer les produits dans son panier 
+==== Gérer les produits dans son panier 
 
-=== Réaliser une commande
+==== Réaliser une commande
 
-== Guide de l'Administrateur
+=== Guide de l'Administrateur
 
-=== se connecter à un compte Administrateur
+==== se connecter à un compte Administrateur
 
 Pour se connecter à un compte Administrateur, rendez-vous sur la page : [.underline]#Connexion#. +
 Depuis cette page, saisissez les informations administrateur dans le formulaire : +
@@ -88,7 +90,7 @@ Si les informations saisies sont correct, l'utilisateur est redirigez vers une p
 
 image:./img/pageAdmin.png[Page Administrateur]  +
 
-=== Gérer les produits
+==== Gérer les produits
 
 WARNING: Pour utiliser cette fonctionnalité, l'utilisateur doit être connecté à un compte administrateur. 
 
@@ -114,7 +116,7 @@ La fonctionnalité permettant de modifier les informations d'un produit redirige
 
 image:./img/pageModifInfoProduit.png[Page modification d'un produit]  +
 
-=== Gérer les clients
+==== Gérer les clients
 
 WARNING: Pour utilliser cette fonctionnalité, l'utilisateur doit être connecté à un compte administrateur.
 
@@ -138,4 +140,6 @@ image:./img/pageAjoutCli.png[Page d'ajout d'un client]  +
 
 La fonctionnalité permettant de modifier les informations d'un client redirige l'administrateur vers une page dans laquelle est présente un formulaire dans lequel il est invité à entrer les nouvelles informations : 
 
-image:./img/pageGestionCli.png[Page modification d'un client]  +
+image:./img/pageGestionCli.png[Page modification d'un client] 
+
+== Guide de l'Application IOT
