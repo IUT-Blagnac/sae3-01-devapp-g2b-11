@@ -64,7 +64,7 @@ public class DataFrameController {
         String nomFichier = null;
         nomFichier = configController.getNomFich();
         // Chemin du fichier
-        Path path = Path.of("src/data/" + nomFichier); // chemin du fichier � lire
+        Path path = Path.of("./data/" + nomFichier); // chemin du fichier � lire
         List<String> lignes = new ArrayList();
         // on essaye de lire les lignes du fichier contenu au chemin "path"
         lignes = Files.readAllLines(path);
@@ -114,7 +114,7 @@ public class DataFrameController {
                     try {
                         nomFichier2 = configController.getNomFich();
                         // Chemin du fichier
-                        Path path2 = Path.of("src/data/" + nomFichier2); // chemin du fichier � lire
+                        Path path2 = Path.of("./data/" + nomFichier2); // chemin du fichier � lire
                         List<String> lignes2 = new ArrayList();
                         // on essaye de lire les lignes du fichier contenu au chemin "path"
                         lignes2 = Files.readAllLines(path2);
@@ -137,7 +137,6 @@ public class DataFrameController {
                             dataT.setNode(new HoveredThresholdNodea(datadict.get("Temperature"), "temperature"));
                             dataSeriesTemp.getData().add(dataT);
                             lvData.getItems().add("Température : " + datadict.get("Temperature"));
-                            System.out.println("aaaaa");
                             if(datadict.get("AlerteTemperature") == 1.0){ // gestion des alertes de température
                                 Alert seuilTemp = new Alert(Alert.AlertType.WARNING);
                                 seuilTemp.setTitle("Alerte seuil");
