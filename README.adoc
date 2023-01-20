@@ -81,6 +81,12 @@ Tuteur/tutrice enseignant(e) de l'équipe:: mailto:pascal.sotin@univ-tlse2.fr[Pa
 
 .. https://github.com/IUT-Blagnac/sae3-01-devapp-g2b-11/tree/master/assets/Docs%20%26%20Tests[Dossier Docs & Tests] : Dossier contenant les documentations https://github.com/IUT-Blagnac/sae3-01-devapp-g2b-11/blob/master/assets/Docs%20%26%20Tests/doc-technique.adoc[technique] et https://github.com/IUT-Blagnac/sae3-01-devapp-g2b-11/blob/master/assets/Docs%20%26%20Tests/doc-utilisateur.adoc[utilisateur] ainsi que les différents tests efféctié sur le site et l'application que nous développons
 
+... Liens vers les documentations en version web (plus lisibles) : 
+
+.... https://iut-blagnac.github.io/sae3-01-devapp-g2b-11/assets/Docs%20&%20Tests/doc-utilisateur.html[Doc utilisateur version web]
+.... https://iut-blagnac.github.io/sae3-01-devapp-g2b-11/assets/Docs%20&%20Tests/doc-technique.html[Doc technique version web]
+.... https://iut-blagnac.github.io/sae3-01-devapp-g2b-11/assets/Docs%20&%20Tests/Tests.html[Tests version web]
+
 .. https://github.com/IUT-Blagnac/sae3-01-devapp-g2b-11/tree/master/assets/GPO[Dossier GPO] : Dossier contenant l'appel d'offre ainsi que les cahier des charges de notre client
 
 .. https://github.com/IUT-Blagnac/sae3-01-devapp-g2b-11/tree/master/assets/PHP[Dossier PHP] : Dossier contenant les comptes rendu du backend du site que nous développons
@@ -94,7 +100,7 @@ Utilisez pour cela les fonctionnalités de GitHub pour les https://docs.github.c
 
 De plus ce fichier `README.adoc` devra être à jour des informations suivantes :
 
-- Version courante : https://github.com/IUT-Blagnac/sae3-01-devapp-g2b-11/releases/tag/Sprint2[version 2]
+- Version courante : https://github.com/IUT-Blagnac/sae3-01-devapp-g2b-11/releases/tag/Sprint4[Sprint 4]
 
 - Liste des https://github.com/IUT-Blagnac/sae3-01-devapp-g2b-11/issues?q=is%3Aissue+is%3Aopen+label%3AUS[User Stories]  et % restant
 

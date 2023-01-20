@@ -31,7 +31,7 @@ public class createJsonConfig {
 
     public static void saveJson(JsonObject c){
         try{
-            FileWriter f = new FileWriter("src/config.json");
+            FileWriter f = new FileWriter("./config.json");
             f.write(c.toJson());
             f.close();
         } catch (IOException e){
