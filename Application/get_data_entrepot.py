@@ -10,7 +10,7 @@ alerte = config["alerte"]
 
 mqttserver = "chirpstack.iut-blagnac.fr"
 mqttport = 1883
-frequency = 5 # en minutes
+frequency = 1 # en minutes
 
 def get_data(mqtt, obj, msg):
     f = open("data/"+config["nomFichier"], O_WRONLY | O_CREAT | O_TRUNC, 0o600)

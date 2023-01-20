@@ -22,6 +22,9 @@ public class EntrepotVisualAppController {
 
     private Stage stage;
 
+    private DataFrameController dataController = new DataFrameController();
+
+    private ConfigFrameController configController = new ConfigFrameController();
     @FXML
     public void initialize(){
         stage = new Stage();

@@ -61,6 +61,8 @@ public class ConfigFrameController {
 
     private JsonObject config = new JsonObject();
 
+    private createJsonConfig createJsonConfig = new createJsonConfig();
+
     public void initialize(){
         lvCapteurs.getItems().add("24e124128c017760");
         lvCapteurs.getItems().add("24e124128c010091");
@@ -95,7 +97,7 @@ public class ConfigFrameController {
 
     public String getNomFich() throws FileNotFoundException {
         Gson gson = new Gson();
-        Map<String, String> dico = gson.fromJson(new FileReader("src\\config.json"), Map.class);
+        Map<String, String> dico = gson.fromJson(new FileReader("./config.json"), Map.class);
 
         return dico.get("nomFichier");
     }

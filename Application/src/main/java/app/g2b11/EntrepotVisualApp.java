@@ -6,21 +6,17 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-
 public class EntrepotVisualApp extends Application {
+
+    private FXMLLoader loader = new FXMLLoader(EntrepotVisualApp.class.getResource("EntrepotVisualApp.fxml"));
+
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(EntrepotVisualApp.class.getResource("EntrepotVisualApp.fxml"));
-        Scene scene = new Scene(fxmlLoader.load());
+        Scene scene = new Scene(loader.load());
         stage.setTitle("Entrepot VisualApp");
         stage.setResizable(false);
         stage.setScene(scene);
         stage.show();
-    }
-
-    @Override
-    public void stop(){
-        System.out.println("CLOSING");
     }
 
     public static void main(String[] args) {
