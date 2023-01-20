@@ -120,15 +120,60 @@ image:./img/code_affichageProduit2.png[code affichage des produits]
 
 === Ajouter des produits au panier
 
+L'ajout d'un produit dans son panier est traité dans la page : [.underline]#produit.php# et dans la page [.underline]#AjoutAuPanier.php# +
+
+Nous vérifions avant tous que l'utilisateur est connecté à un compte : nous créeons une variable qui prend comme valeur : 
+
+* si l'utilisateur est connecté, la valeur de cet variable prend *l'IDCLIENT*
+* si l'utilisateur n'est pas connecté, la valeur de cet variable prend : 0
+
+image:./img/code_ajoutProduitPanier.png[code ajout produit au panier]
+
+Ensuite dans page [.underline]#AjoutAuPanier.php#, nous appelons dans un premier temps la fonction *ajoutAuPanier()* : 
+
+image:./img/code_appelFonctionAjout.png[code appel de la fonction ajout au panier]
+
+Pour fonctionner, dans un premier temps cette fonction vérifie si l'utilisateur est connecté. +
+Si c'est le cas, nous préparons et éxecutons la procédure *ADD_TO_CART* qui ajoute le produit au panier : 
+
+image:./img/code_FonctionAjout.png[code de la fonction ajout au panier]
+
+Dans les cas d'erreur et de réussite, une alerte est afficher présentant le message soit d'erreur ou de réussite : 
+
+image:./img/code_showAlert.png[code de la fonction d'alerte]
+
 === Gérer les produits de sont panier
 
 === Réaliser une commande
 
 === se connecter à un compte Administrateur
 
+La connexion à un compte Administrateur sur le site web s'effectue en suivant plusieurs étapes. +
+Dans un premier temps, une connexion doit être établie pour se rendre sur la page d'Administration grâce au formulaire de la page [.underline]#connexion.php# qui sera traité dans la page : [.underline]#TraitConnexion.php#. +
+
+Nous vérifions que l'email saisie par l'utilisateur est bien le mail permettant d'accéder à la page d'Administration : *RoyalBio@gmail.com* et que le mot de passe saisie correspond à cette email. +
+Si c'est le cas, l'utilisateur est redirigez vers la page Administration :
+
+image:./img/code_showAlert.png[code de la fonction d'alerte]
+
+L'input qui permet de redirigez l'utilisateur vers le formulaire lui permettant de se connecter à son compte Administrateur est traité dans la page : [.underline]#firstConAdmin.php# : 
+
+image:./img/code_firstConnAdmin.png[code de la première connexion Administrateur]
+
+Si le mot de passe saisie correspond au mot de passe pour accéder au formulaire de connexion alors l'utilisateur est redirigez vers la page : [.underline]#connexionAdmin.php# dans laquelle est présente un formulaire qui est traité dans la page [.underline]#TraitconnexionAdmin.php# (à noter que la SESSION qui a été crée lors de la première connexion est détruite) : 
+
+image:./img/code_formConnAdmin.png[code du formulaire de connexion Administrateur]
+
+Pour traité ce formulaire, nous verifions d'abord si les champs saisies et nous préparons et éxecutons une requête SQL qui recherche toutes les informations de l'Administrateur qui a pour numéro d'employé, le *numEmp* saisie. +
+Si un employé est trouvé, et que le mot de passe saisie correspond au compte de cet employé, une *SESSION* et donc une connexion sont établie : 
+
+image:./img/code_TraitConnAdmin2.png[code du traitement du deuxième formulaire de connexion]
+
 === Gérer les produits
 
 === Gérer les clients
+
+=== Gérer la messagerie client 
 
 == Guide technique de l'Application IOT
 

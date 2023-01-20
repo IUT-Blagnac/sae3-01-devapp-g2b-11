@@ -456,6 +456,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_se_connecter_à_un_compte_administrateur">se connecter à un compte Administrateur</a></li>
 <li><a href="#_gérer_les_produits">Gérer les produits</a></li>
 <li><a href="#_gérer_les_clients">Gérer les clients</a></li>
+<li><a href="#_gérer_la_messagerie_client">Gérer la messagerie client</a></li>
 </ul>
 </li>
 <li><a href="#_guide_technique_de_lapplication_iot">Guide technique de l&#8217;Application IOT</a>
@@ -651,38 +652,108 @@ Si il n&#8217;y a pas d&#8217;erreurs, nous parcourons les résultats et nous af
 </div>
 <div class="sect2 data-line-121">
 <h3 id="_ajouter_des_produits_au_panier">Ajouter des produits au panier</h3>
-
+<div class="paragraph data-line-123">
+<p>L&#8217;ajout d&#8217;un produit dans son panier est traité dans la page : <span class="underline">produit.php</span> et dans la page <span class="underline">AjoutAuPanier.php</span><br></p>
 </div>
-<div class="sect2 data-line-123">
+<div class="paragraph data-line-125">
+<p>Nous vérifions avant tous que l&#8217;utilisateur est connecté à un compte : nous créeons une variable qui prend comme valeur :</p>
+</div>
+<div class="ulist data-line-127">
+<ul>
+<li class="data-line-127">
+<p>si l&#8217;utilisateur est connecté, la valeur de cet variable prend <strong>l&#8217;IDCLIENT</strong></p>
+</li>
+<li class="data-line-128">
+<p>si l&#8217;utilisateur n&#8217;est pas connecté, la valeur de cet variable prend : 0</p>
+</li>
+</ul>
+</div>
+<div class="paragraph data-line-130">
+<p><span class="image"><img src="./img/code_ajoutProduitPanier.png" alt="code ajout produit au panier"></span></p>
+</div>
+<div class="paragraph data-line-132">
+<p>Ensuite dans page <span class="underline">AjoutAuPanier.php</span>, nous appelons dans un premier temps la fonction <strong>ajoutAuPanier()</strong> :</p>
+</div>
+<div class="paragraph data-line-134">
+<p><span class="image"><img src="./img/code_appelFonctionAjout.png" alt="code appel de la fonction ajout au panier"></span></p>
+</div>
+<div class="paragraph data-line-136">
+<p>Pour fonctionner, dans un premier temps cette fonction vérifie si l&#8217;utilisateur est connecté.<br>
+Si c&#8217;est le cas, nous préparons et éxecutons la procédure <strong>ADD_TO_CART</strong> qui ajoute le produit au panier :</p>
+</div>
+<div class="paragraph data-line-139">
+<p><span class="image"><img src="./img/code_FonctionAjout.png" alt="code de la fonction ajout au panier"></span></p>
+</div>
+<div class="paragraph data-line-141">
+<p>Dans les cas d&#8217;erreur et de réussite, une alerte est afficher présentant le message soit d&#8217;erreur ou de réussite :</p>
+</div>
+<div class="paragraph data-line-143">
+<p><span class="image"><img src="./img/code_showAlert.png" alt="code de la fonction d&#8217;alerte"></span></p>
+</div>
+</div>
+<div class="sect2 data-line-145">
 <h3 id="_gérer_les_produits_de_sont_panier">Gérer les produits de sont panier</h3>
 
 </div>
-<div class="sect2 data-line-125">
+<div class="sect2 data-line-147">
 <h3 id="_réaliser_une_commande">Réaliser une commande</h3>
 
 </div>
-<div class="sect2 data-line-127">
+<div class="sect2 data-line-149">
 <h3 id="_se_connecter_à_un_compte_administrateur">se connecter à un compte Administrateur</h3>
-
+<div class="paragraph data-line-151">
+<p>La connexion à un compte Administrateur sur le site web s&#8217;effectue en suivant plusieurs étapes.<br>
+Dans un premier temps, une connexion doit être établie pour se rendre sur la page d&#8217;Administration grâce au formulaire de la page <span class="underline">connexion.php</span> qui sera traité dans la page : <span class="underline">TraitConnexion.php</span>.<br></p>
 </div>
-<div class="sect2 data-line-129">
+<div class="paragraph data-line-154">
+<p>Nous vérifions que l&#8217;email saisie par l&#8217;utilisateur est bien le mail permettant d&#8217;accéder à la page d&#8217;Administration : <strong>RoyalBio@gmail.com</strong> et que le mot de passe saisie correspond à cette email.<br>
+Si c&#8217;est le cas, l&#8217;utilisateur est redirigez vers la page Administration :</p>
+</div>
+<div class="paragraph data-line-157">
+<p><span class="image"><img src="./img/code_showAlert.png" alt="code de la fonction d&#8217;alerte"></span></p>
+</div>
+<div class="paragraph data-line-159">
+<p>L&#8217;input qui permet de redirigez l&#8217;utilisateur vers le formulaire lui permettant de se connecter à son compte Administrateur est traité dans la page : <span class="underline">firstConAdmin.php</span> :</p>
+</div>
+<div class="paragraph data-line-161">
+<p><span class="image"><img src="./img/code_firstConnAdmin.png" alt="code de la première connexion Administrateur"></span></p>
+</div>
+<div class="paragraph data-line-163">
+<p>Si le mot de passe saisie correspond au mot de passe pour accéder au formulaire de connexion alors l&#8217;utilisateur est redirigez vers la page : <span class="underline">connexionAdmin.php</span> dans laquelle est présente un formulaire qui est traité dans la page <span class="underline">TraitconnexionAdmin.php</span> (à noter que la SESSION qui a été crée lors de la première connexion est détruite) :</p>
+</div>
+<div class="paragraph data-line-165">
+<p><span class="image"><img src="./img/code_formConnAdmin.png" alt="code du formulaire de connexion Administrateur"></span></p>
+</div>
+<div class="paragraph data-line-167">
+<p>Pour traité ce formulaire, nous verifions d&#8217;abord si les champs saisies et nous préparons et éxecutons une requête SQL qui recherche toutes les informations de l&#8217;Administrateur qui a pour numéro d&#8217;employé, le <strong>numEmp</strong> saisie.<br>
+Si un employé est trouvé, et que le mot de passe saisie correspond au compte de cet employé, une <strong>SESSION</strong> et donc une connexion sont établie :</p>
+</div>
+<div class="paragraph data-line-170">
+<p><span class="image"><img src="./img/code_TraitConnAdmin2.png" alt="code du traitement du deuxième formulaire de connexion"></span></p>
+</div>
+</div>
+<div class="sect2 data-line-172">
 <h3 id="_gérer_les_produits">Gérer les produits</h3>
 
 </div>
-<div class="sect2 data-line-131">
+<div class="sect2 data-line-174">
 <h3 id="_gérer_les_clients">Gérer les clients</h3>
 
 </div>
+<div class="sect2 data-line-176">
+<h3 id="_gérer_la_messagerie_client">Gérer la messagerie client</h3>
+
 </div>
 </div>
-<div class="sect1 data-line-133">
+</div>
+<div class="sect1 data-line-178">
 <h2 id="_guide_technique_de_lapplication_iot">Guide technique de l&#8217;Application IOT</h2>
 <div class="sectionbody">
-<div class="sect2 data-line-135">
+<div class="sect2 data-line-180">
 <h3 id="_partie_python">Partie Python</h3>
 
 </div>
-<div class="sect2 data-line-137">
+<div class="sect2 data-line-182">
 <h3 id="_partie_java">Partie Java</h3>
 
 </div>
