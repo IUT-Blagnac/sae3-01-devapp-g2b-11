@@ -108,7 +108,7 @@ De plus ce fichier `README.adoc` devra être à jour des informations suivantes 
 
 - Indicateurs de qualité du code (dette technique)
 
-- https://github.com/IUT-Blagnac/sae3-01-devapp-g2b-11/blob/master/assets/GPO/Analyse%20d'impact%20G2B11.pdf[Analyse d'impact pour le site de Royal Bio]
+- https://github.com/IUT-Blagnac/sae3-01-devapp-g2b-11/blob/master/assets/GPO[Analyse d'impact pour le site de Royal Bio]
 
 
 == Évaluations hebdomadaires
