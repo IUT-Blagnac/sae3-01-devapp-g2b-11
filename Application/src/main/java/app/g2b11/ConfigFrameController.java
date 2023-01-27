@@ -15,21 +15,6 @@ import java.util.Map;
 public class ConfigFrameController {
 
     @FXML
-    private Label titre;
-
-    @FXML
-    private Label lNom;
-
-    @FXML
-    private Label lData;
-
-    @FXML
-    private Label lSeuilTemp;
-
-    @FXML
-    private Label lSeuilHum;
-
-    @FXML
     private Label lObsSeuilTemp;
 
     @FXML

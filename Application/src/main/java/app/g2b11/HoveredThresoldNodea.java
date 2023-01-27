@@ -1,35 +1,23 @@
 package app.g2b11;
 
-import javafx.event.EventHandler;
-import javafx.scene.Cursor;
 import javafx.scene.control.Label;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.StackPane;
-import javafx.scene.paint.Color;
 
 class HoveredThresholdNodea extends StackPane {
 
-    public HoveredThresholdNodea(Double doub, String typed) {
+    public HoveredThresholdNodea(Double doub) {
         setPrefSize(15, 15);
 
-        final Label label = createDataThresholdLabel(doub, typed);
+        final Label label = createDataThresholdLabel(doub);
 
-        setOnMouseEntered(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent mouseEvent) {
-                getChildren().setAll(label);
-                toFront();
-            }
+        setOnMouseEntered(mouseEvent -> {
+            getChildren().setAll(label);
+            toFront();
         });
-        setOnMouseExited(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent mouseEvent) {
-                getChildren().clear();
-            }
-        });
+        setOnMouseExited(mouseEvent -> getChildren().clear());
     }
 
-    private Label createDataThresholdLabel(Object object, String typed) {
+    private Label createDataThresholdLabel(Object object) {
         final Label label = new Label(object + "");
         label.getStyleClass().addAll( "chart-line-symbol");
         label.setStyle("-fx-font-size: 11; -fx-font-weight: bold;");
