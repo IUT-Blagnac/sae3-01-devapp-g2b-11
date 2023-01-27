@@ -69,7 +69,7 @@ public class DataFrameController {
         // on essaye de lire les lignes du fichier contenu au chemin "path"
         lignes = Files.readAllLines(path);
 
-        String a[] = {""};
+        String a[] = { "" };
 
         // On ajoute ces lignes dans le dictionnaire
         for (String ligne : lignes) {
@@ -77,112 +77,116 @@ public class DataFrameController {
             datadict.put(a[0], Double.valueOf(a[1]));
         }
 
-            // this is used to display time in HH:mm:ss format
-            final SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HH:mm:ss");
+        // this is used to display time in HH:mm:ss format
+        final SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HH:mm:ss");
 
-            final SimpleDateFormat dayDateFormat = new SimpleDateFormat("dd/MM");
-            XYChart.Series dataSeriesHum = new XYChart.Series();
-            XYChart.Series dataSeriesTemp = new XYChart.Series();
-            XYChart.Series dataSeriesCO2 = new XYChart.Series();
+        final SimpleDateFormat dayDateFormat = new SimpleDateFormat("dd/MM");
+        XYChart.Series dataSeriesHum = new XYChart.Series();
+        XYChart.Series dataSeriesTemp = new XYChart.Series();
+        XYChart.Series dataSeriesCO2 = new XYChart.Series();
 
-            if(datadict.keySet().contains("Humidity")){
-                dataSeriesHum.setName("Humidité en %");
-                chartTemp.getData().add(dataSeriesHum);
-                String msgData = "Humidité : " + datadict.get("Humidity");
-                lvData.getItems().add(msgData);
-            }
-            if(datadict.keySet().contains("Temperature")){
-                dataSeriesTemp.setName("Température en °C");
-                chartTemp.getData().add(dataSeriesTemp);
-                lvData.getItems().add(("Température : " + datadict.get("Temperature")));
-            }
-            if(datadict.keySet().contains("CO2")){
-                dataSeriesCO2.setName("Taux de CO2 en ppm / 100");
-                chartTemp.getData().add(dataSeriesCO2);
-                lvData.getItems().add("CO2 : " + datadict.get("CO2"));
-            }
-            // setup a scheduled executor to periodically put data into the chart
-            scheduledExecutorService = Executors.newSingleThreadScheduledExecutor();
+        if (datadict.keySet().contains("Humidity")) {
+            dataSeriesHum.setName("Humidité en %");
+            chartTemp.getData().add(dataSeriesHum);
+            String msgData = "Humidité : " + datadict.get("Humidity");
+            lvData.getItems().add(msgData);
+        }
+        if (datadict.keySet().contains("Temperature")) {
+            dataSeriesTemp.setName("Température en °C");
+            chartTemp.getData().add(dataSeriesTemp);
+            lvData.getItems().add(("Température : " + datadict.get("Temperature")));
+        }
+        if (datadict.keySet().contains("CO2")) {
+            dataSeriesCO2.setName("Taux de CO2 en ppm / 100");
+            chartTemp.getData().add(dataSeriesCO2);
+            lvData.getItems().add("CO2 : " + datadict.get("CO2"));
+        }
+        // setup a scheduled executor to periodically put data into the chart
+        scheduledExecutorService = Executors.newSingleThreadScheduledExecutor();
 
-            // put dummy data onto graph per second
-            scheduledExecutorService.scheduleAtFixedRate(() -> {
+        // put dummy data onto graph per second
+        scheduledExecutorService.scheduleAtFixedRate(() -> {
 
-                // Update the chart
-                Platform.runLater(() -> {
-                    String nomFichier2 = null;
-                    Date now = new Date();
-                    try {
-                        nomFichier2 = configController.getNomFich();
-                        // Chemin du fichier
-                        Path path2 = Path.of("./data/" + nomFichier2); // chemin du fichier � lire
-                        List<String> lignes2 = new ArrayList();
-                        // on essaye de lire les lignes du fichier contenu au chemin "path"
-                        lignes2 = Files.readAllLines(path2);
+            // Update the chart
+            Platform.runLater(() -> {
+                String nomFichier2 = null;
+                Date now = new Date();
+                try {
+                    nomFichier2 = configController.getNomFich();
+                    // Chemin du fichier
+                    Path path2 = Path.of("./data/" + nomFichier2); // chemin du fichier � lire
+                    List<String> lignes2 = new ArrayList();
+                    // on essaye de lire les lignes du fichier contenu au chemin "path"
+                    lignes2 = Files.readAllLines(path2);
 
-                        String a2[] = {""};
+                    String a2[] = { "" };
 
-                        // On ajoute ces lignes dans le dictionnaire
-                        for (String ligne : lignes2) {
-                            a2 = ligne.split(":", 2);
-                            datadict.put(a2[0], Double.valueOf(a2[1]));
-                        }
-
-                        //System.out.println(datadict.keySet());
-                        //System.out.println(valTemp);
-                        //System.out.println(datadict.get("AlerteTemperature"));
-                        lvData.getItems().clear();
-                        // met dans les séries respectives les valeurs demandées par l'utilisateur
-                        if (datadict.keySet().contains("Temperature")) {
-                            final XYChart.Data<String, Double> dataT = new XYChart.Data(simpleDateFormat.format(now), datadict.get("Temperature"));
-                            dataT.setNode(new HoveredThresholdNodea(datadict.get("Temperature"), "temperature"));
-                            dataSeriesTemp.getData().add(dataT);
-                            lvData.getItems().add("Température : " + datadict.get("Temperature"));
-                            if(datadict.get("AlerteTemperature") == 1.0){ // gestion des alertes de température
-                                Alert seuilTemp = new Alert(Alert.AlertType.WARNING);
-                                seuilTemp.setTitle("Alerte seuil");
-                                seuilTemp.setHeaderText("Seuil température trop élevé");
-                                seuilTemp.setContentText("Seuil de température trop élevé à " + simpleDateFormat.format(now) + " le " + dayDateFormat.format(now));
-                                seuilTemp.show();
-                            }
-                        }
-                        if (datadict.keySet().contains("CO2")) {
-                            final XYChart.Data<String, Double> dataC = new XYChart.Data(simpleDateFormat.format(now), datadict.get("CO2") /100.0);
-                            dataC.setNode(new HoveredThresholdNodea(datadict.get("CO2")/100, "co2"));
-                            dataSeriesCO2.getData().add(dataC);
-                            valCO2.add((datadict.get("CO2"))/100.0);
-                            lvData.getItems().add("CO2 : " + datadict.get("CO2"));
-                        }
-                        if (datadict.keySet().contains("Humidity")) {
-                            final XYChart.Data<String, Double> dataH = new XYChart.Data(simpleDateFormat.format(now), datadict.get("Humidity"));
-                            dataH.setNode(new HoveredThresholdNodea(datadict.get("Humidity"), "humidite"));
-                            dataSeriesHum.getData().add(dataH);
-                            valHum.add(datadict.get("Humidity"));
-                            lvData.getItems().add("Humidité : " + datadict.get("Humidity"));
-                            if(datadict.get("AlerteHumidite") == 1.0){ // gestion des alertes d'humidité
-                                Alert seuilHum = new Alert(Alert.AlertType.WARNING);
-                                seuilHum.setTitle("Alerte seuil");
-                                seuilHum.setHeaderText("Seuil d'humidité trop élevé");
-                                seuilHum.setContentText("Seuil d'humidité trop élevé à " + simpleDateFormat.format(now) + " le " + dayDateFormat.format(now));
-                                seuilHum.show();
-                            }
-                        }
-
-                    } catch (IOException e) {
-                        Alert aB = new Alert(Alert.AlertType.ERROR);
-
-                        aB.setTitle("Erreur nom fichier");
-
-                        aB.setHeaderText("Erreur dans la saisie du nom du fichier de données !");
-
-                        aB.setContentText("Veuillez saisir un nom de fichier existant dans le fichier de configuration");
-
-                        aB.show();
+                    // On ajoute ces lignes dans le dictionnaire
+                    for (String ligne : lignes2) {
+                        a2 = ligne.split(":", 2);
+                        datadict.put(a2[0], Double.valueOf(a2[1]));
                     }
 
-                });
-            }, 0, 10, TimeUnit.MINUTES);
-    }
+                    // System.out.println(datadict.keySet());
+                    // System.out.println(valTemp);
+                    // System.out.println(datadict.get("AlerteTemperature"));
+                    lvData.getItems().clear();
+                    // met dans les séries respectives les valeurs demandées par l'utilisateur
+                    if (datadict.keySet().contains("Temperature")) {
+                        final XYChart.Data<String, Double> dataT = new XYChart.Data(simpleDateFormat.format(now),
+                                datadict.get("Temperature"));
+                        dataT.setNode(new HoveredThresholdNodea(datadict.get("Temperature"), "temperature"));
+                        dataSeriesTemp.getData().add(dataT);
+                        lvData.getItems().add("Température : " + datadict.get("Temperature"));
+                        if (datadict.get("AlerteTemperature") == 1.0) { // gestion des alertes de température
+                            Alert seuilTemp = new Alert(Alert.AlertType.WARNING);
+                            seuilTemp.setTitle("Alerte seuil");
+                            seuilTemp.setHeaderText("Seuil température trop élevé");
+                            seuilTemp.setContentText("Seuil de température trop élevé à " + simpleDateFormat.format(now)
+                                    + " le " + dayDateFormat.format(now));
+                            seuilTemp.show();
+                        }
+                    }
+                    if (datadict.keySet().contains("CO2")) {
+                        final XYChart.Data<String, Double> dataC = new XYChart.Data(simpleDateFormat.format(now),
+                                datadict.get("CO2") / 100.0);
+                        dataC.setNode(new HoveredThresholdNodea(datadict.get("CO2") / 100, "co2"));
+                        dataSeriesCO2.getData().add(dataC);
+                        valCO2.add((datadict.get("CO2")) / 100.0);
+                        lvData.getItems().add("CO2 : " + datadict.get("CO2"));
+                    }
+                    if (datadict.keySet().contains("Humidity")) {
+                        final XYChart.Data<String, Double> dataH = new XYChart.Data(simpleDateFormat.format(now),
+                                datadict.get("Humidity"));
+                        dataH.setNode(new HoveredThresholdNodea(datadict.get("Humidity"), "humidite"));
+                        dataSeriesHum.getData().add(dataH);
+                        valHum.add(datadict.get("Humidity"));
+                        lvData.getItems().add("Humidité : " + datadict.get("Humidity"));
+                        if (datadict.get("AlerteHumidite") == 1.0) { // gestion des alertes d'humidité
+                            Alert seuilHum = new Alert(Alert.AlertType.WARNING);
+                            seuilHum.setTitle("Alerte seuil");
+                            seuilHum.setHeaderText("Seuil d'humidité trop élevé");
+                            seuilHum.setContentText("Seuil d'humidité trop élevé à " + simpleDateFormat.format(now)
+                                    + " le " + dayDateFormat.format(now));
+                            seuilHum.show();
+                        }
+                    }
 
+                } catch (IOException e) {
+                    Alert aB = new Alert(Alert.AlertType.ERROR);
+
+                    aB.setTitle("Erreur nom fichier");
+
+                    aB.setHeaderText("Erreur dans la saisie du nom du fichier de données !");
+
+                    aB.setContentText("Veuillez saisir un nom de fichier existant dans le fichier de configuration");
+
+                    aB.show();
+                }
+
+            });
+        }, 0, 10, TimeUnit.MINUTES);
+    }
 
     public void endAllScheduledExecutorService() {
         scheduledExecutorService.shutdown();

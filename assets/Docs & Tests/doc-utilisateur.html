@@ -451,9 +451,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_ajouter_et_consulter_des_produits_dans_son_panier">Ajouter et consulter des produits dans son panier</a></li>
 <li><a href="#_gérer_les_produits_dans_son_panier">Gérer les produits dans son panier</a></li>
 <li><a href="#_réaliser_une_commande">Réaliser une commande</a></li>
+<li><a href="#_envoyer_un_message_à_royal_bio">Envoyer un message à Royal Bio</a></li>
 <li><a href="#_se_connecter_à_un_compte_administrateur">se connecter à un compte Administrateur</a></li>
 <li><a href="#_gérer_les_produits_crud_des_produits">Gérer les produits (CRUD des produits)</a></li>
 <li><a href="#_gérer_les_clients_crud_des_clients">Gérer les clients (CRUD des clients)</a></li>
+<li><a href="#_gérer_la_messagerie_clientèle">Gérer la messagerie clientèle</a></li>
 </ul>
 </li>
 <li><a href="#_guide_de_lapplication_iot">Guide de l&#8217;Application IOT</a></li>
@@ -584,43 +586,139 @@ Pour utiliser cette fonctionnalité, l&#8217;utilisateur doit être connecté à
 </div>
 <div class="sect2 data-line-66">
 <h3 id="_gérer_les_produits_dans_son_panier">Gérer les produits dans son panier</h3>
-
+<div class="sect3 data-line-68">
+<h4 id="_modifier_la_quantité_dun_produit">Modifier la quantité d&#8217;un produit</h4>
+<div class="admonitionblock warning data-line-70">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Pour utiliser cette fonctionnalité, l&#8217;utilisateur doit être connecté à son compte
+</td>
+</tr>
+</table>
 </div>
-<div class="sect2 data-line-68">
+<div class="paragraph data-line-72">
+<p>Pour modifier la quantité d&#8217;un produit dans son panier, le client doit se rendre dans la page <span class="underline">panier.php</span>.
+Depuis cette page, en saisissant une quantité dans le champs dédié et en cliquant sur le bouton <strong>Mettre à jour</strong>, la quantité du produit sera modifié :</p>
+</div>
+<div class="paragraph data-line-75">
+<p><span class="image"><img src="./img/modifQuantite.png" alt="Modification de la quantité d&#8217;un produit"></span></p>
+</div>
+</div>
+<div class="sect3 data-line-77">
+<h4 id="_supprimer_un_produit_de_son_panier">Supprimer un produit de son panier</h4>
+<div class="admonitionblock warning data-line-79">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Pour utiliser cette fonctionnalité, l&#8217;utilisateur doit être connecté à son compte
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph data-line-81">
+<p>Pour supprimer un produit de son panier, le client doit se rendre dans la page <span class="underline">panier.php</span>.
+Depuis cette page, en cliquant sur le bouton <strong>Supprimer</strong> du produit, celui-ci sera supprimer de son panier :</p>
+</div>
+<div class="paragraph data-line-84">
+<p><span class="image"><img src="./img/supprimerProduit.png" alt="Suppression d&#8217;un produit"></span></p>
+</div>
+</div>
+</div>
+<div class="sect2 data-line-86">
 <h3 id="_réaliser_une_commande">Réaliser une commande</h3>
-
+<div class="admonitionblock warning data-line-88">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Pour utiliser cette fonctionnalité, l&#8217;utilisateur doit être connecté à son compte et posséder un panier
+</td>
+</tr>
+</table>
 </div>
-<div class="sect2 data-line-71">
+<div class="paragraph data-line-90">
+<p>Pour réaliser une commande à la suite de la création d&#8217;un panier, le client doit se rendre dans la page <span class="underline">panier.php</span> ou il devra cliquer sur le bouton <strong>Passer la commande</strong> :</p>
+</div>
+<div class="paragraph data-line-92">
+<p><span class="image"><img src="./img/btnCommande.png" alt="Bouton passer la commande"></span></p>
+</div>
+<div class="paragraph data-line-94">
+<p>Il sera rediriger vers une page dans laquelle sera présente un formulaire ou il devra saisir ces informations de livraison ainsi que de paiement :</p>
+</div>
+<div class="paragraph data-line-96">
+<p><span class="image"><img src="./img/formPaiement.png" alt="Formulaire de paiement"></span></p>
+</div>
+<div class="paragraph data-line-98">
+<p><span class="image"><img src="./img/formLiv.png" alt="Formulaire de livraison"></span></p>
+</div>
+</div>
+<div class="sect2 data-line-100">
+<h3 id="_envoyer_un_message_à_royal_bio">Envoyer un message à Royal Bio</h3>
+<div class="admonitionblock warning data-line-102">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Pour utiliser cette fonctionnalité, l&#8217;utilisateur doit être connecté à son compte
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph data-line-104">
+<p>Pour envoyer un message à Royal Bio, le client devra se rendre sur la page : <span class="udnerline">contact.php</span> dans laquelle sera accessible des champs dans lesquels il devra saisir ses informations ainsi que l&#8217;objet de son message et ce dernier :</p>
+</div>
+<div class="paragraph data-line-106">
+<p><span class="image"><img src="./img/formMess.png" alt="Formulaire de message"></span></p>
+</div>
+<div class="paragraph data-line-108">
+<p>Lorsque le client cliquera sur le bouton : <strong>envoyer</strong>, le message sera envoyé à Royal Bio pour qu&#8217;ils y réponde :</p>
+</div>
+<div class="paragraph data-line-110">
+<p><span class="image"><img src="./img/formMessAdmin.png" alt="message reçu par Royal Bio"></span></p>
+</div>
+</div>
+<div class="sect2 data-line-112">
 <h3 id="_se_connecter_à_un_compte_administrateur">se connecter à un compte Administrateur</h3>
-<div class="paragraph data-line-73">
+<div class="paragraph data-line-114">
 <p>Pour se connecter à un compte Administrateur, rendez-vous sur la page : <span class="underline">Connexion</span>.<br>
 Depuis cette page, saisissez les informations administrateur dans le formulaire :<br></p>
 </div>
-<div class="paragraph data-line-76">
+<div class="paragraph data-line-117">
 <p><span class="image"><img src="./img/formConn.png" alt="Formulaire de connexion"></span> <br></p>
 </div>
-<div class="paragraph data-line-78">
+<div class="paragraph data-line-119">
 <p>Si ces informations sont valides, l&#8217;utilisateur sera redirigez vers une page lui demandant le mot de passe des Administrateurs :<br></p>
 </div>
-<div class="paragraph data-line-80">
+<div class="paragraph data-line-121">
 <p><span class="image"><img src="./img/motPasseAdmin.png" alt="Mot de passe admin"></span> <br></p>
 </div>
-<div class="paragraph data-line-82">
+<div class="paragraph data-line-123">
 <p>Si le mot de passe saisit est valide, il sera redirigez à nouveau vers une page dans laquelle est présente un formulaire de connexion où il devra saisir sont numéro d&#8217;employé et le mot de passe associé à ce numéro :<br></p>
 </div>
-<div class="paragraph data-line-84">
+<div class="paragraph data-line-125">
 <p><span class="image"><img src="./img/formAdmin.png" alt="Formulaire de connexio admin"></span> <br></p>
 </div>
-<div class="paragraph data-line-86">
+<div class="paragraph data-line-127">
 <p>Si les informations saisies sont correct, l&#8217;utilisateur est redirigez vers une page dans laquelle sont présent des boutons permettant respectivement de redirigez vers les pages pour faire le CRUD des clients et des produits ainsi que gérer les messages clients :</p>
 </div>
-<div class="paragraph data-line-88">
+<div class="paragraph data-line-129">
 <p><span class="image"><img src="./img/pageAdmin.png" alt="Page Administrateur"></span> <br></p>
 </div>
 </div>
-<div class="sect2 data-line-90">
+<div class="sect2 data-line-131">
 <h3 id="_gérer_les_produits_crud_des_produits">Gérer les produits (CRUD des produits)</h3>
-<div class="admonitionblock warning data-line-92">
+<div class="admonitionblock warning data-line-133">
 <table>
 <tr>
 <td class="icon">
@@ -632,50 +730,50 @@ Pour utiliser cette fonctionnalité, l&#8217;utilisateur doit être connecté à
 </tr>
 </table>
 </div>
-<div class="paragraph data-line-94">
+<div class="paragraph data-line-135">
 <p>Pour faire le CRUD des produits, l&#8217;administrateur doit cliquer sur le bouton : <strong>Gérer les produits</strong> depuis la page <span class="underline">Administrateur</span> :</p>
 </div>
-<div class="paragraph data-line-96">
+<div class="paragraph data-line-137">
 <p><span class="image"><img src="./img/btnGestionProduit.png" alt="Bouton gestion des produits"></span> <br></p>
 </div>
-<div class="paragraph data-line-98">
+<div class="paragraph data-line-139">
 <p>ce qui aura pour effet de le redirigez vers une page dans laquelle la liste de touts les produits est présente dans un tableau :</p>
 </div>
-<div class="paragraph data-line-100">
+<div class="paragraph data-line-141">
 <p><span class="image"><img src="./img/pageGestionProduit.png" alt="Page gestion produits"></span> <br></p>
 </div>
-<div class="paragraph data-line-102">
+<div class="paragraph data-line-143">
 <p>Depuis cette page, l&#8217;Administrateur aura la possibilité de faire trois actions différentes :<br></p>
 </div>
-<div class="ulist data-line-104">
+<div class="ulist data-line-145">
 <ul>
-<li class="data-line-104">
+<li class="data-line-145">
 <p>Ajouter un produit</p>
 </li>
-<li class="data-line-105">
+<li class="data-line-146">
 <p>Modifier les informations d&#8217;un produit</p>
 </li>
-<li class="data-line-106">
+<li class="data-line-147">
 <p>Supprimer un produit</p>
 </li>
 </ul>
 </div>
-<div class="paragraph data-line-108">
+<div class="paragraph data-line-149">
 <p>La fonctionnalité permettant d&#8217;ajouter un produit redirige l&#8217;administrateur vers une page dans laquelle est présente un formaulaire dans lequel il est invité à entrer les nouvelles informations :</p>
 </div>
-<div class="paragraph data-line-110">
+<div class="paragraph data-line-151">
 <p><span class="image"><img src="./img/pageAjoutProduit.png" alt="Page d&#8217;ajout d&#8217;un produit"></span> <br></p>
 </div>
-<div class="paragraph data-line-112">
+<div class="paragraph data-line-153">
 <p>La fonctionnalité permettant de modifier les informations d&#8217;un produit redirige l&#8217;Administrateur vers une page dans laquelle est présente un formulaire dans lequel il est invité à entrer les nouvelles informations :</p>
 </div>
-<div class="paragraph data-line-114">
+<div class="paragraph data-line-155">
 <p><span class="image"><img src="./img/pageModifInfoProduit.png" alt="Page modification d&#8217;un produit"></span> <br></p>
 </div>
 </div>
-<div class="sect2 data-line-116">
+<div class="sect2 data-line-157">
 <h3 id="_gérer_les_clients_crud_des_clients">Gérer les clients (CRUD des clients)</h3>
-<div class="admonitionblock warning data-line-118">
+<div class="admonitionblock warning data-line-159">
 <table>
 <tr>
 <td class="icon">
@@ -687,50 +785,83 @@ Pour utilliser cette fonctionnalité, l&#8217;utilisateur doit être connecté �
 </tr>
 </table>
 </div>
-<div class="paragraph data-line-120">
+<div class="paragraph data-line-161">
 <p>Pour faire le CRUD des clients, l&#8217;administrateur doit cliquer sur le bouton : <strong>Gestion des clients</strong> depuis la page <span class="undeline">Administrateur</span> :</p>
 </div>
-<div class="paragraph data-line-122">
+<div class="paragraph data-line-163">
 <p><span class="image"><img src="./img/btnGestionCli.png" alt="Bouton gestion des clients"></span> <br></p>
 </div>
-<div class="paragraph data-line-124">
+<div class="paragraph data-line-165">
 <p>ce qui aura pour effet de le redirigez vers une page dans laquelle est présente la liste des clients du site dans un tableau :</p>
 </div>
-<div class="paragraph data-line-126">
+<div class="paragraph data-line-167">
 <p><span class="image"><img src="./img/pageGestionCli.png" alt="Page gestion des clients"></span> <br></p>
 </div>
-<div class="paragraph data-line-128">
+<div class="paragraph data-line-169">
 <p>Depuis cette page, l&#8217;administrateur aura la possibilité de faire trois actions différentes :<br></p>
 </div>
-<div class="ulist data-line-130">
+<div class="ulist data-line-171">
 <ul>
-<li class="data-line-130">
+<li class="data-line-171">
 <p>Ajouter un client</p>
 </li>
-<li class="data-line-131">
+<li class="data-line-172">
 <p>Modifier les informations d&#8217;un client</p>
 </li>
-<li class="data-line-132">
+<li class="data-line-173">
 <p>Supprimer un client</p>
 </li>
 </ul>
 </div>
-<div class="paragraph data-line-134">
+<div class="paragraph data-line-175">
 <p>La fonctionnalité permettant d&#8217;ajouter un client redirige l&#8217;administrateur vers une page dans laquelle est présente un formaulaire dans lequel il est invité à entrer les nouvelles informations :</p>
 </div>
-<div class="paragraph data-line-136">
+<div class="paragraph data-line-177">
 <p><span class="image"><img src="./img/pageAjoutCli.png" alt="Page d&#8217;ajout d&#8217;un client"></span> <br></p>
 </div>
-<div class="paragraph data-line-138">
+<div class="paragraph data-line-179">
 <p>La fonctionnalité permettant de modifier les informations d&#8217;un client redirige l&#8217;administrateur vers une page dans laquelle est présente un formulaire dans lequel il est invité à entrer les nouvelles informations :</p>
 </div>
-<div class="paragraph data-line-140">
+<div class="paragraph data-line-181">
 <p><span class="image"><img src="./img/pageGestionCli.png" alt="Page modification d&#8217;un client"></span></p>
 </div>
 </div>
+<div class="sect2 data-line-183">
+<h3 id="_gérer_la_messagerie_clientèle">Gérer la messagerie clientèle</h3>
+<div class="admonitionblock warning data-line-185">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Pour utiliser cette fonctionnalité, l&#8217;utilisateur doit être connecté avec un compte administrateur
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph data-line-187">
+<p>Pour gérer la messagerie clientèle, à savoir consulter les message reçu et y répondre, l&#8217;Administrateur sur la page <strong>d&#8217;Administration</strong> doit cliquez sur le bouton <strong>MEssagerie clients</strong> :</p>
+</div>
+<div class="paragraph data-line-189">
+<p><span class="image"><img src="./img/btnMessCli.png" alt="Messagerie clientèle"></span></p>
+</div>
+<div class="paragraph data-line-191">
+<p>Il sera rediriger vers une page dans laquelle sera présente tous les messages reçu :</p>
+</div>
+<div class="paragraph data-line-193">
+<p><span class="image"><img src="./img/formMessAdmin.png" alt="Messages des clients"></span></p>
+</div>
+<div class="paragraph data-line-196">
+<p>En cliquant sur un message précis, celui-ci sera afficher et l&#8217;Administrateur poura y répondre :</p>
+</div>
+<div class="paragraph data-line-198">
+<p><span class="image"><img src="./img/repMessCli.png" alt="Réponse au message d&#8217;un client"></span></p>
 </div>
 </div>
-<div class="sect1 data-line-142">
+</div>
+</div>
+<div class="sect1 data-line-200">
 <h2 id="_guide_de_lapplication_iot">Guide de l&#8217;Application IOT</h2>
 <div class="sectionbody">
 
