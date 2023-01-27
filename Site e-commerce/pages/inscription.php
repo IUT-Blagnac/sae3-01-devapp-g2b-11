@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -19,16 +19,22 @@
             <h1 class="title">Inscription</h1>
 
             <label class="subtitle"><b>Nom</b></label>
-            <input type="text" placeholder="Entrer le nom" name="nomClient" required>
+            <input type="text" placeholder="Entrer votre nom" name="nomClient" required>
 
             <label class="subtitle"><b>Prénom</b></label>
-            <input type="text" placeholder="Entrer le prénom" name="prenomClient" required>
+            <input type="text" placeholder="Entrer votre prénom" name="prenomClient" required>
 
-            <label class="subtitle"><b>Adresse mail</b></label>
-            <input type="email" placeholder="Entrer l'adresse mail" name="mailClient" required>
+            <label class="subtitle"><b>Adresse email</b></label>
+            <input type="email" placeholder="Entrer votre adresse email" name="mailClient" required>
+
+            <label class="subtitle"><b>Numéro de téléphone</b></label>
+            <input type="text" placeholder="Entrer votre numéro" name="numeroClient" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" maxlength="10" required>
+
+            <label class="subtitle"><b>Adresse postale</b></label>
+            <input type="text" placeholder="Entrer votre adresse" name="adresseClient" required>
 
             <label class="subtitle"><b>Mot de passe*</b></label>
-            <input type="password" placeholder="Entrer le mot de passe" name="motPasseClient" required>
+            <input type="password" placeholder="Entrer un mot de passe" name="motPasseClient" required>
 
             <div class="button">
                 <div class="submit btn">
@@ -36,14 +42,25 @@
                 </div>
             </div>
         </form>
+
         <div class="info">
-            <p>*Le mot de passe doit contenir :</p>
-            <ul>
-                <li>Au moins 8 caractères</li>
-                <li>Au moins 1 minuscule</li>
-                <li>Au moins 1 majuscule</li>
-                <li>Au moins 1 chiffre</li>
-            </ul>
+            <div class="title">Validité des champs*</div>
+            <div class="info-data">
+                <div class="prenom-nom">
+                    Pour être valide, le nom et le prénom doivent commencés par une majuscule
+                </div>
+                <div class="email">
+                    Pour être valide, l'email doit se terminer par @ suivi d'une chaîne de caractère et d'un point suivi d'une chaîne de caractère
+                </div>
+                <div class="motPasse">
+                    Pour être valide, le mot de passe doit respecter ces conditions : <br>
+                    - Au moins 8 caractères <br>
+                    - Au moins 1 minuscule <br>
+                    - Au moins 1 majuscules <br>
+                    - Au moins 1 chiffre <br>
+                    - Au moins 1 caractère spécial
+                </div>
+            </div>
         </div>
 
     </div>

@@ -69,18 +69,35 @@
             }
         }
 
+        //on vérifie si il n'y a pas de problème avec l'image uplaodé
+        // Testons si le fichier a bien été envoyé et s'il n'y a pas d'erreur
+        if ( !empty($_FILES['monfichier']) AND $_FILES['monfichier']['error'] == 0) {
+            // Testons si la taille du fichier est bonne
+            if (5000000 > $_FILES["monfichier"]["size"]) {
+                $nom = htmlentities($idProd);
+                // On peut valider le fichier et le stocker définitivement
+                copy($_FILES["monfichier"]['tmp_name'], '../../uploads/'.$nom.'.png');
+                
+            }else {
+                echo "Le fichier n'est pas du bon type ou il est trop volumineux !<BR>";
+            }
+        }
+
+
         // Requête d'insertion d'un nouveau client dans la base de donnée
-        $query = 'INSERT INTO produit VALUES (:idProduit, :idCategorie, :nomProduit, :prixProduit, :fournisseurProduit, :descriptionProduit, :compositionProduit, :quantiteProduit)';
+        $query = 'INSERT INTO produit VALUES (:idProduit, :idCategorie, :nomProduit, :prixProduit, :fournisseurProduit, :descriptionProduit, :compositionProduit, :quantiteProduit, :promotion, :prixpromo)';
         $insertion = oci_parse($connect, $query);
 
         // Variable bindé
-        $idCat = htmlspecialchars($_POST['idCategorie']);
-        $nomP = htmlspecialchars($_POST['nomProduit']);
-        $prixP = htmlspecialchars($_POST['prixProduit']);
-        $fourniP = htmlspecialchars($_POST['fournisseurProduit']);
-        $descriP = htmlspecialchars($_POST['descriptionProduit']);
-        $compoP = htmlspecialchars($_POST['compositionProduit']);
-        $quantiteP = htmlspecialchars($_POST['quantiteStock']);
+        $idCat = htmlspecialchars($_POST['idCategorie'],ENT_QUOTES, 'UTF-8'); 
+        $nomP = htmlspecialchars($_POST['nomProduit'],ENT_QUOTES, 'UTF-8'); 
+        $prixP = htmlspecialchars($_POST['prixProduit'],ENT_QUOTES, 'UTF-8'); 
+        $fourniP = htmlspecialchars($_POST['fournisseurProduit'],ENT_QUOTES, 'UTF-8'); 
+        $descriP = htmlspecialchars($_POST['descriptionProduit'],ENT_QUOTES, 'UTF-8'); 
+        $compoP = htmlspecialchars($_POST['compositionProduit'],ENT_QUOTES, 'UTF-8'); 
+        $quantiteP = htmlspecialchars($_POST['quantiteStock'],ENT_QUOTES, 'UTF-8'); 
+        $promo = 'n';
+        $prixPromo = NULL;
 
         oci_bind_by_name($insertion, ":idProduit", $idProd);         
         oci_bind_by_name($insertion, ":idCategorie", $idCat);
@@ -90,6 +107,8 @@
         oci_bind_by_name($insertion, ":descriptionProduit", $descriP);
         oci_bind_by_name($insertion, ":compositionProduit", $compoP);
         oci_bind_by_name($insertion, ":quantiteProduit", $quantiteP);
+        oci_bind_by_name($insertion, ":promotion", $promo);
+        oci_bind_by_name($insertion, ":prixpromo", $prixPromo);
 
         // on exécute la requête
         $result = oci_execute($insertion);

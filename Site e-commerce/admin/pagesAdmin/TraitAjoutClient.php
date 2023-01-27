@@ -47,12 +47,12 @@
         $insertion = oci_parse($connect, $query);
 
         // Variable bindé
-        $motPasseClient = password_hash(htmlspecialchars($_POST['motPasseClient']), PASSWORD_DEFAULT);
-        $nomClient = htmlspecialchars($_POST['nomClient']);
-        $prenomClient = htmlspecialchars($_POST['prenomClient']);
-        $adresseClient = htmlspecialchars($_POST['adresseClient']);
-        $telephoneClient = htmlspecialchars($_POST['telClient']);
-        $mailClient = htmlspecialchars($_POST['mailClient']);
+        $motPasseClient = password_hash(htmlspecialchars($_POST['motPasseClient'],ENT_QUOTES, 'UTF-8'), PASSWORD_DEFAULT);
+        $nomClient = htmlspecialchars($_POST['nomClient'],ENT_QUOTES, 'UTF-8'); 
+        $prenomClient = htmlspecialchars($_POST['prenomClient'],ENT_QUOTES, 'UTF-8'); 
+        $adresseClient = htmlspecialchars($_POST['adresseClient'],ENT_QUOTES, 'UTF-8'); 
+        $telephoneClient = htmlspecialchars($_POST['telClient'],ENT_QUOTES, 'UTF-8'); 
+        $mailClient = htmlspecialchars($_POST['mailClient'],ENT_QUOTES, 'UTF-8'); 
 
         oci_bind_by_name($insertion, ":idClient", $idClient);         
         oci_bind_by_name($insertion, ":motPasseClient", $motPasseClient);

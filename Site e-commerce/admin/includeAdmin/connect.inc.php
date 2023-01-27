@@ -6,7 +6,7 @@
 			  (SID = db11g)
 			)
 		  )" ;
-	$connect = oci_connect("SAEBD11", "G1g4CHaD", $db);
+	$connect = oci_connect("SAEBD11", "G1g4CHaD", $db, 'AL32UTF8');
 	
 	// si la connexion a échoué, on affiche le message d'erreur
 	if (!$connect) {

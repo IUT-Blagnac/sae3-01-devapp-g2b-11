@@ -1,7 +1,9 @@
 <?php 
 		session_start();
 		if(isset($_SESSION['access'])){
-			session_destroy();
-			header("location: /~SAESYS11/");
+			header("location: /~SAESYS11/admin/indexAdmin.php");
 			exit();
 		}
+		header("location: /~SAESYS11/");
+		exit();
+?>

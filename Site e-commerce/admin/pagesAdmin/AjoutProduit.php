@@ -26,7 +26,7 @@
             }
         ?>
 
-         <form method='POST' action="./TraitAjoutProduit.php" enctype="multipart/form-data">
+         <form method='POST' action="TraitAjoutProduit.php" enctype="multipart/form-data">
             
             <fieldset>
                 <legend> Ajout d'un nouveau produit </legend><BR>
@@ -38,6 +38,8 @@
                 Composition du produit : <input type='text' name='compositionProduit'  /><BR><BR>
                 Quantité du stock : <input type='text' name='quantiteStock'  required/><BR><BR>
                
+                <input type="file" name="monfichier" required /><br/>
+
                 <input type='submit' name='submit' value='Valider'/><BR><BR>
 
             </fieldset>

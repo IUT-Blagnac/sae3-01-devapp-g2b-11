@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,12 +9,13 @@
     <link rel="stylesheet" href="/~SAESYS11/styles/tete.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-<header>
+    <header>
         <div class="header">
             <div class="navlogo">
                 <div class="logo">
-                    <img src="/~SAESYS11/img/logo.png" alt="Logo de la start'up">
+                    <img src="/~SAESYS11/uploads/logo.png" alt="Logo de la start'up">
                 </div>
             </div>
 
@@ -25,20 +27,33 @@
                             <div class="input"><input type="text" name="recherche" placeholder="Recherche un produit ..."></div>
                         </form>
                     </div>
-                    
+
                     <li><a href="/~SAESYS11/pages/contact.php" class="button">Contact</a></li>
-                    <li><a href="/~SAESYS11/pages/connexion.php" class="button">Connexion</a></li>
-                    <li><a href="#" class="panier" id="panier-btn"><i class="fa-solid fa-basket-shopping"></i></a></li>
+                    <li>
+                        <?php if (isset($_SESSION['access']) && $_SESSION['access'] == 'oui') { ?>
+                            <a href="/~SAESYS11/pages/connexion.php" class="button">Mon compte</a>
+                        <?php } else { ?>
+                            <a href="/~SAESYS11/pages/connexion.php" class="button">Connexion</a>
+                        <?php } ?>
+                    </li>
+                    <li>
+                    <?php 
+                    	if (isset($_SESSION['access']) && $_SESSION['access'] == 'oui'){?>
+                    	<a href="/~SAESYS11/pages/affichagePanier.php?panier=<?php echo $_SESSION['idClient']; ?>" class="panier" id="panier-btn"><i class="fa-solid fa-basket-shopping"></i></a>
+                    <?php } else { ?>
+                    	<a href="/~SAESYS11/pages/panier.php?panier=?" class="panier" id="panier-btn"><i class="fa-solid fa-basket-shopping"></i></a>
+                    <?php } ?>
+                	</li>
                 </ul>
 
                 <div class="toggle">
-                <i class="fa-solid fa-bars"></i>
-            </div>
+                    <i class="fa-solid fa-bars"></i>
+                </div>
             </div>
 
 
         </div>
-        
+
 
         <div class="subheader">
             <ul class="menu">
@@ -69,9 +84,10 @@
                 </li>
             </ul>
         </div>
-    
-</header>
 
-<script src="/~SAESYS11/include/script.js"></script>
+    </header>
+
+    <script src="/~SAESYS11/include/script.js"></script>
 </body>
+
 </html>
