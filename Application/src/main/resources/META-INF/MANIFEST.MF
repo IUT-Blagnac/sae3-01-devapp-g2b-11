@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Main-Class: app.g2b11.EntrepotVisualApp
+
