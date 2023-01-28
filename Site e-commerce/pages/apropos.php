@@ -29,7 +29,7 @@
                     </div>
                 </div>
                 <div class="apropos_img">
-                    <img src="/~SAESYS11/img/epicerie_img.jpg" alt="Image de l'épicerie">
+                    <img src="/~SAESYS11/uploads/epicerie_img.jpg" alt="Image de l'épicerie">
                 </div>
         </div>
 
@@ -46,7 +46,7 @@
                     </div>
                 </div>
                 <div class="apropos_img">
-                    <img src="/~SAESYS11/img/blagnac.jpg" alt="Image de la ville de Blagnac">
+                    <img src="/~SAESYS11/uploads/blagnac.jpg" alt="Image de la ville de Blagnac">
                 </div>
         </div>
 
@@ -64,7 +64,7 @@
         		</div>
         	</div>
         	<div class="apropos_img">
-        		<img src="/~SAESYS11/img/harry_keau.png" align="Image de notre PDG">
+        		<img src="/~SAESYS11/uploads/harry_keau.png" align="Image de notre PDG">
         	</div>
         </div>
     </main>

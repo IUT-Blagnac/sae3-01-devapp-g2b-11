@@ -1,0 +1,5 @@
+CO2:502
+AlerteHumidite:0.0
+Humidity:33.5
+AlerteTemperature:1.0
+Temperature:18.9

@@ -7,28 +7,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class createJsonConfig {
-
-    /*public static void main(String[] args) {
-        JsonObject config = new JsonObject();
-        String[] data = new String[3];
-
-        data[0] = "temperature";
-        data[1] = "co2";
-        data[2] = "humidity";
-
-        ecrireNomFich("data.txt", config);
-        ecrireseuil(8,60,config);
-        choixdata(data, config);
-
-        try{
-            FileWriter f = new FileWriter("src/config.json");
-            f.write(config.toJson());
-            f.close();
-        } catch (IOException e){
-            e.printStackTrace();
-        }
-    }*/
-
+    
     public static void saveJson(JsonObject c){
         try{
             FileWriter f = new FileWriter("./config.json");

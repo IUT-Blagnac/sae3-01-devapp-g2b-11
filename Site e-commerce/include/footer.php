@@ -22,7 +22,7 @@
                     </div>
                 </div>
                 <div class="terms">
-                    <label for="#">En s'inscrivant à notre Newletters, vous acceptez <span class="terms_link"><a href="#">les conditions</a></span></label>
+                    <label for="#">En s'inscrivant à notre Newletters, vous acceptez <span class="terms_link"><a href="/~SAESYS11/pages/confi.php">les conditions</a></span></label>
                 </div>
             </form>
         </div>

@@ -27,7 +27,6 @@
             echo 'Aucun client';
         }
         $infoClients = oci_fetch_assoc($lesclients);
-        //var_dump($infoClients);
     ?>
     <main>
         <input type="submit" value="Retour" onclick="document.location.href='./GestionClient.php'"/>
@@ -79,6 +78,7 @@
 
                 // On redirige l'utilisateur vers la page GestionClient.php
                 header("location: ./GestionClient.php");
+                exit();
             }
         }
     ?>

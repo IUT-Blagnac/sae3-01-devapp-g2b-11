@@ -142,7 +142,14 @@ Dans les cas d'erreur et de réussite, une alerte est afficher présentant le me
 
 image:./img/code_showAlert.png[code de la fonction d'alerte]
 
-=== Gérer les produits de sont panier
+=== Gérer les produits de son panier
+
+==== Modifier la quantité d'un produit
+
+La modification de la quantité d'un produit dans le panier d'un client est effectuer dans la page : [.underline]#include/fonctions.php#.
+
+
+==== Supprimer un produit de son panier 
 
 === Réaliser une commande
 

@@ -1,9 +1,10 @@
 .container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   margin-top: 5%;
+  gap: 50px;
   /* background-color: red; */
 }
 
@@ -101,14 +102,25 @@ input[type="text"] {
 }
 
 .container .info {
-  margin-top: 20px;
-  color: #555;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  padding: 50px;
 }
-.container .info ul {
-  padding-left: 40px;
+
+.info .info-data {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 250px;
 }
-.container .info ul li {
-  list-style: square;
+
+.info .title {
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: 2px;
 }
 
 .informations {

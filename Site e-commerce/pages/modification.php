@@ -26,7 +26,7 @@
                     </div>
                     <div class="box">
                         <label for="email">Votre email</label> <input type="email" name="email" value="<?php echo $_SESSION['emailClient'] ?>" placeholder="saisissez votre email" required>
-                        <label for="telephone">Votre téléphone</label> <input type="text" name="telephone" value="<?php echo $_SESSION['telephoneClient'] ?>" placeholder="saisissez votre téléphone" required>
+                        <label for="telephone">Votre téléphone</label> <input type="text" name="telephone" value="<?php echo $_SESSION['numeroClient'] ?>" placeholder="saisissez votre téléphone" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" maxlength="10" required>
                     </div>
                     <div class="box">
                         <label for="adresse">Votre adresse</label> <input type="text" name="adresse" value="<?php echo $_SESSION['adresseClient'] ?>" placeholder="saisissez votre adresse" required>

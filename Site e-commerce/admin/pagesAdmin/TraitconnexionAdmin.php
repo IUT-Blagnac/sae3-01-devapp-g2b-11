@@ -7,7 +7,8 @@
         require_once("../includeAdmin/connect.inc.php"); //connexion à la base de donnée
         error_reporting(0);
         // Variable qui stocks les infos de connexion
-        $numEmp = $_POST['numEmp']; 
+        $numEmp = htmlspecialchars($_POST['numEmp'],ENT_QUOTES, 'UTF-8');
+        $mdp = htmlspecialchars($_POST['password'],ENT_QUOTES, 'UTF-8'); 
         
         // recherche le numéro de l'employé dans la base de donnée
         $query = "SELECT * FROM ADMIN WHERE NUMEMPLOYE = '".$numEmp."'";
@@ -20,7 +21,7 @@
         
         while(($admin = oci_fetch_assoc($leclient))!=false){
             // On vérifie que le mots de passe saisies correspond à celui de l'employé
-            if (password_verify($_POST['password'], $admin['MOTPASSEADMIN'])){
+            if (password_verify($mdp, $admin['MOTPASSEADMIN'])){
                 // on ajouter les valeurs à la variable de session;
                 $_SESSION['access'] = "accessAdmin";
                 $_SESSION['numEmploye'] = $admin['NUMEMPLOYE'];

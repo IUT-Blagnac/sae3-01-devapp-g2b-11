@@ -1,23 +1,18 @@
 package app.g2b11;
 
 import javafx.application.Platform;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.Alert;
-import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.VBox;
-import javafx.stage.WindowEvent;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.concurrent.Executors;
@@ -36,18 +31,7 @@ public class DataFrameController {
     private LineChart chartTemp;
 
     @FXML
-    private BorderPane b;
-
-    @FXML
-    private Label titre;
-
-    @FXML
     private ListView lvData;
-
-    @FXML
-    private Label lbLastData;
-
-    private VBox vbData;
 
     private ScheduledExecutorService scheduledExecutorService;
 
@@ -64,7 +48,7 @@ public class DataFrameController {
         String nomFichier = null;
         nomFichier = configController.getNomFich();
         // Chemin du fichier
-        Path path = Path.of("./data/" + nomFichier); // chemin du fichier � lire
+        Path path = Paths.get("./data/", nomFichier);// chemin du fichier � lire
         List<String> lignes = new ArrayList();
         // on essaye de lire les lignes du fichier contenu au chemin "path"
         lignes = Files.readAllLines(path);
@@ -107,6 +91,7 @@ public class DataFrameController {
         // put dummy data onto graph per second
         scheduledExecutorService.scheduleAtFixedRate(() -> {
 
+<<<<<<< HEAD
             // Update the chart
             Platform.runLater(() -> {
                 String nomFichier2 = null;
@@ -118,13 +103,82 @@ public class DataFrameController {
                     List<String> lignes2 = new ArrayList();
                     // on essaye de lire les lignes du fichier contenu au chemin "path"
                     lignes2 = Files.readAllLines(path2);
+=======
+                // Update the chart
+                Platform.runLater(() -> {
+                    String nomFichier2 = null;
+                    Date now = new Date();
+                    try {
+                        nomFichier2 = configController.getNomFich();
+                        // Chemin du fichier
+                        Path path2 = Paths.get("./data/" + nomFichier2); // chemin du fichier � lire
+                        List<String> lignes2 = new ArrayList();
+                        // on essaye de lire les lignes du fichier contenu au chemin "path"
+                        lignes2 = Files.readAllLines(path2);
+>>>>>>> d511dc46463187795f7424ba3ed7baaad5414bfd
 
                     String a2[] = { "" };
 
+<<<<<<< HEAD
                     // On ajoute ces lignes dans le dictionnaire
                     for (String ligne : lignes2) {
                         a2 = ligne.split(":", 2);
                         datadict.put(a2[0], Double.valueOf(a2[1]));
+=======
+                        // On ajoute ces lignes dans le dictionnaire
+                        for (String ligne : lignes2) {
+                            a2 = ligne.split(":", 2);
+                            datadict.put(a2[0], Double.valueOf(a2[1]));
+                        }
+
+                        lvData.getItems().clear();
+                        // met dans les séries respectives les valeurs demandées par l'utilisateur
+                        if (datadict.keySet().contains("Temperature")) {
+                            final XYChart.Data<String, Double> dataT = new XYChart.Data(simpleDateFormat.format(now), datadict.get("Temperature"));
+                            dataT.setNode(new HoveredThresholdNodea(datadict.get("Temperature")));
+                            dataSeriesTemp.getData().add(dataT);
+                            lvData.getItems().add("Température : " + datadict.get("Temperature"));
+                            if(datadict.get("AlerteTemperature") == 1.0){ // gestion des alertes de température
+                                Alert seuilTemp = new Alert(Alert.AlertType.WARNING);
+                                seuilTemp.setTitle("Alerte seuil");
+                                seuilTemp.setHeaderText("Seuil température trop élevé");
+                                seuilTemp.setContentText("Seuil de température trop élevé à " + simpleDateFormat.format(now) + " le " + dayDateFormat.format(now));
+                                seuilTemp.show();
+                            }
+                        }
+                        if (datadict.keySet().contains("CO2")) {
+                            final XYChart.Data<String, Double> dataC = new XYChart.Data(simpleDateFormat.format(now), datadict.get("CO2") /100.0);
+                            dataC.setNode(new HoveredThresholdNodea(datadict.get("CO2")/100));
+                            dataSeriesCO2.getData().add(dataC);
+                            valCO2.add((datadict.get("CO2"))/100.0);
+                            lvData.getItems().add("CO2 : " + datadict.get("CO2"));
+                        }
+                        if (datadict.keySet().contains("Humidity")) {
+                            final XYChart.Data<String, Double> dataH = new XYChart.Data(simpleDateFormat.format(now), datadict.get("Humidity"));
+                            dataH.setNode(new HoveredThresholdNodea(datadict.get("Humidity")));
+                            dataSeriesHum.getData().add(dataH);
+                            valHum.add(datadict.get("Humidity"));
+                            lvData.getItems().add("Humidité : " + datadict.get("Humidity"));
+                            if(datadict.get("AlerteHumidite") == 1.0){ // gestion des alertes d'humidité
+                                Alert seuilHum = new Alert(Alert.AlertType.WARNING);
+                                seuilHum.setTitle("Alerte seuil");
+                                seuilHum.setHeaderText("Seuil d'humidité trop élevé");
+                                seuilHum.setContentText("Seuil d'humidité trop élevé à " + simpleDateFormat.format(now) + " le " + dayDateFormat.format(now));
+                                seuilHum.show();
+                            }
+                        }
+
+                    } catch (IOException e) {
+                        Alert aB = new Alert(Alert.AlertType.ERROR);
+
+                        aB.setTitle("Erreur nom fichier");
+
+                        aB.setHeaderText("Erreur dans la saisie du nom du fichier de données !");
+
+                        aB.setContentText("Veuillez saisir un nom de fichier existant dans le fichier de configuration");
+
+                        aB.show();
+>>>>>>> d511dc46463187795f7424ba3ed7baaad5414bfd
                     }
 
                     // System.out.println(datadict.keySet());

@@ -1,3 +1,6 @@
+<?php
+    include "../includeAdmin/secuPageAdmin.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,6 +36,7 @@
         if (password_verify($_POST['password'], $realPSWD)) {
             header('location: /~SAESYS11/admin/pagesAdmin/connexionAdmin.php');
         } else {
+            session_destroy();
             header('location: /~SAESYS11/pages/connexion.php');
         }
     }

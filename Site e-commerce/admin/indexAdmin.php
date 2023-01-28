@@ -22,7 +22,7 @@ include "./includeAdmin/secuPageAdmin.php";
 	<?php include "./includeAdmin/headerAdmin.php"; ?>
 
 	<main>
-		<input type="submit" value="Retour" onclick="document.location.href='./pagesAdmin/connexionAdmin'" />
+		<input type="submit" value="Déconnexion" onclick="document.location.href='./pagesAdmin/connexionAdmin'" />
 		<div class="container">
 			<div class="content">
 				<div class="formulaire">
@@ -30,17 +30,17 @@ include "./includeAdmin/secuPageAdmin.php";
 					<div class="button">
 						<div class="gestionClient">
 							<div class="btn">
-								<a href="#">Gestions des clients</a>
+								<a href="./pagesAdmin/GestionClient.php">Gestions des clients</a>
 							</div>
 						</div>
 						<div class="gestionProduit">
 							<div class="btn">
-								<a href="#">Gestions des produits</a>
+								<a href="./pagesAdmin/GestionProduits.php">Gestions des produits</a>
 							</div>
 						</div>
 						<div class="gestionMessagerie">
 							<div class="btn">
-								<a href="#">Messagerie clients</a>
+								<a href="./pagesAdmin/GestionContact.php">Messagerie clients</a>
 							</div>
 						</div>
 					</div>

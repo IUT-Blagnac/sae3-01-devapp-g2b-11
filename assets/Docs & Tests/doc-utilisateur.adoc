@@ -197,4 +197,4 @@ En cliquant sur un message précis, celui-ci sera afficher et l'Administrateur p
 
 image:./img/repMessCli.png[Réponse au message d'un client] 
 
-== Guide de l'Application IOT
+

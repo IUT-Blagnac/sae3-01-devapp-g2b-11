@@ -451,7 +451,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_consulter_et_modifier_ses_informations">Consulter et modifier ses informations</a></li>
 <li><a href="#_recherche_et_consultation_des_produits">Recherche et consultation des produits</a></li>
 <li><a href="#_ajouter_des_produits_au_panier">Ajouter des produits au panier</a></li>
-<li><a href="#_gérer_les_produits_de_sont_panier">Gérer les produits de sont panier</a></li>
+<li><a href="#_gérer_les_produits_de_son_panier">Gérer les produits de son panier</a></li>
 <li><a href="#_réaliser_une_commande">Réaliser une commande</a></li>
 <li><a href="#_se_connecter_à_un_compte_administrateur">se connecter à un compte Administrateur</a></li>
 <li><a href="#_gérer_les_produits">Gérer les produits</a></li>
@@ -692,108 +692,117 @@ Si c&#8217;est le cas, nous préparons et éxecutons la procédure <strong>ADD_T
 </div>
 </div>
 <div class="sect2 data-line-145">
-<h3 id="_gérer_les_produits_de_sont_panier">Gérer les produits de sont panier</h3>
+<h3 id="_gérer_les_produits_de_son_panier">Gérer les produits de son panier</h3>
+<div class="sect3 data-line-147">
+<h4 id="_modifier_la_quantité_dun_produit">Modifier la quantité d&#8217;un produit</h4>
+<div class="paragraph data-line-149">
+<p>La modification de la quantité d&#8217;un produit dans le panier d&#8217;un client est effectuer dans la page : <span class="underline">include/fonctions.php</span>.</p>
+</div>
+</div>
+<div class="sect3 data-line-152">
+<h4 id="_supprimer_un_produit_de_son_panier">Supprimer un produit de son panier</h4>
 
 </div>
-<div class="sect2 data-line-147">
+</div>
+<div class="sect2 data-line-154">
 <h3 id="_réaliser_une_commande">Réaliser une commande</h3>
 
 </div>
-<div class="sect2 data-line-149">
+<div class="sect2 data-line-156">
 <h3 id="_se_connecter_à_un_compte_administrateur">se connecter à un compte Administrateur</h3>
-<div class="paragraph data-line-151">
+<div class="paragraph data-line-158">
 <p>La connexion à un compte Administrateur sur le site web s&#8217;effectue en suivant plusieurs étapes.<br>
 Dans un premier temps, une connexion doit être établie pour se rendre sur la page d&#8217;Administration grâce au formulaire de la page <span class="underline">connexion.php</span> qui sera traité dans la page : <span class="underline">TraitConnexion.php</span>.<br></p>
 </div>
-<div class="paragraph data-line-154">
+<div class="paragraph data-line-161">
 <p>Nous vérifions que l&#8217;email saisie par l&#8217;utilisateur est bien le mail permettant d&#8217;accéder à la page d&#8217;Administration : <strong>RoyalBio@gmail.com</strong> et que le mot de passe saisie correspond à cette email.<br>
 Si c&#8217;est le cas, l&#8217;utilisateur est redirigez vers la page Administration :</p>
 </div>
-<div class="paragraph data-line-157">
+<div class="paragraph data-line-164">
 <p><span class="image"><img src="./img/code_showAlert.png" alt="code de la fonction d&#8217;alerte"></span></p>
 </div>
-<div class="paragraph data-line-159">
+<div class="paragraph data-line-166">
 <p>L&#8217;input qui permet de redirigez l&#8217;utilisateur vers le formulaire lui permettant de se connecter à son compte Administrateur est traité dans la page : <span class="underline">firstConAdmin.php</span> :</p>
 </div>
-<div class="paragraph data-line-161">
+<div class="paragraph data-line-168">
 <p><span class="image"><img src="./img/code_firstConnAdmin.png" alt="code de la première connexion Administrateur"></span></p>
 </div>
-<div class="paragraph data-line-163">
+<div class="paragraph data-line-170">
 <p>Si le mot de passe saisie correspond au mot de passe pour accéder au formulaire de connexion alors l&#8217;utilisateur est redirigez vers la page : <span class="underline">connexionAdmin.php</span> dans laquelle est présente un formulaire qui est traité dans la page <span class="underline">TraitconnexionAdmin.php</span> (à noter que la SESSION qui a été crée lors de la première connexion est détruite) :</p>
 </div>
-<div class="paragraph data-line-165">
+<div class="paragraph data-line-172">
 <p><span class="image"><img src="./img/code_formConnAdmin.png" alt="code du formulaire de connexion Administrateur"></span></p>
 </div>
-<div class="paragraph data-line-167">
+<div class="paragraph data-line-174">
 <p>Pour traité ce formulaire, nous verifions d&#8217;abord si les champs saisies et nous préparons et éxecutons une requête SQL qui recherche toutes les informations de l&#8217;Administrateur qui a pour numéro d&#8217;employé, le <strong>numEmp</strong> saisie.<br>
 Si un employé est trouvé, et que le mot de passe saisie correspond au compte de cet employé, une <strong>SESSION</strong> et donc une connexion sont établie :</p>
 </div>
-<div class="paragraph data-line-170">
+<div class="paragraph data-line-177">
 <p><span class="image"><img src="./img/code_TraitConnAdmin2.png" alt="code du traitement du deuxième formulaire de connexion"></span></p>
 </div>
 </div>
-<div class="sect2 data-line-172">
+<div class="sect2 data-line-179">
 <h3 id="_gérer_les_produits">Gérer les produits</h3>
-<div class="sect3 data-line-174">
+<div class="sect3 data-line-181">
 <h4 id="_ajouter_un_produit">Ajouter un produit</h4>
-<div class="paragraph data-line-176">
+<div class="paragraph data-line-183">
 <p>L&#8217;ajout d&#8217;un produit est faite grâce à un formulaire dans la page <span class="underline">AjoutProduit.php</span> qui est traité dans la page  <span class="underline ">TraitAjoutProduit</span> :</p>
 </div>
-<div class="paragraph data-line-178">
+<div class="paragraph data-line-185">
 <p><span class="image"><img src="./img/code_formAjoutProduit.png" alt="code du formulaire d&#8217;ajout d&#8217;un produit"></span></p>
 </div>
-<div class="paragraph data-line-180">
+<div class="paragraph data-line-187">
 <p>Pour traité se formulaire, nous vérifions que les différents champs ont étés saisies et différentes regex :</p>
 </div>
-<div class="paragraph data-line-182">
+<div class="paragraph data-line-189">
 <p><span class="image"><img src="./img/code_formAjoutProduit.png" alt="code du traitement du formulaire d&#8217;ajout d&#8217;un produit"></span></p>
 </div>
-<div class="paragraph data-line-184">
+<div class="paragraph data-line-191">
 <p>Ensuite, nous préparons et éxecutons une requête SQL qui permet de rechercher les produits et les ajouter à un tableau.<br></p>
 </div>
-<div class="paragraph data-line-186">
+<div class="paragraph data-line-193">
 <p><span class="image"><img src="./img/code_TraitFormAjoutProduit2.png" alt="code du traitement du formulaire d&#8217;ajout d&#8217;un produit"></span></p>
 </div>
-<div class="paragraph data-line-188">
+<div class="paragraph data-line-195">
 <p>Ensuite nous vérifions que le produit à créer n&#8217;existe pas déjà et on incrément la valeur de <strong>l&#8217;idProduit</strong> :</p>
 </div>
-<div class="paragraph data-line-190">
+<div class="paragraph data-line-197">
 <p><span class="image"><img src="./img/code_TraitFormAjoutProduit3.png" alt="code du traitement du formulaire d&#8217;ajout d&#8217;un produit"></span></p>
 </div>
-<div class="paragraph data-line-192">
+<div class="paragraph data-line-199">
 <p>Enfin nous insérons dans la base de données le nouveau produit crée :</p>
 </div>
-<div class="paragraph data-line-194">
+<div class="paragraph data-line-201">
 <p><span class="image"><img src="./img/code_TraitFormAjoutProduit4.png" alt="code du traitement du formulaire d&#8217;ajout d&#8217;un produit"></span></p>
 </div>
 </div>
-<div class="sect3 data-line-196">
+<div class="sect3 data-line-203">
 <h4 id="_modifier_un_produit">Modifier un produit</h4>
 
 </div>
-<div class="sect3 data-line-198">
+<div class="sect3 data-line-205">
 <h4 id="_supprimer_un_produit">Supprimer un produit</h4>
 
 </div>
 </div>
-<div class="sect2 data-line-200">
+<div class="sect2 data-line-207">
 <h3 id="_gérer_les_clients">Gérer les clients</h3>
 
 </div>
-<div class="sect2 data-line-202">
+<div class="sect2 data-line-209">
 <h3 id="_gérer_la_messagerie_client">Gérer la messagerie client</h3>
 
 </div>
 </div>
 </div>
-<div class="sect1 data-line-204">
+<div class="sect1 data-line-211">
 <h2 id="_guide_technique_de_lapplication_iot">Guide technique de l&#8217;Application IOT</h2>
 <div class="sectionbody">
-<div class="sect2 data-line-206">
+<div class="sect2 data-line-213">
 <h3 id="_partie_python">Partie Python</h3>
 
 </div>
-<div class="sect2 data-line-208">
+<div class="sect2 data-line-215">
 <h3 id="_partie_java">Partie Java</h3>
 
 </div>
